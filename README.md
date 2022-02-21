@@ -3,4 +3,4 @@ This is an academic Research project carried out for intensive learning of Ingre
 
 Here is a roadmap to the files in this repository:
  ## Wiki  : 
-        It consists of all teh documentations of ideas gathered throughout
+        It consists of all the documentations of ideas gathered throughout
