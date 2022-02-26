@@ -1,5 +1,5 @@
 For basic ideas on Docker and its environments, here is the wiki page for the same describing the fundamentals : <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Docker-%7C-Its-Environments">Read here</a>
--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 This is a README file for the basic demo conducted to deploy a wordpress using docker-compose without using Traefik.Below is the description of each step in the docker-compose.yml.
 
