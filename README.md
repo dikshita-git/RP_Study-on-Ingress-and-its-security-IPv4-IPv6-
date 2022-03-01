@@ -17,10 +17,10 @@ Here the SSH keys and GPG keys are established and synchronised with my machine.
 PS: OpenSSh server could be installed on the machine beforehand because the latest GIT operations hold right only either via SSH or Authentication apps like Twilio Authy etc.
 Here is a roadmap to the files in this repository:
  ## Wiki  : 
-        It consists of all the documentations of ideas gathered throughout:
+ It consists of all the documentations of ideas gathered throughout:
         
-        https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Docker-%7C-Its-Environments
-        https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik
+https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Docker-%7C-Its-Environments
+https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik
  
  ## Codes  : 
         Folder with all the code files
