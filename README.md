@@ -19,9 +19,8 @@ Here is a roadmap to the files in this repository:
  ## Wiki  : 
         It consists of all the documentations of ideas gathered throughout:
         
-        <ul>
-        <li><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Docker-%7C-Its-Environments">Docker | Its Environments</a></li>
-        <li><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik">Traefik</a></li>
-        </ul>
+        https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Docker-%7C-Its-Environments
+        https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik
+ 
  ## Codes  : 
         Folder with all the code files
