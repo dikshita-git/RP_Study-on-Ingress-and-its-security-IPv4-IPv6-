@@ -6,5 +6,5 @@ Source Courtesy: <a href="https://doc.traefik.io/traefik/routing/overview/">Clic
 When we start Traefik, we:
 1. First define entrypoints (these are port numbers)
 2. Secondly, connected to these entryoints are routers which analyze to check if any incoming requests match the set of rules.
-      - <span style="color: green">If they match </span>----> the router might transform this request using some pieces of middlewares before forwarding them to our services 
+      - ![#f03c15]If they match </span>----> the router might transform this request using some pieces of middlewares before forwarding them to our services 
       
