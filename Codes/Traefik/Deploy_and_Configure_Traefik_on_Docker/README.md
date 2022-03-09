@@ -53,7 +53,7 @@ Now, in this case, we next go to the Portrainer dashboard and select the contain
 
 1. The first label we are adding here in order to enable Traefik monitor this nginx container is: "traefik.enable" and set this to "true" as shown in figure below:
 
-    ![nginx_container_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/nginx_container_label.PNG)
+![nginx_container_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/nginx_container_label.PNG)
 
     When we set the traefik.enable as "true", only then Traefik will recognize any changes in the label configurations of this container and will react/respond to it.
 
@@ -65,13 +65,13 @@ Now, in this case, we next go to the Portrainer dashboard and select the contain
 
    The flow of the aforementioned is shown below:
                 
-                ![Traefik_flow](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Traefik_flow.PNG)
+![Traefik_flow](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Traefik_flow.PNG)
 
    At this point, let us create the Label for the Entrypoint. To do so, we create a label named as "traefik.http.routers.<router_name>.entrypoints"and name it as "web". See reference: <a href="https://doc.traefik.io/traefik/providers/docker"> Click here </a>
 
             Thus our final label looks like below:
             
-            ![Entrypoint_label]()
+![Entrypoint_label]()
 
 
 ---------------------
@@ -83,15 +83,15 @@ Now, in this case, we next go to the Portrainer dashboard and select the contain
 After these, we now need to add a Host Name so that Traefik knows which Host Name it should redirect. For this, we configure the HTTP Router with another Label called "traefik.http.routers.<container_name>.rule". IN our case the container name is "nginx" so the label is:
 "traefik.http.routers.nginx.rule". In this rule, we can configure which Host Names we want to attach to this container. Let us put Host names as: Host(`example.com`). This host will point to the public IP address of the server. The rule label is as shown below in the image:
 
-            ![rule_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/rule_label.PNG)
+![rule_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/rule_label.PNG)
 
             Let us deploy the container.  Now, we can reload Traefik dashboard and under "HTTP" we could see the host name that we created as shown in the image:
 
-            ![host_name](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/host_name.PNG)
+![host_name](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/host_name.PNG)
 
             Below shows a more detailed description(click on the host name) of the route that the TRaefik will take:
 
-            ![host_name_route](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/host_name_routes.PNG)
+![host_name_route](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/host_name_routes.PNG)
 
             So, we see that it:
         First comes to the Entrypoint that we configured on Port 80 
