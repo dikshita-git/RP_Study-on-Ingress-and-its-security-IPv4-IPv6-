@@ -21,6 +21,7 @@ PS: OpenSSh server could be installed on the machine beforehand because the late
   2. root@ubuntu:/home/dk/Desktop# docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
   
       ***Check http://localhost:9000/#/home***
+      
   
 Here is a roadmap to the files in this repository:
  ## Wiki  : 
