@@ -38,11 +38,16 @@ Now, we need to configure Traefik in order to expose this nginx container. For t
 ------    Reference:  https://doc.traefik.io/traefik/routing/routers/ ------
 
 ## Dynamic configuration
-http:
-  routers:
-    my-router:
-      rule: "Path(`/foo`)"
-      service: service-foo
+
+    http:
+  
+        routers:
+    
+            my-router:
+      
+                rule: "Path(`/foo`)"
+      
+                service: service-foo
 
 
 But for this demo, we are using Dynamic Configuration in <u>Docker Labels</u>. <a href="https://doc.traefik.io/traefik/providers/docker/">Click here</a> to read the refernce 
@@ -78,7 +83,8 @@ Thus our final label looks like below:
 
 ***In our /etc/traefik/traefik.yml, we have declared 2 entrypoints but here we will just consider HTTP. Thus we have named the entrypoint here as "web"***.
 
-After these, we now need to add a Host Name so that Traefik knows which Host Name it should redirect. For this, we configure the HTTP Router with another Label called "traefik.http.routers.<container_name>.rule". IN our case the container name is "nginx" so the label is:
+After these, we now need to add a Host Name so that Traefik knows which Host Name it should redirect. For this, we configure the HTTP Router with another Label called "traefik.http.routers.<container_name>.rule". In our case the container name is "nginx" so the label is:
+
 "traefik.http.routers.nginx.rule". In this rule, we can configure which Host Names we want to attach to this container. Let us put Host names as: Host(`example.com`). This host will point to the public IP address of the server. The rule label is as shown below in the image:
 
 ![rule_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/rule_label.PNG)
@@ -104,7 +110,7 @@ Forward it to the nginx Server (under Service)
 
         
         
-        If we click on "HTTP Services"  tab in Traefik dashboard
+If we click on "HTTP Services"  tab in Traefik dashboard
 
 
 
