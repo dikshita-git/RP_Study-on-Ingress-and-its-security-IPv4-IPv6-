@@ -15,6 +15,13 @@ Here the SSH keys and GPG keys are established and synchronised with my machine.
   2. git clone <ssh_repo_link>
  
 PS: OpenSSh server could be installed on the machine beforehand because the latest GIT operations hold right only either via SSH or Authentication apps like Twilio Authy etc.
+
+### PORTRAINER: (installed as)
+  1. root@ubuntu:/home/dk/Desktop# docker volume create portainer_data
+  2. root@ubuntu:/home/dk/Desktop# docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+  
+      ***Check http://localhost:9000/#/home***
+  
 Here is a roadmap to the files in this repository:
  ## Wiki  : 
  It consists of all the documentations of ideas gathered throughout:
