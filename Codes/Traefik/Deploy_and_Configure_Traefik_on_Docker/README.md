@@ -55,21 +55,19 @@ Now, in this case, we next go to the Portrainer dashboard and select the contain
 
 ![nginx_container_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/nginx_container_label.PNG)
 
-    When we set the traefik.enable as "true", only then Traefik will recognize any changes in the label configurations of this container and will react/respond to it.
-
-    Before moving further, it is very important to undertsand that Traefik works in a very specific way to configure it:
+When we set the traefik.enable as "true", only then Traefik will recognize any changes in the label configurations of this container and will react/respond to it.
+Before moving further, it is very important to undertsand that Traefik works in a very specific way to configure it:
      
- a) First of all, we need to define an <b>Entrypoint</b>
+ a) First of all, we need to define an ***Entrypoint***
                  
-    ====> Entrypoint is where the clients sends a request and the Traefik reverse-proxy will pick it up and once Traefik decides what to do with this Entrypoint, it will route it to an HTTP router and in this HTTP router, we can configure what should actually happen to this request. Also, we can configure if it should pass through some Middlewares incase of any redirections or if we want to make any modifications to the request we can also put some Authentication parts in these Middlewares.Now, this Middleware dorwards the request to the Service and this service is responsible for accessing the Docker container.
+Entrypoint is where the clients sends a request and the Traefik reverse-proxy will pick it up and once Traefik decides what to do with this Entrypoint, it will route it to an HTTP router and in this HTTP router, we can configure what should actually happen to this request. Also, we can configure if it should pass through some Middlewares incase of any redirections or if we want to make any modifications to the request we can also put some Authentication parts in these Middlewares.Now, this Middleware dorwards the request to the Service and this service is responsible for accessing the Docker container.
 
-   The flow of the aforementioned is shown below:
+The flow of the aforementioned is shown below:
                 
 ![Traefik_flow](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Traefik_flow.PNG)
+At this point, let us create the Label for the Entrypoint. To do so, we create a label named as "traefik.http.routers.<router_name>.entrypoints"and name it as "web". See reference: <a href="https://doc.traefik.io/traefik/providers/docker"> Click here </a>
 
-   At this point, let us create the Label for the Entrypoint. To do so, we create a label named as "traefik.http.routers.<router_name>.entrypoints"and name it as "web". See reference: <a href="https://doc.traefik.io/traefik/providers/docker"> Click here </a>
-
-            Thus our final label looks like below:
+Thus our final label looks like below:
             
 ![Entrypoint_label]()
 
@@ -85,24 +83,24 @@ After these, we now need to add a Host Name so that Traefik knows which Host Nam
 
 ![rule_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/rule_label.PNG)
 
-            Let us deploy the container.  Now, we can reload Traefik dashboard and under "HTTP" we could see the host name that we created as shown in the image:
+Let us deploy the container.  Now, we can reload Traefik dashboard and under "HTTP" we could see the host name that we created as shown in the image:
 
 ![host_name](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/host_name.PNG)
 
-            Below shows a more detailed description(click on the host name) of the route that the TRaefik will take:
+Below shows a more detailed description(click on the host name) of the route that the TRaefik will take:
 
 ![host_name_route](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/host_name_routes.PNG)
 
-            So, we see that it:
-        First comes to the Entrypoint that we configured on Port 80 
+So, we see that it:
+First comes to the Entrypoint that we configured on Port 80 
         
-                                     ↓
+                          ↓
         
-        It send the request then to nginx routers which will then 
+It send the request then to nginx routers which will then 
         
-                                     ↓
+                          ↓
         
-        Forward it to the nginx Server (under Service)
+Forward it to the nginx Server (under Service)
 
         
         
