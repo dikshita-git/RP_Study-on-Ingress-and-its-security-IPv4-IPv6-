@@ -74,7 +74,7 @@ Thus our final label looks like below:
 
 After these, we now need to add a Host Name so that Traefik knows which Host Name it should redirect. For this, we configure the HTTP Router with another Label called "traefik.http.routers.<container_name>.rule". In our case the container name is "nginx" so the label is:
 
-"traefik.http.routers.nginx.rule". In this rule, we can configure which Host Names we want to attach to this container. Let us put Host names as: Host(`example.com`). This host will point to the public IP address of the server. The rule label is as shown below in the image:
+"traefik.http.routers.nginx.rule". In this rule, we can configure which Host Names we want to attach to this container. Let us put Host names as: Host(`ingress.pixxelldesign.com`). This host will point to the public IP address of the server. The rule label is as shown below in the image:
 ![rule_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/rule_label.PNG)
 
 Let us deploy the container.  Now, we can reload Traefik dashboard and under "HTTP" we could see the host name that we created as shown in the image:
@@ -109,7 +109,42 @@ Under tab "Service Details" we see the type as Loadbalancer which means we can a
 
 If we open the domain example.com in browser, we see it is not yet secureed because we have not used HTTPS entrypoint yet.
 
-Now, let us put the HTTPS entrypoint too in order to give the secured certificate to our domain:
+----------------------------------------------------------------
+
+### HTTPS certs ###
+
+Now, let us put the HTTPS entrypoint too in order to give the secured certificate to our domain. IN this case, if we check our traefik.yml file in /etc/traefik folder, we find that under ***Certificate Resolvers*** and we have 2 certificate resolvers namely ***"Staging"*** and ***"Production"***. Here, let us test using the ***" Staging"*** because in Production server of Lets Encrypt , if we have any misconfigurations then we might hit the rate limit. See refernce: <a href="https://doc.traefik.io/traefik/https/acme/">Click here</a>.
+
+One of the advantage of Traefik is that, we do not need to modify the configuration files of Traefik itself even if we want to change the configuration to expose our nginx container, we can directly go to the Portrainer dashboard and configure/change the ***Labels*** of the particular container.Below image shows the new label created for the nginx container.
+![SSL_label] ()
+
+The label used for exposing the nginx container is: ***traefik.http.routers.<router_name>.tls***. <a href="https://doc.traefik.io/traefik/routing/providers/docker/">Read More</a>
+
+*** Since, we want an SSL certificate and as per declaration in the traefik.yml file of /etc/traefik folder, so now in the entrypoint label in portrainer dashboard, we have to switch the value from web to websecure otherwise Traefik will not accept the request on port HTTPS (443) ***
+
+Now, we also need to create another label in the container in order to obtain a trusted SSL cert. We will create a new label for this named: ***traefik.http.routers.<router_name>.tls.certresolver*** and we put the name of the certresolver as ***"staging"*** since we want to use staging cert resolver(As mentioned in our traefik.yml) aand lets re-deploy the container.
+
+Now, if we write https:// in front of ingress.pixxelldesign.com, then we can see it is secured as shown in below images:
+
+--------------------------------------------------------------
+
+### HTTPS REDIRECTION ###
+
+We want the redirection because we do not want to accept the traffic on port 80 anymore and also we want to redirect FROM HTTP to HTTPS in case anyone tries to access the ingress.pixxelldeign.com using port HTTP otherwise the client will see the Error 404 or we dont see the SSL cert in the http://ingress.pixxelldesign.com. To do this redirection, we can configure using Labels too but then it would applz only for that particular container. Since, we want every container in the future to get this redirection, so we shall configure it in the steady configuration file in traefik.yml in /etc/traefik folder. Thus we activate from line 18-22 which now looks like the below:
+
+    # http:
+    #   redirections:
+    #     entryPoint:
+    #       to: websecure
+    #       scheme: https
+
+Thus after activating, my traefik.yml looks like the below image:
+
+
+Hence, by doing so we allow permanent redirection fro every connection that is incoming in the ***Entrypoint: web*** on port 80(HTTP) and redirect it to ***websecure*** which is port 443(HTTPS).Since we have edited the steady traefik file so we shall restart traefik container in Portrainer dashboard. But before restarting, we will add ***web*** value alongwith ***websecure***to the entrypoint label as shown below:
 
 
 
+
+
+Deploy the container
