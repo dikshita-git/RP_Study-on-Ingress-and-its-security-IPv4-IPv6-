@@ -20,6 +20,7 @@ Next step, we click on the "Containers" tab in portrainer and it shows the stack
 ![portrainer_container](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/portrainer_container.PNG)
 
 Now, since our container is created so we can access the Traefik Dashboard by clicking the port:8080:8080. The traefik dashboard looks like the below:
+
 ![traefik_dashboard](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/tarefik_dashboard.PNG)
 
 After exploring the traefik dashboard a bit, let us do an example by deploying an nginx web server on portrainer. For this we create a container in the Portrainer dashboard but this  time we have to select the Traefiktest network, which was used to create the stack otherwise the traefik container we want to create now will not connect to the applications it want to expose.Below is the image for the same:
@@ -63,13 +64,10 @@ The flow of the aforementioned is shown below:
 At this point, let us create the Label for the Entrypoint. To do so, we create a label named as "traefik.http.routers.<router_name>.entrypoints"and name it as "web". See reference: <a href="https://doc.traefik.io/traefik/providers/docker"> Click here </a>
 
 Thus our final label looks like below:
-![Entrypoint_label]()
+![Entrypoint_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/update_rule_label.png)
 
 
----------------------
 #### Hint: ####
----------------------
-
 ***In our /etc/traefik/traefik.yml, we have declared 2 entrypoints but here we will just consider HTTP. Thus we have named the entrypoint here as "web"***.
 
 After these, we now need to add a Host Name so that Traefik knows which Host Name it should redirect. For this, we configure the HTTP Router with another Label called "traefik.http.routers.<container_name>.rule". In our case the container name is "nginx" so the label is:
