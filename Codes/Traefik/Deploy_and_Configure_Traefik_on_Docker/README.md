@@ -119,19 +119,19 @@ Forward it to the nginx Server (under Service)
         
 If we click on "HTTP Services"  tab in Traefik dashboard, we get the below details of all the HTTP services running:
 
-![http_service] (https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/http_service.PNG)
+![http_service](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/http_service.PNG)
 
 
 
 where we select the host name "example.com" and then we have the below details:
 
-![redirection] (https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/redirection.PNG)
+![redirection](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/redirection.PNG)
 
 
 
 Here under "Servers" tab we see an IP address which basically means that it redirects which is our docker container nginx's IP address. We can cross check if our container has the same IP address as shown in the Traefik dashboard by following the command as shown below:
 
-![ip_address] (https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/ip_add_nginx.PNG)
+![ip_address](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/ip_add_nginx.PNG)
 
 
 
@@ -148,7 +148,7 @@ Now, let us put the HTTPS entrypoint too in order to give the secured certificat
 One of the advantage of Traefik is that, we do not need to modify the configuration files of Traefik itself even if we want to change the configuration to expose our nginx container, we can directly go to the Portrainer dashboard and configure/change the ***Labels*** of the particular container.Below image shows the new label created for the nginx container.
 The label used for exposing the nginx container is: ***traefik.http.routers.<router_name>.tls***. <a href="https://doc.traefik.io/traefik/routing/providers/docker/">Read More</a>
 
-![SSL_label] (https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/SSL_label.PNG)
+![SSL_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/SSL_label.PNG)
 
 
 
@@ -158,13 +158,13 @@ Now, we also need to create another label in the container in order to obtain a 
 
 If we check, right now our site looks unsecure like below:
 
-![unsecure_ingress] (https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/unsecure_pixxelldesign.PNG)
+![unsecure_ingress](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/unsecure_pixxelldesign.PNG)
 
 
 
 Now, if we write https:// in front of ingress.pixxelldesign.com, then we can see it is secured as shown in below image:
 
-![secure_ingress] (https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/secure_ingress.PNG)
+![secure_ingress](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/secure_ingress.PNG)
 
 
 
@@ -182,13 +182,13 @@ We want the redirection because we do not want to accept the traffic on port 80 
 
 Thus after activating, my traefik.yml looks like the below image:
 
-![active_traefik_redirection] (https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/active_traefik_redirection.PNG)
+![active_traefik_redirection](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/active_traefik_redirection.PNG)
 
 
 
 Hence, by doing so we allow permanent redirection fro every connection that is incoming in the ***Entrypoint: web*** on port 80(HTTP) and redirect it to ***websecure*** which is port 443(HTTPS).Since we have edited the steady traefik file so we shall restart traefik container in Portrainer dashboard. But before restarting, we will add ***web*** value alongwith ***websecure***to the entrypoint label as shown below:
 
-![latest_label] (https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/latest_label.PNG)
+![latest_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/latest_label.PNG)
 
 
 
