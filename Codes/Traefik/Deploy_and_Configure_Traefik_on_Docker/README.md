@@ -64,7 +64,7 @@ Before moving further, it is very important to undertsand that Traefik works in 
      
  a) First of all, we need to define an ***Entrypoint***
                  
-Entrypoint is where the clients sends a request and the Traefik reverse-proxy will pick it up and once Traefik decides what to do with this Entrypoint, it will route it to an HTTP router and in this HTTP router, we can configure what should actually happen to this request. Also, we can configure if it should pass through some Middlewares incase of any redirections or if we want to make any modifications to the request we can also put some Authentication parts in these Middlewares.Now, this Middleware dorwards the request to the Service and this service is responsible for accessing the Docker container.
+Entrypoint is where the clients sends a request and the Traefik reverse-proxy will pick it up and once Traefik decides what to do with this Entrypoint, it will route it to an HTTP router and in this HTTP router, we can configure what should actually happen to this request. Also, we can configure if it should pass through some Middlewares incase of any redirections or if we want to make any modifications to the request we can also put some Authentication parts in these Middlewares. Now, this Middleware forwards the request to the Service and this service is responsible for accessing the Docker container.
 
 The flow of the aforementioned is shown below:
 
