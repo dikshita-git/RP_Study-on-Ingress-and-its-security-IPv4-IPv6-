@@ -61,7 +61,8 @@ Entrypoint is where the clients sends a request and the Traefik reverse-proxy wi
 
 The flow of the aforementioned is shown below:
 ![Traefik_flow](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Traefik_flow.PNG)
-At this point, let us create the Label for the Entrypoint. To do so, we create a label named as "traefik.http.routers.<router_name>.entrypoints"and name it as "web". See reference: <a href="https://doc.traefik.io/traefik/providers/docker"> Click here </a>
+
+At this point, let us create the Label for the Entrypoint. To do so, we create a label named as "traefik.http.routers.<router_name>.entrypoints" and name it as "web". See reference: <a href="https://doc.traefik.io/traefik/providers/docker"> Click here </a>
 
 Thus our final label looks like below:
 ![Entrypoint_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/update_rule_label.png)
@@ -74,6 +75,7 @@ After these, we now need to add a Host Name so that Traefik knows which Host Nam
 ![nginx_container_label]
 
 "traefik.http.routers.nginx.rule". In this rule, we can configure which Host Names we want to attach to this container. Let us put Host names as: Host(`ingress.pixxelldesign.com`). This host will point to the public IP address of the server. The rule label is as shown below in the image:
+
 ![rule_label](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/new_rule_label.PNG)
 
 Let us deploy the container.  Now, we can reload Traefik dashboard and under "HTTP" we could see the host name that we created as shown in the image:
