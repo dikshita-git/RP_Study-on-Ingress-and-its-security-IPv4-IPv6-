@@ -1,4 +1,4 @@
-|       Date    | Task  | Status |
-| ------------- | -------------  |------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| FirstName     | LastName      | City     |
+| ------------- | ------------- | -------- |
+| John          | Test1         | NewYork  |
+| Bob           | Test2         | Toronto  |
