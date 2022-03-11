@@ -26,10 +26,12 @@ PS: OpenSSh server could be installed on the machine beforehand because the late
 Here is a roadmap to the files in this repository:
  ## Wiki  : 
  It consists of all the documentations of ideas gathered throughout:
+ 
+1. Weekly meeting table: 
         
-1. https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Docker-%7C-Its-Environments
+2. Docker:  https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Docker-%7C-Its-Environments
 
-2. https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik
+3. Traefik: https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik
  
  ## Codes  : 
         Folder with all the code files
