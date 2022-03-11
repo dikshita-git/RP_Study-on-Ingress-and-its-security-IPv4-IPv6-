@@ -27,11 +27,11 @@ Here is a roadmap to the files in this repository:
  ## Wiki  : 
  It consists of all the documentations of ideas gathered throughout:
  
-1. Weekly meeting table: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Daily_MoM">Click here </a>
+1. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Daily_MoM">Weekly meeting table</a>
         
-2. Docker:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Docker-%7C-Its-Environments">Click here</a>
+2. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Docker-%7C-Its-Environments">Docker</a>
 
-3. Traefik: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik">Click here</a>
+3. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik">Traefik</a>
  
  ## Codes  : 
         Folder with all the code files
