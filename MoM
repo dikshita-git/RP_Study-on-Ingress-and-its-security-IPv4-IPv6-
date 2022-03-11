@@ -1,4 +1,4 @@
-| FirstName     | LastName      | City     |
+| Date          | Task          | Status    |
 | ------------- | ------------- | -------- |
-| John          | Test1         | NewYork  |
+| 26.11.2021    | <ul><li>Look for different lightweight kubernetes distribution </li><li>Think about their aspects to compare</li><li>Find their literatures</li><li>Research aspects can be like:</li><li>Eg: K3s ----> Oversized in osme scenarios but MicroK8s could be useful in that case or so</li></ul>        | Done  |
 | Bob           | Test2         | Toronto  |
