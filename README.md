@@ -35,7 +35,11 @@ Here is a roadmap to the files in this repository:
         
 2. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Docker-%7C-Its-Environments">Docker</a>
 
-3. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik">Traefik</a>
+3. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Fundamentals-of-K8s">Fundamentals of K8s</a>
+
+4. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Ingress">Ingress</a>
+
+5. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik">Traefik</a>
  
  ## Codes  : 
         Folder with all the code files
