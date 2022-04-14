@@ -21,7 +21,12 @@ PS: OpenSSh server could be installed on the machine beforehand because the late
   2. root@ubuntu:/home/dk/Desktop# docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
   
       ***Check http://localhost:9000/#/home***
-      
+ 
+ 
+ ### MINIKUBE: (installed as)
+  1. As root : minikube start --driver=none
+  2. <i>Minikube dashboard command</i>: minikube dashboard
+  3. 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # <u>My GIT Roadmap:</u>
