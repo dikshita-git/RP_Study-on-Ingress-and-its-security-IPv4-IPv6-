@@ -27,6 +27,9 @@ PS: OpenSSh server could be installed on the machine beforehand because the late
   1. As root : minikube start --driver=none
   2. <i>Minikube dashboard command</i>: minikube dashboard
   3. In my Ubuntu, alwasy start minikubeusing docker driver on: <b>dikshita@ubuntu</b> with the command: <b>minikube start  --driver=docker</b>
+
+
+***NOTE: Always stop minikube by doing: "docker system prune"***
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # <u>My GIT Roadmap:</u>
