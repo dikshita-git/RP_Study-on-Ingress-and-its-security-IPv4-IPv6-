@@ -30,6 +30,13 @@ PS: OpenSSh server could be installed on the machine beforehand because the late
 
 
 ***NOTE: Always stop minikube by doing: "docker system prune"***
+
+
+### DIGITAL OCEAN:
+   1. doctl auth init (To start)
+   2. doctl kubernetes cluster kubeconfig save demo-cluster-1 (To save a particular cluster to be accessed)
+   3. kubectl --kubeconfig=~/.kube/demo-cluster-1-kubeconfig.yaml get nodes (Checkk nodes in that cluster)
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # <u>My GIT Roadmap:</u>
