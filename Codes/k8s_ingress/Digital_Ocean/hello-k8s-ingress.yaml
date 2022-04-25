@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-k8s-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod    #For cert-manager
+spec:
+  tls:     # tls block under spec defines in what Secret the certificates for host hello1-k8s.xyz will store their certificates, which the letsencrypt-prod ClusterIssuer issues. This will be different for every Ingress we create.
+  - hosts:
+    - hello1-k8s.xyz
+    secretName: hello-k8s-tls
+  rules:
+  - host: "hello1-k8s.xyz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: hello1-k8s
+            port:
+              number: 80
+  
