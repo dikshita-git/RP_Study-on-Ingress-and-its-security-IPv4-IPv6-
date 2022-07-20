@@ -1,0 +1,48 @@
+apiVersion: kubeadm.k8s.io/v1beta2
+kind: InitConfiguration
+kubernetesVersion: stable
+localAPIEndpoint:
+  advertiseAddress: 2001:638:408:200:e000::1
+nodeRegistration:
+  criSocket: /var/run/containerd/containerd.sock
+  name: dk
+  kubeletExtraArgs:
+    cluster-dns: 2001:638:408:200:e000::a
+    node-ip: 2001:638:408:200:e000::1
+---
+apiServer:
+  extraArgs:
+    advertise-address: 2001:638:408:200:e000::1
+    bind-address: '::'
+    etcd-servers: https://[2001:638:408:200:e000::1]:2379
+    service-cluster-ip-range: 2001:638:408:200:e000::/112
+apiVersion: kubeadm.k8s.io/v1beta2
+controllerManager:
+  extraArgs:
+    allocate-node-cidrs: 'true'
+    bind-address: '::'
+    cluster-cidr: 2001:638:408:200:e001::/80
+    node-cidr-mask-size: '120'
+    service-cluster-ip-range: 2001:638:408:200:e000::/112
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+    extraArgs:
+      advertise-client-urls: https://[2001:638:408:200:e000::1]:2379
+      initial-advertise-peer-urls: https://[2001:638:408:200:e000::1]:2380
+      initial-cluster: __HOSTNAME__=https://[2001:638:408:200:e000::1]:2380
+      listen-client-urls: https://[2001:638:408:200:e000::1]:2379
+      listen-peer-urls: https://[2001:638:408:200:e000::1]:2380
+kind: ClusterConfiguration
+networking:
+  serviceSubnet: 2001:638:408:200:e000::/112
+scheduler:
+  extraArgs:
+    bind-address: '::'
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+cgroupDriver: systemd
+clusterDNS:
+- 2001:638:408:200:e000::a
+healthzBindAddress: '::'
+kind: KubeletConfiguration
