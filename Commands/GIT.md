@@ -1,8 +1,8 @@
 Here the SSH keys and GPG keys are established and synchronised between my proxmox server and the github account. The GIT commands used thereby are:
 
-####1. git init
-####2. git config --global user.name "John Doe"
-####3. git config --global user.email "John Doe@gmail.com"
+#### 1. git init
+#### 2. git config --global user.name "John Doe"
+#### 3. git config --global user.email "John Doe@gmail.com"
 
 
 ### GIT PUSH:
