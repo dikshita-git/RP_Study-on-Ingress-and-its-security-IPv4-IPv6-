@@ -1,4 +1,6 @@
-Here the SSH keys and GPG keys are established and synchronised with my machine. The GIT commands used thereby are:
+Here the SSH keys and GPG keys are established and synchronised between my proxmox server and the github account. The GIT commands used thereby are:
+
+git init
 
 ### GIT PUSH:
   1. Navigate inside the folder (could be the cloned repo too)  which has the new updates to be pushed to GIT 
