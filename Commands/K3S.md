@@ -12,8 +12,8 @@
       
 - #### k3d cluster delete -a 
  
-     =  Deletes all clusters 
+      =  Deletes all clusters 
      
 - #### k3d cluster delete "name_of_cluster" 
 
-     = Deletes specified cluster 
+      = Deletes specified cluster 
