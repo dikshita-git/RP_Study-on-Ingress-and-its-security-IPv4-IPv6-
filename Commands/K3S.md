@@ -17,3 +17,7 @@
 - #### k3d cluster delete "name_of_cluster" 
 
       = Deletes specified cluster 
+      
+- #### kubectl get pods,svc,ing
+ 
+      = To load all pods, services and ingress or any Kubernetes object.
