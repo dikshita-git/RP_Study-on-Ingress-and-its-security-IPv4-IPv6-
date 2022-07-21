@@ -8,4 +8,12 @@
       
 - #### k3d node create "Worker-Node-name" --replicas 2 --cluster "cluster_name_to_which_you_want_to_add_workers"
       
-      = This command basically creates 2 Worker nodes with the specified name(01,02 will be allocated to them by k3d itself) inside the  specified cluater name
+      = This command basically creates 2 Worker nodes with the specified name(01,02 will be allocated to them by k3d itself) inside the  specified cluater name.
+      
+- #### k3d cluster delete -a 
+ 
+     =  Deletes all clusters 
+     
+- #### k3d cluster delete "name_of_cluster" 
+
+     = Deletes specified cluster 
