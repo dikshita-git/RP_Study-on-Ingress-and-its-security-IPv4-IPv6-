@@ -21,3 +21,4 @@
 - #### kubectl get pods,svc,ing
  
       = To load all pods, services and ingress or any Kubernetes object.
+      = This command works after a kind "deployment" is created
