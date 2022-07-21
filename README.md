@@ -10,8 +10,9 @@ To install k3d we need these requirements:
 3. 200MB disk space range
 
 Installation requirements:
+
 1. Docker
--------------
+=========
 
 - To install I used the script by Rancher as given below:
 
@@ -19,7 +20,7 @@ Installation requirements:
 $ curl https://releases.rancher.com/install-docker/19.03.sh | sh
 
 2. Kubectl
--------------
+=========
 
 - We need to set up kubectl to communicate with the Kubernetes API server.
 
@@ -34,7 +35,7 @@ We can check the installation by:
 kubectl version --client
 
 3. K3D
--------------
+=========
 
 wget -q -O - https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
 
