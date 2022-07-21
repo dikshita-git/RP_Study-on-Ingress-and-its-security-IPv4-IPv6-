@@ -10,6 +10,10 @@
       
       = This command basically creates 2 Worker nodes with the specified name(01,02 will be allocated to them by k3d itself) inside the  specified cluater name.
       
+- #### kubectl get node
+
+      = Lists all nodes
+      
 - #### k3d cluster delete -a 
  
       =  Deletes all clusters 
