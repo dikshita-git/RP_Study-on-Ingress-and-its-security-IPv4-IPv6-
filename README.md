@@ -3,7 +3,7 @@ This is an academic Research project carried out for intensive learning of Ingre
 
 ### What is K3s?:
 -This is a lightweight distribution of Kubernetes where we can easily create clusters and manage it using the tool K3d which basically means K3s with Docker.
-- Applicable for :
+- Applicable for: \br
     a) IoT
     b) Edge Computing
     c) ARM etc. where the device components are smaller and holds minimal memory.
