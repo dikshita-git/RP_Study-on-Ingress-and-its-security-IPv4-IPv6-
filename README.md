@@ -27,4 +27,6 @@ Steps:
 
  These settings can also be applied during the proxmox system installation.
  
-2. Install k3s using : export INSTALL_K3S_VERSION=v1.21.3+k3s1
+2. Install k3s using : 
+        
+        export INSTALL_K3S_VERSION=v1.21.3+k3s1
