@@ -20,7 +20,8 @@ This is an academic Research project carried out for intensive learning of Ingre
 
 ### K3s Dual-stack:
 
-Steps:
+<i>Implementation:</i>
+
 1. Configure the proxmox's netplan (/etc/netplan) with the configuration as below:
 
 <img src="">
