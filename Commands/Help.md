@@ -32,5 +32,5 @@ curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--fla
 11. Install k3s + Config For IPv4,IPv6 address :
 **************************************
 
-curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--flannel-backend=none --cluster-cidr=192.168.0.0/16,2001::00/68 --service-cidr=10.43.0.0/16 --disable-network-policy --node-ip=2001:638:408:200::100:180 --disable=traefik" sh -
+curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--flannel-backend=none --cluster-cidr=192.168.0.0/16,2001::00/68 --service-cidr=10.43.0.0/16 --disable-network-policy --node-ip=2001:638:408:200:: 100:180 --disable=traefik" sh -
 
