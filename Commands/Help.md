@@ -24,14 +24,26 @@ curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--fla
 9. kubectl version -o yaml
 
 10. k3s kubectl describe node server
+
+11. To taint nodes:
+===========================
+
+- k3s kubectl describe node "node_name" | grep -A5 Taints
+
+- k3s kubectl taint node "node_name" "Paste_details_next_to_Unschedulable/Schedulable_from_result_of_above_command"
+
+12. To untaint nodes:
+===========================
+
+- k3s kubectl taint node "node_nam" "Paste_details_next_to_Unschedulable/Schedulable_from_result_of_above_command"-
  
-11. curl  https://projectcalico.docs.tigera.io/manifests/custom-resources.yaml > calico.yaml   
+13. curl  https://projectcalico.docs.tigera.io/manifests/custom-resources.yaml > calico.yaml   
 
 (to copy contents from  https://projectcalico.docs.tigera.io/manifests/custom-resources.yaml to calico .yaml)
 
 
 
-11. Install k3s + Config For IPv4,IPv6 address :
+14. Install k3s + Config For IPv4,IPv6 address :
 **************************************
 
 curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--flannel-backend=none --cluster-cidr=192.168.0.0/16,2001::00/68 --service-cidr=10.43.0.0/16 --disable-network-policy --node-ip=2001:638:408:200:: 100:180 --disable=traefik" sh -
