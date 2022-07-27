@@ -26,14 +26,14 @@ curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--fla
 10. k3s kubectl describe node server
 
 11. To taint nodes:
-===========================
+*******************
 
 - k3s kubectl describe node "node_name" | grep -A5 Taints
 
 - k3s kubectl taint node "node_name" "Paste_details_next_to_Unschedulable/Schedulable_from_result_of_above_command"
 
 12. To untaint nodes:
-===========================
+*******************
 
 - k3s kubectl taint node "node_nam" "Paste_details_next_to_Unschedulable/Schedulable_from_result_of_above_command"-
  
