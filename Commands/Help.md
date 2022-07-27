@@ -22,8 +22,10 @@ curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--fla
 8. k3s kubectl get pod --all-ns
 
 9. kubectl version -o yaml
+
+10. k3s kubectl describe node server
  
-10. curl  https://projectcalico.docs.tigera.io/manifests/custom-resources.yaml > calico.yaml   
+11. curl  https://projectcalico.docs.tigera.io/manifests/custom-resources.yaml > calico.yaml   
 
 (to copy contents from  https://projectcalico.docs.tigera.io/manifests/custom-resources.yaml to calico .yaml)
 
