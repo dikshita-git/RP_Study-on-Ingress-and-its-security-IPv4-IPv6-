@@ -40,7 +40,7 @@ In my case, I have:
 
 In the deployment environment machine, clone the official k3s+ansible <a href="https://github.com/k3s-io/k3s-ansible.git">Git repo</a>
 
-Once the repo is cloned, we now have to configure the inventory file according to our requirements. Instead of applying the configurations in the default inventory file ***sample***, we create its copy called ***my-cluster*** and edit there.
+Once the repo is cloned, we now have to cd into the repo and configure the inventory file according to our requirements. Instead of applying the configurations in the default inventory file ***sample***, we create its copy called ***my-cluster*** and edit there.
 
 Command used:
 
