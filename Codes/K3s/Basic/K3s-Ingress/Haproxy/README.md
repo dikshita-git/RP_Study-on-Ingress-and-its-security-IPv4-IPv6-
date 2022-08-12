@@ -9,5 +9,5 @@ The above step is followed by copying teh ssh-key of the deployment VM to the ma
 
 In the next step, we edit the ***/etc/ansible/hosts*** as given below::
 
-<img arc="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/10.PNG">
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/10.PNG">
 
