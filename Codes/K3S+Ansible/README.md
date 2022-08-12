@@ -46,4 +46,11 @@ Command used:
 
       cp -R inventory/sample inventory/my-cluster
 
+
+
+## Step 3: Install K3s
+
+In order to proceed with instaalling k3s, we have to declare our masters, workers in our ansible host.ini file so that the k3s components are ready. In this case, we will edit ***inventory/my-cluster/hosts.ini*** as this is our inventory folder to work on.
+
+
       
