@@ -52,7 +52,8 @@ The token we can get it from the master node on the following location ***/var/l
 This is done by the command:
                 
                 curl -sfL https://get.k3s.io | K3S_URL=https://10.20.116.104:6443 K3S_TOKEN="K1022823f9c9804022be8bf04846f5da7bbcb7763063eee43290acdbc7ec66f6eb3::server:54956246f32a0d4f1cb6d4c9fb3b3f78" sh -
-                
+
+This command has to be run in all the worker nodes so that they can be attached to the master node using its IP address and the node-token.
 
 K3s server always requires the port 6443 to be accessible by all teh nodes.
 
@@ -62,3 +63,14 @@ But <u>***WHY 6443?***</u> :fire:
 By default, the Kubernetes API server listens on port 6443 on the first non-localhost network interface, protected by TLS. Traffic on port 6443 is for the Kubernetes API. ... for securely routing traffic from a remote shell outside the cluster to the UCP ports of the cluster.
  
  
+ 
+#### 3. Test the results  :tada:
+
+In order to test whether the Step 2 was successful, run the command beloww in the master node:
+
+                    kubectl get nodes
+                    
+We should now see the master node and worker nodes together in the list as shown in the image below:
+
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/1..PNG">
+            
