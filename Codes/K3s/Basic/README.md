@@ -68,7 +68,7 @@ K3s server always requires the port 6443 to be accessible by all teh nodes.
 
 In order to test whether the Step 2 was successful, run the command beloww in the master node:
 
-                    kubectl get nodes
+                    kubectl get nodes -o wide
                     
 We should now see the master node and worker nodes together in the list as shown in the image below:
 
