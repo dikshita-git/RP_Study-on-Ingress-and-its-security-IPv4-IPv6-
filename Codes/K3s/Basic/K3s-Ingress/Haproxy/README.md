@@ -7,7 +7,7 @@ Next, it is time to configure the ***inventory/hosts.ini***. here is the link to
 
 The above step is followed by copying teh ssh-key of the deployment VM to the master and worker nodes because Ansible works via ssh and passwordless access. Thus our cluster nodes can be accessible by Ansible and we get a successful ping in ansible. 
 
-In the next step, we edit the ***/etc/ansible/hosts*** as given below:
+In the next step, we edit the ***/etc/ansible/hosts*** as given below::
 
 <img arc="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/10.PNG">
 
