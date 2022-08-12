@@ -15,7 +15,7 @@ Thus our cluster nodes can be accessible by Ansible and we get a successful ping
 
 In the next step, we edit the ***/etc/ansible/hosts*** as given below::
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/10.PNG">
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/10.PNG" width: 300px;height:300px;>
 
 We can also ansible ping all our hosts listed in inventory/hosts.ini by running the below command isnide the folder where my hosts.ini file is present. if everything works fien, we will get a pong response :
 
