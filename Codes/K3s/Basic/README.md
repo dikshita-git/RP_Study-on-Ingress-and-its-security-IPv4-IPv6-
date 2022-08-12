@@ -77,3 +77,8 @@ We should now see the master node and worker nodes together in the list as shown
 We can also have a look to knoww how the k3s-agent unit file uses an environment file (/etc/systemd/system/k3s-agent.service.env) to store the variables variables K3S_URL and K3S_TOKEN as shown in the image below:
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/3.PNG">
+
+
+#### 4. Create a deployment  :tada:
+
+Now, we can create a sample nginx deployment yml file named "nginx-deployment.yml" for test. 
