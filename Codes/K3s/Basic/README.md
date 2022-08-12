@@ -72,7 +72,7 @@ In order to test whether the Step 2 was successful, run the command beloww in th
                     
 We should now see the master node and worker nodes together in the list as shown in the image below:
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/2.PNG">
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/6.PNG">
             
 We can also have a look to knoww how the k3s-agent unit file uses an environment file (/etc/systemd/system/k3s-agent.service.env) to store the variables variables K3S_URL and K3S_TOKEN as shown in the image below:
 
