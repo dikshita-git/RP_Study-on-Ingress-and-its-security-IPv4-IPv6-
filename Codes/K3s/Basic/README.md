@@ -58,8 +58,7 @@ This command has to be run in all the worker nodes so that they can be attached 
 K3s server always requires the port 6443 to be accessible by all teh nodes.
 
 
-But <u>***WHY 6443?***</u> :fire:
-*******************************
+*** But <u>WHY 6443?***</u> :fire:
 
              By default, the Kubernetes API server listens on port 6443 on the first non-localhost network interface, protected by TLS. Traffic on port 6443 is for the              Kubernetes API. ... for securely routing traffic from a remote shell outside the cluster to the UCP ports of the cluster.
  
