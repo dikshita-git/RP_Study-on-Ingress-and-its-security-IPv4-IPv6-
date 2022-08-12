@@ -49,9 +49,10 @@ In order to set up the K3s cluster, below steps are followed:
                    
 The token we can get it from the master node on the following location ***/var/lib/rancher/k3s/server/node-token***. As we alredy know the IP address of the master node, so in ***K3S_URL*** we will have to specify the HTTPS protocol of our master node and specify 6443 as the port number. Also, paste teh K3s_Token that we copied from teh location /var/lib/rancher/k3s/server/node-token.
 
-This is done by teh command:
-
-        curl -sfL https://get.k3s.io | K3S_URL=https://10.20.116.104:6443               K3S_TOKEN="K1022823f9c9804022be8bf04846f5da7bbcb7763063eee43290acdbc7ec66f6eb3::server:54956246f32a0d4f1cb6d4c9fb3b3f78" sh -
+This is done by the command:
+                
+                curl -sfL https://get.k3s.io | K3S_URL=https://10.20.116.104:6443 K3S_TOKEN="K1022823f9c9804022be8bf04846f5da7bbcb7763063eee43290acdbc7ec66f6eb3::server:54956246f32a0d4f1cb6d4c9fb3b3f78" sh -
+                
 
 K3s server always requires the port 6443 to be accessible by all teh nodes.
 
