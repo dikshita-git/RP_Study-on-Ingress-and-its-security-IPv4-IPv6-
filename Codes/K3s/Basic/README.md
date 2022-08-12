@@ -105,9 +105,10 @@ We can now check the services if it worked as shown in the image below:
 
 But it is not yet load-balanced and has to be done! Because once we created the service, the servcie instances can be made accessible from teh outside world by creating an ingress. This ingress can be of many types:
 
-            1. HA proxy
-            2. Traefik
-            3. Cert-manager
+            1. HAProxy, 
+            2. NGINX, 
+            3. Traefik, and, most recently, 
+            4. Envoy Proxy.
 
 
 #### 6. Ingress with HA Proxy :tada:
