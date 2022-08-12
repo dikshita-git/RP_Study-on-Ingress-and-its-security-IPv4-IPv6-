@@ -26,7 +26,10 @@ Setting up a K3s cluster in the most basic way with minmum nodes associated  is 
 
 In order to set up the K3s cluster, below steps are followed:
 
-#### 1. Install K3s binary in the ***master node*** with the command: ####  :tada:
+#### STEPS:
+
+
+#### 1. Install K3s binary in the ***master node*** with the command:  :tada:
 
               curl -sfL https://get.k3s.io | sh -
  This installation is carried out in the server/master node as it is the control plane and the worker nodes will be associated to it using teh k3s_server_token that we will receive after the installtion in the directory ***/var/lib/rancher/k3s/server/node-token***
