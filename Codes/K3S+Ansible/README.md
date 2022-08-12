@@ -38,6 +38,6 @@ In my case, I have:
 ## Step 2: Git clone
 *********************
 
-
+In the deployment environment machine, clone the official k3s+ansible <a href="https://github.com/k3s-io/k3s-ansible.git">Git repo</a>
 
       
