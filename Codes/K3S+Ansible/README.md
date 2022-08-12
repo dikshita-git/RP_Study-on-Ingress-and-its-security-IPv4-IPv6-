@@ -55,6 +55,6 @@ In order to proceed with instaalling k3s, we have to declare our masters, worker
             master
             node
 
-
+Now, it is the time to configure the ***inventory/my-cluster/group_vars/all.yml***. This group_vars/all.yml is the file which holds the very crucial informations as it consists of all the ***variables*** saved for Ansible
 
       
