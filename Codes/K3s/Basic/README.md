@@ -113,3 +113,11 @@ But it is not yet load-balanced and has to be done! Because once we created the 
 #### 6. Ingress with HA Proxy :tada:
 
 HAProxy Ingress Controller is claimed to be the most efficient way to route teh  traffic into our K3s cluster. It configures a HAProxy instance to route incoming requests from an external network to the in-cluster applications. The routing configurations are built reading specs from the Kubernetes cluster.
+
+Using teh command below we install teh HA Proy manifest directly from their official github site:
+    
+    kubectl apply -f https://raw.githubusercontent.com/haproxytech/kubernetes-ingress/v1.4/deploy/haproxy-ingress.yaml
+
+Meanwhile, we can now check if the HAProxy was installed using the command below in the image:
+
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/8.PNG">
