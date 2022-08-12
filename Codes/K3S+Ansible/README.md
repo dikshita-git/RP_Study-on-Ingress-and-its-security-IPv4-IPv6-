@@ -52,5 +52,28 @@ Command used:
 
 In order to proceed with instaalling k3s, we have to declare our masters, workers in our ansible host.ini file so that the k3s components are ready. In this case, we will edit ***inventory/my-cluster/hosts.ini*** as this is our inventory folder to work on.
 
+            [master]
+            
+            10.20.116.104
+            
+            10.20.116.209
+
+
+
+            [node]
+            
+            10.20.116.160
+            
+            10.20.116.213
+
+
+
+            [k3s_cluster:children]
+            
+            master
+            
+            node
+
+
 
       
