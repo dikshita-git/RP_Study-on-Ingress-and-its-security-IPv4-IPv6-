@@ -1,5 +1,5 @@
-## Securing Ingress in dual-stack K3s
-This is an academic Research project carried out for intensive learning of Ingress across different platforms and determines the possible measures to secure it both using IPv4 and IPv6.
+## Securing Ingress in K3s
+
 
 
 ### What is K3s?:
@@ -17,17 +17,3 @@ This is an academic Research project carried out for intensive learning of Ingre
 
 - This means both IPv4 and IPv6 works with K3S:
 
-
-### K3s Dual-stack:
-
-<i>Implementation:</i>
-
-1. Configure the proxmox's netplan (/etc/netplan) with the configuration as below:
-
-<img src="">
-
- These settings can also be applied during the proxmox system installation.
- 
-2. Install k3s using : 
-        
-        export INSTALL_K3S_VERSION=v1.21.3+k3s1
