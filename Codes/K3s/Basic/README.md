@@ -52,6 +52,6 @@ The token we can get it from the master node on the following location ***/var/l
 K3s server always requires the port 6443 to be accessible by all teh nodes.
 
 But <u>***WHY?***</u> :fire:
-*****************
+-----------------------------
  
  
