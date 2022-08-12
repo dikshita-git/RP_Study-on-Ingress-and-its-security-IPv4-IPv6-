@@ -42,4 +42,8 @@ In the deployment environment machine, clone the official k3s+ansible <a href="h
 
 Once the repo is cloned, we now have to configure the inventory file according to our requirements. Instead of applying the configurations in the default inventory file ***sample***, we create its copy called ***my-cluster*** and edit there.
 
+Command used:
+
+      cp -R inventory/sample inventory/my-cluster
+
       
