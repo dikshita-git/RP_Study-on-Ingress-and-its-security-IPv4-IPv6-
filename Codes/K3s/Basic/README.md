@@ -89,3 +89,14 @@ Now, we can create a sample nginx deployment yml file named "nginx-deployment.ym
  
  <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/4.PNG">
 
+
+
+#### 5. Create a Service  :tada:
+
+Now, here we create a service named "sample-nginx-service.yml" and created it using the command:
+
+        kubectl create -f sample-nginx-service.yml"
+        
+We can now check the services if it worked as shown in the image below:
+
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/7.PNG">
