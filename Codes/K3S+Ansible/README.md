@@ -1,4 +1,6 @@
-Setting up K3s cluster manually can be very tiresome task to do specially with High-availability. Thus uding automation tool like Ansible help us carry out the tasks efficiently. Whilst there are some steps to be followed in order to craete the k3s cluster using Ansible, here are they listed:
+# Automatised K3s with Ansible
+
+Setting up K3s cluster manually can be very tiresome task to do specially with High-availability. Thus uding automation tool like Ansible help us carry out the tasks efficiently. Once our VMs are configured with the OS, we are good to get started. Whilst there are some steps to be followed in order to craete the k3s cluster using Ansible, here are they listed:
 
 ## Step 1: Install Ansible
 ******************************
@@ -29,4 +31,13 @@ In my case, I have:
       **********************
       
              depenv: IP address    ------->  10.20.116.88/24
+             
+
+
+
+## Step 2: Git clone
+*********************
+
+
+
       
