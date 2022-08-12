@@ -5,7 +5,13 @@ Thus, I have installed Ansible 2.13.2 on my deployment environemnt VM named ***d
 
 Next, it is time to configure the ***inventory/hosts.ini***. here is the link to my <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Codes/K3s/Basic/K3s-Ingress/Haproxy/inventory/sample/hosts.ini">hosts.ini</a> configuration file. Once done, don't forget to activate the ***inventory*** line in <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Codes/K3s/Basic/K3s-Ingress/Haproxy/ansible.cfg">ansible.cfg</a>.
 
-The above step is followed by copying teh ssh-key of the deployment VM to the master and worker nodes because Ansible works via ssh and passwordless access. Thus our cluster nodes can be accessible by Ansible and we get a successful ping in ansible. 
+The above step is followed by copying teh ssh-key of the deployment VM to the master and worker nodes because Ansible works via ssh and passwordless access. The command used are:
+
+        1. ssh-copy-id master@10.20.116.104
+        2. ssh-copy-id worker1@10.20.116.160
+        3. ssh-copy-id worker2@10.20.116.213
+
+Thus our cluster nodes can be accessible by Ansible and we get a successful ping in ansible. 
 
 In the next step, we edit the ***/etc/ansible/hosts*** as given below::
 
