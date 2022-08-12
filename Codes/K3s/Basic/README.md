@@ -6,6 +6,8 @@ This folder consists of the normal way to create a 3-Node K3s cluster. Thanks an
 
 2. <a href="https://pet2cattle.com/2021/04/k3s-join-nodes">Pet2cattle</a>
 
+3. <a hre="https://github.com/jcmoraisjr/haproxy-ingress">HA Proxy</a>
+
 In this case, I have set up a K3s cluster with:
     
               1 Master node
@@ -100,3 +102,14 @@ Now, here we create a service named "sample-nginx-service.yml" and created it us
 We can now check the services if it worked as shown in the image below:
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/7.PNG">
+
+But it is not yet load-balanced and has to be done! Because once we created the service, the servcie instances can be made accessible from teh outside world by creating an ingress. This ingress can be of many types:
+
+            1. HA proxy
+            2. Traefik
+            3. Cert-manager
+
+
+#### 6. Ingress with HA Proxy :tada:
+
+HAProxy Ingress Controller is claimed to be the most efficient way to route teh  traffic into our K3s cluster. It configures a HAProxy instance to route incoming requests from an external network to the in-cluster applications. The routing configurations are built reading specs from the Kubernetes cluster.
