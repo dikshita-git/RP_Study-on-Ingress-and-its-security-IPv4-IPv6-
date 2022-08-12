@@ -12,26 +12,17 @@ In my case, I have:
 
       Master nodes: 2
       *******************
-      
           1. master1: IP address    -------> 10.20.116.104/24
-          
           2. master2: IP address    -------> 10.20.116.209/24
-      
-      
-      
+        
       Worker nodes: 2
       *******************
-      
           1. worker1: IP address    -------> 10.20.116.160/24
-          
           2. worker2: IP address    -------> 10.20.116.213/24
 
-
-      
       Deployment environment: 1
       **********************
-      
-             depenv: IP address    ------->  10.20.116.88/24
+        depenv: IP address    ------->  10.20.116.88/24
              
 
 
@@ -56,20 +47,12 @@ In order to proceed with instaalling k3s, we have to declare our masters, worker
             10.20.116.104
             10.20.116.209
 
-
-
             [node]
-            
             10.20.116.160
-            
             10.20.116.213
 
-
-
             [k3s_cluster:children]
-            
             master
-            
             node
 
 
