@@ -121,3 +121,7 @@ Using teh command below we install teh HA Proy manifest directly from their offi
 Meanwhile, we can now check if the HAProxy was installed using the command below in the image:
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/8.PNG">
+
+Now, we can try to talk to one of the pods (using the IP address shown when we run ***kubectl get pods -o wide***. An idea is shown below:
+
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/9.PNG">
