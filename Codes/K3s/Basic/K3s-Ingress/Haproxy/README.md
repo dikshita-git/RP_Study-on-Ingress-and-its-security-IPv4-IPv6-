@@ -19,5 +19,5 @@ In the next step, we edit the ***/etc/ansible/hosts*** as given below::
 
 We can also ansible ping all our hosts listed in inventory/hosts.ini by running the below command isnide the folder where my hosts.ini file is present. if everything works fien, we will get a pong response :
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/11.PNG" width="500" height="350">
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/11.PNG" width="700" height="350">
 
