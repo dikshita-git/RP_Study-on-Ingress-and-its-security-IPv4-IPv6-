@@ -1,6 +1,8 @@
 ## Details on my K3s Cluster
 
-For this case, I have set up a K3s cluster with:
+This folder consists of the normal way to create a 3-Node K3s cluster.
+
+In this case, I have set up a K3s cluster with:
     
               1 Master node
               **************
