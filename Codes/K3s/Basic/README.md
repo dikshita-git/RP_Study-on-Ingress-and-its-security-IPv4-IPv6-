@@ -81,4 +81,11 @@ We can also have a look to knoww how the k3s-agent unit file uses an environment
 
 #### 4. Create a deployment  :tada:
 
-Now, we can create a sample nginx deployment yml file named "nginx-deployment.yml" for test. 
+Now, we can create a sample nginx deployment yml file named "nginx-deployment.yml" for test. Here we have specified 2 replicas to be deployed. Further, this file is created and activated using teh command below:
+
+           kubectl create -f nginx-deployment.yml
+           
+ While, if we now check the pods using teh commands as shown in the image, we see the folllowing:
+ 
+ <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/4.PNG">
+
