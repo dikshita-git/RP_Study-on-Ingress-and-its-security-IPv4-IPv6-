@@ -72,5 +72,5 @@ In order to test whether the Step 2 was successful, run the command beloww in th
                     
 We should now see the master node and worker nodes together in the list as shown in the image below:
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/1..PNG">
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/2.PNG">
             
