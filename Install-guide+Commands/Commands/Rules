@@ -1,6 +1,0 @@
-- Delete the clusters and nodes everytime after work.
-- Clean docker images and containers.
-      = docker ps (to load contaierS)
-      = docker delete Container_id 
-      = docekr images (to load images)
-      = docker image rm image_id (to delete image)
