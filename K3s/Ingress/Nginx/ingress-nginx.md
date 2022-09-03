@@ -7,7 +7,7 @@ in this part, we are trying to get a valid certificate fro our sample applicatio
 
 2. Cert-manager as certificate manager
 
-  - We need cert-manager so taht we can communicate with our certificate provider. In short, we will configure cert-manager to speak to Lets encrypt
+    - We need cert-manager so taht we can communicate with our certificate provider. In short, we will configure cert-manager to speak to Lets encrypt
 
 Results expected:
 ----------------------
