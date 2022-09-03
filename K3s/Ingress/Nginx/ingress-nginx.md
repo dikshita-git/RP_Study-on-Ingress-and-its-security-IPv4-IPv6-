@@ -40,6 +40,6 @@ curl -sfL https://get.k3s.io | sh -s -
 
 4. Install Nginx Ingress Controller by:
 
-```
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.47.0/deploy/static/provider/baremetal/deploy.yaml
-```
+     ```
+     kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.47.0/deploy/static/provider/baremetal/deploy.yaml
+     ```
