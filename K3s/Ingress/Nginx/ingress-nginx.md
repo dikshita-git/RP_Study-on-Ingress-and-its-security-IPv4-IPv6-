@@ -36,4 +36,10 @@ curl -sfL https://get.k3s.io | sh -s -
      ```
      curl -sfL https://get.k3s.io | K3S_URL=https://<IP_address_of_master_node>:6443 K3S_TOKEN="<PASTE_THE _COPIED_TOKEN_HERE>" sh -
      ```
-        
+      This will join the worker nodes to the master node in the cluster.
+
+4. Install Nginx Ingress Controller by:
+
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.47.0/deploy/static/provider/baremetal/deploy.yaml
+```
