@@ -23,3 +23,17 @@ The tool used to do this is cert-manager.
 export INSTALL_K3S_EXEC="server --no-deploy traefik"
 ```
 
+2. Install k3s cluster with:
+
+```
+curl -sfL https://get.k3s.io | sh -s -
+```
+
+3. Add worker nodes to the cluster by copying the NODE-TOKEN from /var/lib/rancher/k3s/server/node-token
+ 
+   - Open up the worker node and write the command:
+        
+     ```
+     curl -sfL https://get.k3s.io | K3S_URL=https://<IP_address_of_master_node>:6443 K3S_TOKEN="<PASTE_THE _COPIED_TOKEN_HERE>" sh -
+     ```
+        
