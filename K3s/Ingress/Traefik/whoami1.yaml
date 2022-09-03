@@ -1,0 +1,43 @@
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whoami1
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: whoami1
+  template:
+    metadata:
+      labels:
+        app: whoami1
+    spec:
+      containers:
+        - name: whoami1
+          image: traefik/whoami:v1.6.0
+          ports:
+          - containerPort: 80
+          volumeMounts:
+          - name: html-volume
+            mountPath: /usr/share/nginx/html
+      volumes:
+      - name: html-volume
+        configMap:
+          name: whoami1-index-html
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: whoami1
+
+spec:
+  selector:
+    app: whoami1
+
+  ports:
+    - port: 80
+      targetPort: http
