@@ -1,26 +1,23 @@
-kind: Ingress
 apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
-  name: whoami
-  namespace: whoami
+  name: main
+  namespace: main
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web
-
+    kubernetes.io/ingress.class: traefik
+    traefik.ingress.kubernetes.io/redirect-entry-point: https
 spec:
   rules:
-    - http:
+    - host: main.dkrp2.xyz
+      http:
         paths:
-          - path: /bar
-            pathType: Prefix
-            backend:
+          - backend:
               service:
-                name: whoami
+                name: main
                 port:
                   number: 80
-          - path: /foo
+            path: /
             pathType: Prefix
-            backend:
-              service:
-                name: whoami
-                port:
-                  number: 80
+  tls:
+    - hosts:
+        - main.dkrp2.xyz
