@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: cloudflare-api-token
+  namespace: cert-manager
+type: Opaque
+stringData:
+  api-token: fOkXmIayj3zcwY3bPhWQoy2Qo130O8HbllqY96t-
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: dikshita.kalita@smail.th-koeln.de
+    privateKeySecretRef:
+      name: letsencrypt-prod-key
+    solvers:
+      - dns01:
+          cloudflare:
+            email: dikshita.kalita@smail.th-koeln.de
+            apiTokenSecretRef:
+              name: cloudflare-api-token-secret
+              key: 1052b508e3752ab7dc0a759bbcfac6e4c1f93
