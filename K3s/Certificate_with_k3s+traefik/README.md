@@ -17,13 +17,15 @@ In other words, an Ingress Controller can be defined as an in-cluster applicatio
 3. Configures itself in order to route the recived traffic or Ingress based on the Ingress rules defined.
 This also implies, when we talk about HTTP/HTTPS traffic in Kubernetes, it specifies port 80/443 respectively on the publicj IP address from which our Kuberneets cluster will receive the traffic.
 
-There aare avrious type of Ingress Controllers available. Some of the most popular ones are:
+There are avrious type of Ingress Controllers available. Some of the most popular ones are:
 
 1. The ***Traefik Kubernetes Ingress*** provider is an ingress controller for the Traefik proxy.
 2. The ***NGINX Ingress Controller*** for Kubernetes works with the NGINX webserver (as a proxy).
 3. The ***HAProxy Ingress Controller*** for Kubernetes is also an ingress controller for HAProxy.
 4. ***Istio Ingress*** is an Istio based ingress controller.
 
-In this particular folder, our primary focus is on issuing Wildcard certificates to K3s using ***Traefik***. To deep dive into the steps followed and their declarative aspects, here is a basic draft about Traefik.
+In this particular folder, our primary focus is on using default Wildcard certificate for K3s's in-built Ingress Controller ***Traefik***. To deep dive into the steps followed and their declarative aspects, here is a basic draft about <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik">Traefik</a> to read.
+
+
 
 
