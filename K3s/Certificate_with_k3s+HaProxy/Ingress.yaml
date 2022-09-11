@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: new-haproxy-ingress
+ annotations:
+    haproxy-ingress.github.io/rewrite-target: /
+    cert-manager.io/cluster-issuer: letsencrypt-staging
+spec:
+ rules:
+ - host: dkrp3.xyz
+   http:
+     paths:
+     - pathType: Prefix
+       path: /
+       backend:
+         service:
+           name: new-service
+           port: 
+             number: 80
+ tls:
+ - secretName: dkrp3-cert
+   hosts:
+   - dkrp3.xyz

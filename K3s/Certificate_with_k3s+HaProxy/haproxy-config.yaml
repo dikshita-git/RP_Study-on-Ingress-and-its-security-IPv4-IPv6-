@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: haproxy-ingress
+  namespace: default
+data:
+  ssl-certificate: "default/newdemo-cert"
