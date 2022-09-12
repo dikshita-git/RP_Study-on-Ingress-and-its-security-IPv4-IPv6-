@@ -8,7 +8,7 @@ metadata:
     traefik.ingress.kubernetes.io/redirect-entry-point: https
 spec:
   rules:
-    - host: main.dkrp2.xyz
+    - host: dkrp2.xyz
       http:
         paths:
           - backend:
@@ -20,4 +20,4 @@ spec:
             pathType: Prefix
   tls:
     - hosts:
-        - main.dkrp2.xyz
+        - dkrp2.xyz
