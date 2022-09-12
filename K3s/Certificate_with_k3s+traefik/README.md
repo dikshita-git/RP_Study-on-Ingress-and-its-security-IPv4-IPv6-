@@ -17,7 +17,7 @@ Here is my k3s cluster set-up <code> <a href="https://github.com/dikshita-git/RP
 Once our cluster is up and running, we can now install Cert-manager. Read more about <code> <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes#cert-manager">Cert-manager</a></code>
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/helm_install.PNG" height="300">
-<p>![#f03c15] Fig: Installing cert-manager using helm</p>
+<p>![#1589F0](https://via.placeholder.com/15/1589F0/1589F0.png)Fig: Installing cert-manager using helm</p>
 
 Now we could check ns to see if cert-manager is running:
 
