@@ -37,7 +37,15 @@ Apply the MetalLB manifest controller and speaker from the metallb.yaml file
 ```
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/metallb.yaml
 ```
-These wwould result in craeting the components as shown in image below:
+These would result in craeting the components as shown in image below:
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Bnginx/2.PNG">
 <p><i>Fig: Installing Metallb</i></p>
+
+
+### 3. Create configmap file to insert IP address pool for Metallb
+
+As mentioned above, Metallb refers to a configmap.yaml file to assign our dservices IP addresses from that pool. We can then apply the file as shown below:
+
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Bnginx/3.PNG">
+<p><i>Fig: Create configmap for Metallb</i></p>
