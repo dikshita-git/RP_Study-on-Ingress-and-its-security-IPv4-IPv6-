@@ -31,4 +31,6 @@ Issuers, and ClusterIssuers are Kubernetes resources that represent certificate 
 
 I am using the ACME issuer type with DNS01 challenges via Cloudflare. This involves me first needing to get an API token from Cloudflare and then providing it to K3s as a Secret resource as <code>api-token</code> of the ClusterIssuer file.
 
+The benefit of using a ClusterIssuer (over a standard Issuer) will make it possible to create the wildcard certificate in the kube-system namespace that K3s uses for Traefik. Also, note that any referenced Secret resources will (by default) need to be in the cert-manager namespace.
 
+### 4. Create and apply ClusterIssuer
