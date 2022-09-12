@@ -28,7 +28,7 @@ Now we could check ns to see if cert-manager is running:
 
 
 >***Note***
->There is a possibility that cert-manager cainjector shows teh status of "Crashloopbackoff".
+>There is a possibility that cert-manager ([^cainjector]) shows the status of "Crashloopbackoff".
 >  - In such cases, to get more details, check the log file of cert-manager ca-injector by:
 
 ```
@@ -43,7 +43,7 @@ k3s kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/
 Here I tried to apply a higher version of cert-manager. v1.2.0 already moved to use "admissionregistration.k8s.io/v1".
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-mang-cainjector-solution.PNG">
-<p><i>Fig: Final cert-manage Cainjector pod</i></p>
+<p><i>Fig: Final cert-manager Cainjector pod</i></p>
 
 
 ### 3. Create and apply ClusterIssuer
