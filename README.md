@@ -4,9 +4,12 @@ Study on Ingress filtering/securing in Kubernetes and evaluation of its best pos
 
 ## Team
 
-<p>***Supervsior:*** Prof.Dr Martin Leischner</p>
-<p>***Mentor:*** Richard Clauß</p>
-<p>***Candidate:*** Dikshita Kalita</p>
+***Supervsior:*** Prof.Dr Martin Leischner
+
+***Mentor:*** Richard Clauß
+
+***Candidate:*** Dikshita Kalita
+
 
 ## Introduction
 
