@@ -7,7 +7,7 @@ Below marks the steps followed for the tassk with their description:
 ## Steps:
 
 
-***1. Set up the k3s Cluster***
+### 1. Set up the k3s Cluster
 
 Here is my k3s cluster set-up <code> <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Cluster-setup">file</a></code> .
 
