@@ -1,6 +1,6 @@
 ## Topic
 
-Study on Ingress filtering/securing in Kubernetes and evaluation of its best possible implementation(s) across different platforms.
+Study on Ingress filtering/securing in Kubernetes and evaluation of its best possible implementation(s) across different platforms.
 
 ## Team
 
