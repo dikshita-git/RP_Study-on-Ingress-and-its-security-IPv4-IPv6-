@@ -52,7 +52,13 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 ## Literatures:
 
-1. <code href="https://cert-manager.io/docs/concepts/ca-injector/">Cert manager</code>
+1. <code><a href="href="https://cert-manager.io/docs/">Cert manager</a></code>
+
+2. <code><a href="href="https://cert-manager.io/docs/concepts/ca-injector/">Cert manager Cainjector</a></code>
+  
+3. <code><a href="href="https://cert-manager.io/docs/concepts/ca-injector/">Cert manager</a></code>
+  
+4. 
 
 ***Wiki:***
 
