@@ -63,7 +63,7 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 <details><summary>TLS</summary><p>
   
-  *<code><a href="https://opensource.com/article/20/3/ssl-letsencrypt-k3s">TLS in K3s</a></code>
+  * <code><a href="https://opensource.com/article/20/3/ssl-letsencrypt-k3s">TLS in K3s</a></code>
   
 </p></details>
 
