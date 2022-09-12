@@ -38,7 +38,7 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
        
 1.2 <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Certificate_with_k3s%2BHaProxy">HaProxy</a></code>, 
        
-1.3 Nginx and 
+1.3 <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Certificate_with_k3s%2Bnginx">Nginx</a></code> and 
        
 1.4 Compare the applicability differences of these Ingress Controllers.
        
