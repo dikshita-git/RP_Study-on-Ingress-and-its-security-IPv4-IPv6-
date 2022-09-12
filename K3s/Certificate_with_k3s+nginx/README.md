@@ -26,9 +26,17 @@ We can now check if our cluster has all the required components:
 
 We can install Metallb using Helm or by the yaml file.I used the yaml file:
 
+Apply the namespace yaml to create the metallb-system namespace
+
 ```
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/namespace.yaml
 ```
+
+Apply the MetalLB manifest controller and speaker from the metallb.yaml file
 ```
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/metallb.yaml
 ```
+These wwould result in craeting the components as shown in image below:
+
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Bnginx/2.PNG">
+<p><i>Fig: Instaling Metallb</i></p>
