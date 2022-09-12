@@ -15,3 +15,8 @@ Once the command above is implemented in our K3s server, we can copy the node-to
 ```
 curl -sfL https://get.k3s.io | K3S_URL=https://[IP_address_of_master]:6443 K3S_TOKEN="paste_the_copied_node-token" sh -
 ```
+
+We can now check if our cluster has all the required components:
+
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Bnginx/00.PNG">
+<p><i>Fig: Check the cluster nodes</i></p>
