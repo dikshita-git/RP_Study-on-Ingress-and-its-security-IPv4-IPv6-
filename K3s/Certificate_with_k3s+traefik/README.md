@@ -28,7 +28,7 @@ Now we could check ns to see if cert-manager is running:
 
 
 >***Note***
->There is a possibility that cert-manager ([^cainjector]) shows the status of "Crashloopbackoff".
+>There is a possibility that cert-manager ( [^1] ). ([^cainjector]) shows the status of "Crashloopbackoff".
 >  - In such cases, to get more details, check the log file of cert-manager ca-injector by:
 
 ```
