@@ -62,3 +62,18 @@ I used helm fro this purpose:
 
 >***Note***
 >This will also assign deafult Nginx TLS ecrtificate but we will adjust it with our self-signed certificate in teh further steps.
+
+Now, we can check the services and we see the IP address attached to the Loadbalancer as shown in the below image.
+
+
+### 5. Insttall cert-manager
+
+Since i already have the cert-manager namespace so we can move forward to installing CRD and cert-manager with the command below:
+
+```
+k3s kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.crds.yaml
+```
+
+```
+k3s kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.yaml
+```
