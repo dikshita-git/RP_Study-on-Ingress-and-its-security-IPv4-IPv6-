@@ -24,7 +24,7 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
        
        1.4 Compare the applicability differences of these Ingress Controllers.
        
-       1.5 Compare the use-cases of the ecrtificates used above.
+       1.5 Compare the use-cases of the certificates used above.
     
     
 2. Test automatic certificate rotation on startup on atleast one of the aforementioned task.
