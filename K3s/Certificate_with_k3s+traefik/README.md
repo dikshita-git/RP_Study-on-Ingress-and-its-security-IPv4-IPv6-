@@ -27,6 +27,4 @@ Now we could check ns to see if cert-manager is running:
 
 Here is my <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/cert-manager/ClusterIssuer.yaml">ClusterIssuer</a></code> file
 
-
-
-
+Issuers, and ClusterIssuers are Kubernetes resources that represent certificate authorities (CAs) that are able to generate signed certificates by honoring certificate signing requests. All cert-manager certificates require a referenced issuer that is in a ready condition to attempt to honor the request. <a ref="https://cert-manager.io/docs/concepts/issuer/">Read More</a>
