@@ -11,7 +11,7 @@ Below marks the steps followed for the tassk with their description:
 Here is my file k3s cluster set-up andd running it in detail. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Cluster-setup">Click here</a>
 
 
-***2. Install cert-manager***
+***2. Install cert-manager (using helm)***
 
 Once our cluster is up and running, we can now install Cert-manager. Read more about Cert-manager <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes#cert-manager">here</a>
 
