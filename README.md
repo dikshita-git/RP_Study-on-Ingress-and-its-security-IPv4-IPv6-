@@ -1,21 +1,37 @@
-## Securing Ingress in K3s
+## Goal
+
+This project aims to secure the Ingress in a K3s cluster using different Ingress Cntrollers namely Traefik, HaProxy, Nginx and to study their differences in use-cases. Further, it also tests various certificates like self-signed, wildcard and default certificates and analyse automatic certificate rotation.
 
 
+## Research Questions:
 
-### What is K3s?:
--This is a lightweight distribution of Kubernetes where we can easily create clusters and manage it using the tool K3d which basically means K3s with Docker.
+1. What are the best use-cases for Traefik Vs HaProxy Vs Nginx Ingress Controllers and how they differ in their operations?
 
-- Applicable for: 
+2. What are the difference situations of applicability of self-signed, wildcard and default certificates?
 
-    a) IoT
+3. Analysing best practices to implement certificate rotation in k3s.
     
-    b) Edge Computing
-    
-    c) ARM etc. where the device components are smaller and holds minimal memory.
-    
-- It supports dual-stack from v1.21+
+        - Automatic rotation
 
-- This means both IPv4 and IPv6 works with K3S:
+
+
+## Tasks:
+
+1.Secure K3s ingress with TLS with ingress controllers 
+
+       1.1 Traefik, 
+       
+       1.2 HaProxy, 
+       
+       1.3 Nginx and 
+       
+       1.4 Compare the applicability differences of these Ingress Controllers.
+       
+       1.5 Compare the use-cases of the ecrtificates used above.
+    
+    
+2. Test automatic certificate rotation on atleast one of the aforementioned task.
+
 
 
 ### Roadmap:
