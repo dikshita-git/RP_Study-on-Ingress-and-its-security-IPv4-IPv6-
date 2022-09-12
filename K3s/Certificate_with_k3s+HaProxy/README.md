@@ -68,4 +68,8 @@ This  command will install all the cert manager components in our cluster. Next 
 
 Issuers, and ClusterIssuers are Kubernetes resources that represent certificate authorities (CAs) that are able to generate signed certificates by honoring certificate signing requests. All cert-manager certificates require a referenced issuer that is in a ready condition to attempt to honor the request. <a href="https://cert-manager.io/docs/concepts/issuer/">Read More</a>
 
-Here is my <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2BHaProxy/Issuer.yaml">ClusterIssuer</a> file
+Here is my <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2BHaProxy/Issuer.yaml">ClusterIssuer</a> file.
+
+***Description of ClusterIssuer***
+
+* 
