@@ -53,7 +53,7 @@ As mentioned above, Metallb refers to a configmap.yaml file to assign our dservi
 Here is my <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Bnginx/ConfigMap.yaml">ConfigMap.yaml</a></code>
 
 
-### 4. Insttall nginx ingress controller
+### 4. Install nginx ingress controller
 
 I used helm fro this purpose:
 
@@ -65,8 +65,12 @@ I used helm fro this purpose:
 
 Now, we can check the services and we see the IP address attached to the Loadbalancer as shown in the below image.
 
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Bnginx/5.PNG">
+<p><i>Fig: Loadbalancer IP address</i></p>
 
-### 5. Insttall cert-manager
+
+
+### 5. Install cert-manager
 
 Since i already have the cert-manager namespace so we can move forward to installing CRD and cert-manager with the command below:
 
@@ -77,3 +81,13 @@ k3s kubectl apply -f https://github.com/cert-manager/cert-manager/releases/downl
 ```
 k3s kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.yaml
 ```
+
+
+### 6. Create resources that represent CA
+
+Hereby in this step we will create a <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Bnginx/ClusterIssuer.yaml">ClusterIsuuer.yaml</a></code> and <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Bnginx/Issuer.yaml">Isuuer.yaml</a></code>
+
+These both selfsigned Issuers does not represent a CA in this case and is rather signifies that a private key of the certificates will sign itself.
+
+>***Note***
+>These type of Issuer is very beneficial if we want to make a quick test for ad-hoc certificates. <a href="https://cert-manager.io/docs/configuration/selfsigned/">ReadMore</a>
