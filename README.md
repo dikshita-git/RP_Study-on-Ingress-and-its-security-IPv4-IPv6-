@@ -32,7 +32,7 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 ## Tasks:
 
-1.Secure K3s ingress with TLS with ingress controllers 
+<b>1.</b> Secure K3s ingress with TLS with ingress controllers 
 
 1.1 <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Certificate_with_k3s%2Btraefik">Traefik</a></code>, 
        
@@ -45,9 +45,9 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 1.5 Compare the use-cases of the certificates used above.
     
     
-2. Test automatic certificate rotation on startup on atleast one of the aforementioned task.
+<b>2.</b> Test automatic certificate rotation on startup on atleast one of the aforementioned task.
 
-3. Recovering from the expired or old certificates.
+<b>3. </b> Recovering from the expired or old certificates.
 
 
 
