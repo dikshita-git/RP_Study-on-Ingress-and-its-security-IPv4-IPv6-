@@ -59,4 +59,4 @@ The benefit of using a ClusterIssuer (over a standard Issuer) will make it possi
 
 ### 4. Requesting a wildcard Certificate
 
-This <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/cert-manager/Certificate.yaml">Cerficate.yaml</a></code> file requests for a <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Research-answers/2.%20Certificates">Wildcard certificate</a></code>for my domain dkrp2.xyz.
+This <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/cert-manager/Certificate.yaml">Cerficate.yaml</a></code> file requests for a <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Research-answers/2.%20Certificates">Wildcard certificate</a></code>for my domain <a href="https://dkrp2.xyz/">dkrp2.xyz</a>.
