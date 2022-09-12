@@ -95,5 +95,18 @@ These both selfsigned Issuers does not represent a CA in this case and is rather
 
 ### 7. Create an Ingress file
 
-Through this <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Bnginx/Ingress.yaml">Ingress file</a></code>, we will be able to use selfsigned-issuer to issue te TLS certificat efor nginx ingress.   
+Through this <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Bnginx/Ingress.yaml">Ingress file</a></code>, we will be able to use selfsigned-issuer to issue te TLS certificate for nginx ingress.   
 
+
+### 8. Check the certificate details:
+
+We can also check the status and details of the issued certificate using the command as shown here:
+
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Bnginx/8.PNG">
+<p><i>Fig: Certificate detail</i></p>
+
+Just replace the end with the given <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Bnginx/Ingress.yaml">tls.secretname</a></code>
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
