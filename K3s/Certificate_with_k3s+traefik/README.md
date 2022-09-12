@@ -19,10 +19,13 @@ Once our cluster is up and running, we can now install Cert-manager. Read more a
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/helm_install.PNG" height="300">
 <p><i>Fig: Installing cert-manager using helm</i></p>
 
+
+
 Now we could check ns to see if cert-manager is running:
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-man_ns.PNG">
-<p>Fig: Checking namespace named cert-manager</p>
+<p><i>Fig: Checking namespace named cert-manager</i></p>
+
 
 >***Note***
 >There is a possibility that cert-manager cainjector shows teh status of "Crashloopbackoff".
@@ -40,7 +43,7 @@ k3s kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/
 Here I tried to apply a higher version of cert-manager. v1.2.0 already moved to use "admissionregistration.k8s.io/v1".
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-mang-cainjector-solution.PNG">
-<p>Fig: Final cert-manage Cainjector pod</p>
+<p><i>Fig: Final cert-manage Cainjector pod</i></p>
 
 
 ### 3. Create and apply ClusterIssuer
