@@ -2,7 +2,6 @@
 * [Headers](#headers)  
 * [Emphasis](#emphasis)  
   
-<a name="headers"/>
 
 
 ## Introduction
