@@ -50,7 +50,7 @@ As mentioned above, Metallb refers to a configmap.yaml file to assign our dservi
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Bnginx/3.PNG">
 <p><i>Fig: Create configmap for Metallb</i></p>
 
-Here is my <code><a href="">ConfigMap.yaml</a></code>
+Here is my <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Bnginx/ConfigMap.yaml">ConfigMap.yaml</a></code>
 
 
 ### 4. Insttall nginx ingress controller
