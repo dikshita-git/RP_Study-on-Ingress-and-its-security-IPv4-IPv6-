@@ -36,7 +36,7 @@ kubectl logs -n cert-manager <cert-manager-cainjector-name-found-from-get-pods -
 ```
 >   - Next install the higher version of cert-manager yaml by :
      
- ```
+```
 k3s kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.4.0/cert-manager.yaml
 ```      
 
@@ -60,3 +60,32 @@ The benefit of using a ClusterIssuer (over a standard Issuer) will make it possi
 ### 4. Requesting a wildcard Certificate
 
 This <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/cert-manager/Certificate.yaml">Cerficate.yaml</a></code> file requests for a <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Research-answers/2.%20Certificates">Wildcard certificate</a></code>for my domain <a href="https://dkrp2.xyz/">dkrp2.xyz</a>.
+
+If we check the ***kubectl describe certificate -n kube-system***,  we will see the message "Certificate issued successfully." 
+
+
+### 5. Configure traefik
+
+The final step includes configuring the default ingress controller in k3s : Traefik so that the domain uses the wildcard we requested for in the above step. This step is needed because if the Ingress resource is being defined without any TLS secretname then Traefik chooses the default TLS certificate as it has no input about the new/custom certificate we received. traefik.yml. Thus we have to mount our custom wildcard certficate in such a manner that Traefik choose it instead of opting for  its default TLS certificate. 
+
+In order to do that, we have to add the beow to the vauesContent part in /var/lib/rancher/k3s/server/manifest/traefik.yml file as shown in the image below:
+
+```
+extraVolumeMounts:
+  - name: ssl
+    mountPath: /ssl
+extraVolumes:
+  - name: ssl
+    secret:
+      secretName: wildcard-dkrp2-tls     
+```
+
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/tarefik.yaml.PNG">
+<p><i>Fig: My traefik file after the content</i></p>
+
+
+This <code>secretName</code> should be the same as mentioned in the <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/cert-manager/Certificate.yaml">Certificate.yaml</a></code> file.
+
+
+*** What does adding these contents imply?***
+
