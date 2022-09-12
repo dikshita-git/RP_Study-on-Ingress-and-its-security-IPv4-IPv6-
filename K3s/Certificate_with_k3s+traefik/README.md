@@ -42,7 +42,7 @@ k3s kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/
 
 Here I tried to apply a higher version of cert-manager. v1.2.0 already moved to use "admissionregistration.k8s.io/v1".
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-mang-cainjector-solution.PNG" height="300">
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-mang-cainjector-solution.PNG">
 <p><i>Fig: Final cert-manager Cainjector pod</i></p>
 
 
