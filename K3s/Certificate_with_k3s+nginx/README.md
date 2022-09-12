@@ -95,7 +95,10 @@ These both selfsigned Issuers does not represent a CA in this case and is rather
 
 ### 7. Create an Ingress file
 
-Through this <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Bnginx/Ingress.yaml">Ingress file</a></code>, we will be able to use selfsigned-issuer to issue te TLS certificate for nginx ingress.   
+Through this <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Bnginx/Ingress.yaml">Ingress file</a></code>, we will be able to use selfsigned-issuer to issue te TLS certificate for nginx ingress. 
+
+>***Note***
+>ImplementationSpecific: With this path type, matching is up to the IngressClass. Implementations can treat this as a separate pathType or treat it identically to Prefix or Exact path types. <a href="https://kubernetes.io/docs/concepts/services-networking/ingress/#path-types">Read More</a>
 
 
 ### 8. Check the certificate details:
