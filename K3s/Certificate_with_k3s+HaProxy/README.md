@@ -76,5 +76,4 @@ Here is my <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and
 * Its named as Letsencrypt-staging
 * Server here specified is the letsencrypt staging server.
 * All ACME[^1] Issuers follow a similar configuration structure - a clients email, a server URL, a privateKeySecretRef, and one or more solvers. Solvers come in the form of dns01 and http01 stanzas. 
-
-[^1]Automatic Certificate Management Environment (ACME) protocol is a communications protocol for automating interactions between certificate authorities and their users' servers, allowing the automated deployment of public key infrastructure at very low cost.[
+[^1]  Automatic Certificate Management Environment (ACME) protocol is a communications protocol for automating interactions between certificate authorities and their users' servers, allowing the automated deployment of public key infrastructure at very low cost.[
