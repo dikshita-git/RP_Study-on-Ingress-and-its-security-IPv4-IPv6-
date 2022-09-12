@@ -28,3 +28,7 @@ Now we could check ns to see if cert-manager is running:
 Here is my <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/cert-manager/ClusterIssuer.yaml">ClusterIssuer</a></code> file
 
 Issuers, and ClusterIssuers are Kubernetes resources that represent certificate authorities (CAs) that are able to generate signed certificates by honoring certificate signing requests. All cert-manager certificates require a referenced issuer that is in a ready condition to attempt to honor the request. <a href="https://cert-manager.io/docs/concepts/issuer/">Read More</a>
+
+I am using the ACME issuer type with DNS01 challenges via Cloudflare. This involves me first needing to get an API token from Cloudflare and then providing it to K3s as a Secret resource as <code>api-token</code> of the ClusterIssuer file.
+
+
