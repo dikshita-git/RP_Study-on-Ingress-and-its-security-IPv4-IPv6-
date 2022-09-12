@@ -65,6 +65,8 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
   
   * <code><a href="https://opensource.com/article/20/3/ssl-letsencrypt-k3s">TLS in K3s</a></code>
   
+  * <code><a href="https://www.thebookofjoel.com/k3s-cert-manager-letsencrypt">TLS in K3s with traefik, cert-manager and Lets-Encrypt</a></code>
+  
 </p></details>
 
 <details><summary>Cert-manager</summary><p>
