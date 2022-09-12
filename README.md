@@ -50,7 +50,12 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 <b>3. </b> Recovering from the expired or old certificates.
 
 
+## Literatures:
+
+1. <code href="https://cert-manager.io/docs/concepts/ca-injector/">Cert manager</code>
 
 ***Wiki:***
 
 For wiki pages, <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki">Click Here</a>
+
+
