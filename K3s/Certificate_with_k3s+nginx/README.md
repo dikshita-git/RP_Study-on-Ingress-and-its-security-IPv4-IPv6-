@@ -40,4 +40,4 @@ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manif
 These wwould result in craeting the components as shown in image below:
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Bnginx/2.PNG">
-<p><i>Fig: Instaling Metallb</i></p>
+<p><i>Fig: Installing Metallb</i></p>
