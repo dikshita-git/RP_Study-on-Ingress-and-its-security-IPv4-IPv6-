@@ -28,6 +28,7 @@ We can install Metallb using Helm or by the yaml file.I used the yaml file:
 
 ```
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/namespace.yaml
-
+```
+```
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/metallb.yaml
 ```
