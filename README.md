@@ -52,7 +52,22 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 ## Literatures:
 
-<details><summary>* Cert-manager</summary><p>
+
+<details><summary>K3s</summary><p>
+  
+  * <code><a href="https://rancher.com/docs/k3s/latest/en/">K3s</a></code>
+  
+  * <code><a href="https://www.kubermatic.com/blog/keeping-the-state-of-apps-1-introduction-to-volume-and-volumemounts/">Volumes</a></code>
+  
+</p></details>
+
+<details><summary>TLS</summary><p>
+  
+  *<code><a href="https://opensource.com/article/20/3/ssl-letsencrypt-k3s">TLS in K3s</a></code>
+  
+</p></details>
+
+<details><summary>Cert-manager</summary><p>
   
   * <code><a href="https://cert-manager.io/docs/">Cert manager</a></code>
   
@@ -60,15 +75,8 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
   
   * <code><a href="https://bryanbende.com/development/2021/07/01/k3s-raspberry-pi-cert-manager">Cert-manager in K3s</a></code>
   
-</p></details>
+</p></details> 
 
-*. <code><a href="https://rancher.com/docs/k3s/latest/en/">K3s</a></code>
-
-
-  
-*. <code><a href="https://www.kubermatic.com/blog/keeping-the-state-of-apps-1-introduction-to-volume-and-volumemounts/">Volumes</a></code>
-  
-*. <code><a href="https://opensource.com/article/20/3/ssl-letsencrypt-k3s">TLS in K3s</a></code>
 
  
 
