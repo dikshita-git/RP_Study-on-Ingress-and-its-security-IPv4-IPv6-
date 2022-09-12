@@ -5,7 +5,7 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 ## Research Questions:
 
-1. What are the best use-cases for Traefik Vs HaProxy Vs Nginx Ingress Controllers and how they differ in their operations?
+1. What are the best use-cases and scenarios for using Traefik Vs HaProxy Vs Nginx Ingress Controllers and how they differ in their operations?
 
 2. What are the difference situations of applicability of self-signed, wildcard and default certificates?
 
