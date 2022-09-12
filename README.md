@@ -1,8 +1,12 @@
-## Table of Contents  
-* [Headers](#headers)  
-* [Emphasis](#emphasis)  
-  
+## Topic
 
+Study on Ingress filtering/securing in Kubernetes and evaluation of its best possible implementation(s) across different platforms.
+
+## Team
+
+<p>***Supervsior:*** Prof.Dr Martin Leischner</p>
+<p>***Mentor:*** Richard Clauß</p>
+<p>***Candidate:*** Dikshita Kalita</p>
 
 ## Introduction
 
