@@ -17,3 +17,16 @@
 
 - This means both IPv4 and IPv6 works with K3S:
 
+
+### Roadmap:
+
+*** 1. Codes:***
+
+* <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Cluster-setup">K3s cluster set-up</a>
+* <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Certificate_with_k3s%2BHaProxy">K3s with Haproxy</a>
+* <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Certificate_with_k3s%2Btraefik">K3s with Traefik</a>
+
+
+*** 2. Wiki:***
+
+For wiki pages, <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki">Click Here</a>
