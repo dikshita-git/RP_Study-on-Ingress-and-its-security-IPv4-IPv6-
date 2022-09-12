@@ -9,11 +9,8 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 2. What are the difference situations of applicability of self-signed, wildcard and default certificates?
 
-3. Analysing best practices to implement certificate rotation in k3s.
-    
-        - Automatic rotation
-
-
+3. Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
+  
 
 ## Tasks:
 
@@ -30,7 +27,9 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
        1.5 Compare the use-cases of the ecrtificates used above.
     
     
-2. Test automatic certificate rotation on atleast one of the aforementioned task.
+2. Test automatic certificate rotation on startup on atleast one of the aforementioned task.
+
+3. Recovering from the expired or old certificates.
 
 
 
