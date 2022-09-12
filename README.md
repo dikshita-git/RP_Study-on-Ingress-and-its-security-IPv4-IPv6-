@@ -86,6 +86,17 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 </p></details> 
 
 
+<details><summary>Certificates</summary><p>
+  
+  * <code><a href="https://ikarus.sg/why-traefik-ingress-controller/">Kubernetes Ingress Controllers</a></code>
+  
+  * <code><a href="https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/">Ingress Controllers</a></code>
+  
+  * <code><a href="https://traefik.io/glossary/kubernetes-ingress-and-ingress-controller-101/">What is a Kubernetes Ingress Controller?</a></code>
+  
+</p></details> 
+
+
  
 
 ***Wiki:***
