@@ -12,10 +12,7 @@ Below marks the steps followed for the tassk with their description:
 Here is my k3s cluster set-up <code> <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Cluster-setup">file</a></code> .
 
 
-
-
-
-***2. Install cert-manager (using helm)***
+### 2. Install cert-manager (using helm)
 
 Once our cluster is up and running, we can now install Cert-manager. Read more about <code> <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes#cert-manager">Cert-manager</a></code>
 
@@ -26,9 +23,7 @@ Now we could check ns to see if cert-manager is running:
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-man_ns.PNG">
 
 
-
-
-***3. Create and apply ClusterIssuer***
+### 3. Create and apply ClusterIssuer
 
 Here is my <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/cert-manager/ClusterIssuer.yaml">ClusterIssuer</a></code> file
 
