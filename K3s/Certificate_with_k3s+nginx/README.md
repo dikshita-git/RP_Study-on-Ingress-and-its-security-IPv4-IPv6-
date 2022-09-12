@@ -91,3 +91,9 @@ These both selfsigned Issuers does not represent a CA in this case and is rather
 
 >***Note***
 >These type of Issuer is very beneficial if we want to make a quick test for ad-hoc certificates. <a href="https://cert-manager.io/docs/configuration/selfsigned/">ReadMore</a>
+
+
+### 7. Create an Ingress file
+
+Through this <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Bnginx/Ingress.yaml">Ingress file</a></code>, we will be able to use selfsigned-issuer to issue te TLS certificat efor nginx ingress.   
+
