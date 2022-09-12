@@ -23,7 +23,7 @@ Once our cluster is up and running, we can now install Cert-manager. Read more a
 
 Now we could check ns to see if cert-manager is running:
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-man_ns.PNG">
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-man_ns.PNG" height="300">
 <p><i>Fig: Checking namespace named cert-manager</i></p>
 
 
@@ -42,7 +42,7 @@ k3s kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/
 
 Here I tried to apply a higher version of cert-manager. v1.2.0 already moved to use "admissionregistration.k8s.io/v1".
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-mang-cainjector-solution.PNG">
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-mang-cainjector-solution.PNG" height="300">
 <p><i>Fig: Final cert-manager Cainjector pod</i></p>
 
 
@@ -80,7 +80,7 @@ extraVolumes:
       secretName: wildcard-dkrp2-tls     
 ```
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/tarefik.yaml.PNG">
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/tarefik.yaml.PNG" height="300">
 <p><i>Fig: My traefik file after the content</i></p>
 
 
@@ -93,6 +93,6 @@ This <code>secretName</code> should be the same as mentioned in the <code><a hre
 
 Finally, we have our certificate attached to the domain:
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/result.PNG">
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/result.PNG" height="300">
 <p><i>Fig: TLS on domain</i></p>
 
