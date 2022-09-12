@@ -20,3 +20,14 @@ We can now check if our cluster has all the required components:
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Bnginx/00.PNG">
 <p><i>Fig: Check the cluster nodes</i></p>
+
+
+### 2. Install Metallb
+
+We can install Metallb using Helm or by the yaml file.I used the yaml file:
+
+```
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/namespace.yaml
+
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.10.2/manifests/metallb.yaml
+```
