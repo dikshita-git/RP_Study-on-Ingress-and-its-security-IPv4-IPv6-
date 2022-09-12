@@ -1,6 +1,6 @@
 ## Details on my K3s Cluster
 
-This folder consists of the normal way to create a 3-Node K3s cluster. Thanks and credits to the reference links: 
+This folder consists of the normal way to create a K3s cluster. Thanks and credits to the reference links: 
 
 1. <a href="https://rancher.com/docs/k3s/latest/en/">K3s Official</a>
 
