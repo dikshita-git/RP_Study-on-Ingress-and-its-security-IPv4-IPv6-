@@ -28,7 +28,7 @@ Now we could check ns to see if cert-manager is running:
 
 
 >***Note***
->There is a possibility that cert-manager ( [^1] ). ([^cainjector]) shows the status of "Crashloopbackoff".
+>There is a possibility that <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes#cainjector-in-cert-manager">cert-manager cainjector</code></a> shows the status of "Crashloopbackoff".
 >  - In such cases, to get more details, check the log file of cert-manager ca-injector by:
 
 ```
