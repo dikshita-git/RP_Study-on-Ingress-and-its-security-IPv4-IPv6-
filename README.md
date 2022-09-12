@@ -21,9 +21,9 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 1.Secure K3s ingress with TLS with ingress controllers 
 
-       1.1 Traefik, 
+       1.1 <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Certificate_with_k3s%2Btraefik">Traefik</a></code>, 
        
-       1.2 HaProxy, 
+       1.2 <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Certificate_with_k3s%2BHaProxy">HaProxy</a></code>, 
        
        1.3 Nginx and 
        
@@ -38,15 +38,6 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 
 
-### Roadmap:
-
-***1. Codes:***
-
-* <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Cluster-setup">K3s cluster set-up</a>
-* <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Certificate_with_k3s%2BHaProxy">K3s with Haproxy</a>
-* <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Certificate_with_k3s%2Btraefik">K3s with Traefik</a>
-
-
-***2. Wiki:***
+***Wiki:***
 
 For wiki pages, <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki">Click Here</a>
