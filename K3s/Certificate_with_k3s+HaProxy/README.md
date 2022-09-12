@@ -64,6 +64,7 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 This  command will install all the cert manager components in our cluster. Next we need is a ***ClusterIssuer*.
 
 
+
 ### 4. Create a ClusterIssuer:
 
 Issuers, and ClusterIssuers are Kubernetes resources that represent certificate authorities (CAs) that are able to generate signed certificates by honoring certificate signing requests. All cert-manager certificates require a referenced issuer that is in a ready condition to attempt to honor the request. <a href="https://cert-manager.io/docs/concepts/issuer/">Read More</a>
@@ -72,4 +73,8 @@ Here is my <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and
 
 ***Description of ClusterIssuer***
 
-* 
+* Its named as Letsencrypt-staging
+* Server here specified is the letsencrypt staging server.
+* All ACME[^1] Issuers follow a similar configuration structure - a clients email, a server URL, a privateKeySecretRef, and one or more solvers. Solvers come in the form of dns01 and http01 stanzas. 
+
+[^1]Automatic Certificate Management Environment (ACME) protocol is a communications protocol for automating interactions between certificate authorities and their users' servers, allowing the automated deployment of public key infrastructure at very low cost.[
