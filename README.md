@@ -52,13 +52,25 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 ## Literatures:
 
-1. <code><a href="https://cert-manager.io/docs/">Cert manager</a></code>
+<details><summary>* Cert-manager</summary><p>
+  
+  * <code><a href="https://cert-manager.io/docs/">Cert manager</a></code>
+  
+  * <code><a href="https://cert-manager.io/docs/concepts/ca-injector/">Cert manager Cainjector</a></code>
+  
+  * <code><a href="https://bryanbende.com/development/2021/07/01/k3s-raspberry-pi-cert-manager">Cert-manager in K3s</a></code>
+  
+</p></details>
 
-2. <code><a href="https://cert-manager.io/docs/concepts/ca-injector/">Cert manager Cainjector</a></code>
+*. <code><a href="https://rancher.com/docs/k3s/latest/en/">K3s</a></code>
+
+
   
-3. <code><a href="https://cert-manager.io/docs/concepts/ca-injector/">Cert manager</a></code>
+*. <code><a href="https://www.kubermatic.com/blog/keeping-the-state-of-apps-1-introduction-to-volume-and-volumemounts/">Volumes</a></code>
   
-4. 
+*. <code><a href="https://opensource.com/article/20/3/ssl-letsencrypt-k3s">TLS in K3s</a></code>
+
+ 
 
 ***Wiki:***
 
