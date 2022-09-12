@@ -59,3 +59,6 @@ I used helm fro this purpose:
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Bnginx/4.PNG">
 <p><i>Fig: Install nginx</i></p>
+
+>***Note***
+>This will also assign deafult Nginx TLS ecrtificate but we will adjust it with our self-signed certificate in teh further steps.
