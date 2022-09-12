@@ -33,4 +33,7 @@ I am using the ACME issuer type with DNS01 challenges via Cloudflare. This invol
 
 The benefit of using a ClusterIssuer (over a standard Issuer) will make it possible to create the wildcard certificate in the kube-system namespace that K3s uses for Traefik. Also, note that any referenced Secret resources will (by default) need to be in the cert-manager namespace.
 
-### 4. Create and apply ClusterIssuer
+
+### 4. Requesting a wildcard Certificate
+
+This <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/cert-manager/Certificate.yaml">Cerficate.yaml</a></code> file requests for a wildcard ecrtificate for my domain dkrp2.xyz.
