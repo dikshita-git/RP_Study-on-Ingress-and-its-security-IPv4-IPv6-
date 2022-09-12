@@ -56,6 +56,9 @@ helm repo update
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.crds.yaml
 ```
 
+cert-manager uses Kubernetes Custom Resources to define the resources which users interact with when using cert-manager, such as Certificates and Issuers. <a href="https://cert-manager.io/docs/contributing/crds/">Read more</a>
+
 ```
 kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.9.1/cert-manager.yaml
 ```
+This  command will install all the 
