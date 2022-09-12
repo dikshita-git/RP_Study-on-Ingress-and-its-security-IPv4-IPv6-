@@ -80,3 +80,7 @@ Here is my <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and
 ::: Tips
 Automatic Certificate Management Environment (ACME) protocol is a communications protocol for automating interactions between certificate authorities 
 :::
+
+
+> **Note**
+> Automatic Certificate Management Environment (ACME) protocol is a communications protocol for automating interactions between certificate authorities and their users' servers, allowing the automated deployment of public key infrastructure at very low cost.
