@@ -87,5 +87,12 @@ extraVolumes:
 This <code>secretName</code> should be the same as mentioned in the <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/cert-manager/Certificate.yaml">Certificate.yaml</a></code> file.
 
 
-*** What does adding these contents imply?***
+***What does adding these contents imply?***
+
+<code>extraVolumeMounts</code> means basically adding an extra storage and allows us to mount or attach multiple type of volumes in a pod. In case our cert-manager pod's container data gets deleted or lost or even if the container restartes or crashes, the newly created pod's container can immediately grab this data at the state before the container crashes. In this case it will use the path /ssl to mount the volume or (certificate in this case) on. Here, <code>extraVolumes</code> contains the actual data of our own wildcard certificate with the secretname <code>wildcard-dkrp2-tls </code> that is mentioned in certificate.yaml and this means that the generated wilcard certificate is to be attached and used instead of defaul TLS certificate.
+
+Finally, we have our certificate attached to the domain:
+
+<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/result.PNG">
+<p><i>Fig: TLS on domain</i></p>
 
