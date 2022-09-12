@@ -12,9 +12,11 @@ Here is my k3s cluster set-up <code> <a href="https://github.com/dikshita-git/RP
 
 ***2. Install cert-manager (using helm)***
 
-Once our cluster is up and running, we can now install Cert-manager. Read more about Cert-manager <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes#cert-manager">here</a>
+Once our cluster is up and running, we can now install Cert-manager. Read more about <code> <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes#cert-manager">here</a>Cert-manager</a></code>
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/helm_install.PNG" height="300">
+
+
 
 
 
