@@ -66,7 +66,7 @@ If we check the ***kubectl describe certificate -n kube-system***,  we will see 
 
 ### 5. Configure traefik
 
-The final step includes configuring the default ingress controller in k3s : Traefik so that the domain uses the wildcard we requested for in the above step. This step is needed because if the Ingress resource is being defined without any TLS secretname then Traefik chooses the default TLS certificate as it has no input about the new/custom certificate we received. traefik.yml. Thus we have to mount our custom wildcard certficate in such a manner that Traefik choose it instead of opting for  its default TLS certificate. 
+This step includes configuring the default ingress controller in k3s : Traefik so that the domain uses the wildcard we requested for in the above step. This step is needed because if the Ingress resource is being defined without any TLS secretname then Traefik chooses the default TLS certificate as it has no input about the new/custom certificate we received. traefik.yml. Thus we have to mount our custom wildcard certficate in such a manner that Traefik choose it instead of opting for  its default TLS certificate. 
 
 In order to do that, we have to add the beow to the vauesContent part in /var/lib/rancher/k3s/server/manifest/traefik.yml file as shown in the image below:
 
@@ -91,8 +91,18 @@ This <code>secretName</code> should be the same as mentioned in the <code><a hre
 
 <code>extraVolumeMounts</code> means basically adding an extra storage and allows us to mount or attach multiple type of volumes in a pod. In case our cert-manager pod's container data gets deleted or lost or even if the container restartes or crashes, the newly created pod's container can immediately grab this data at the state before the container crashes. In this case it will use the path /ssl to mount the volume or (certificate in this case) on. Here, <code>extraVolumes</code> contains the actual data of our own wildcard certificate with the secretname <code>wildcard-dkrp2-tls </code> that is mentioned in certificate.yaml and this means that the generated wilcard certificate is to be attached and used instead of defaul TLS certificate.
 
-Finally, we have our certificate attached to the domain:
+Finally, we have our certificate attached to the domain.
 
+
+
+### 6. Expose the service
+
+Here comes the end step where we expose the service so that it can communicate with the Internet. This is achieved by creating an <code><a href="">Ingress.yaml</a></code>
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/result.PNG" height="300">
 <p><i>Fig: TLS on domain</i></p>
 
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
