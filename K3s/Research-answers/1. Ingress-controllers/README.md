@@ -13,4 +13,4 @@ Let us consider an application named <b>"App"</b> deployed on Kubernetes cluster
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Research_Question/1.%20Ingress/1.drawio.png" width=500>
 
-Now, in order to make our App accessible publicly, we have to create a Service of type Nodeport. Whenever we try to create a service for our application and if the IP address of atleast one of the  worker nodes and port number which is defined as part of the service is known, we can easily access our application from outside. This kind of service is referred to as <sup>1</sup>External service
+Now, in order to make our App accessible publicly, we have to create a Service of type Nodeport. Whenever we try to create a service for our application and if the IP address of atleast one of the  worker nodes and port number which is defined as part of the service is known, we can easily access our application from outside. This kind of service is referred to as External service<sup>1</sup> footnote[^1]
