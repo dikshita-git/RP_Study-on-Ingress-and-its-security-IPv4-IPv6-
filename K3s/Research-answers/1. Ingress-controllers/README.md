@@ -46,7 +46,7 @@ In order to create Internal service, we need to :
 >In order to make our services secure, we can create service as an ***Internal service*** by defining type as ***ClusterIP***  so that teh service is not accessible outside the cluster.
 >Once we create service as ***Internaal service***, then our clients cannot access our service using IP address and port number.
 
-❓<ins>***2. How would we provide our clients the access to our application in a secured way?***</ins>
+#### ❓ 2. </ins>How would we provide our clients the access to our application in a secured way?</ins>
 
 This is where for ***Ingress*** comes into the picture.
 
