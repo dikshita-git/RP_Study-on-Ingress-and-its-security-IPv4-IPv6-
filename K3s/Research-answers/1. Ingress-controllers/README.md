@@ -64,7 +64,9 @@ Ingress resource alone cannot do all these job and needs an ***Ingress Controlle
 
 | Daemon Set    | Deployment    |
 | ------------- | ------------- |
-|<ul><li>A DaemonSet ensures that all (or some) Nodes run a copy of a Pod.</li> <li>Then the ingress controller is created on each worker node.</li> <p>Eg: If we have 6 worker nodes fro our application, then Ingress controller will be created on 6 worker nodes.</p></ul>   | Then 1,2 or 6 ingress controllers will be created on the worker nodes  |
+|<ul><li>A DaemonSet ensures that all (or some) Nodes run a copy of a Pod.</li> <li>A DaemonSet schedules exactly one type of Pod per cluster node, masters included, thus when the ingress controller is defined using DaemonSet, the controllers are created on each worker node.</li> <p>Eg: If we have 6 worker nodes fro our application, then Ingress controller will be created on 6 worker nodes.</p></ul>   | <ul><li>In a reasonably large cluster deploying ingress as deployment with multiple replicas is suitable compared to daemonset.</li><li></li>Sometimes if the ingress-controller is running via a deployment and one of the nodes didn't have the pod allocated then the node could be listed as "unhealthy" in the loadbalancer targergroup healthcheck. </ul>  |
+
+
 
 
 
@@ -73,3 +75,11 @@ Ingress resource alone cannot do all these job and needs an ***Ingress Controlle
 There are lot of Ingress Controllers
 
 
+
+
+
+#### 📚 References:
+
+* <a href="https://kubernetes.github.io/ingress-nginx/deploy/baremetal/">Kubernetes ingress official</a>
+
+* <a href="https://stackoverflow.com/questions/61004408/is-it-necessary-to-deploy-the-ingress-controller-using-daemonset">Stack Overflow </a>
