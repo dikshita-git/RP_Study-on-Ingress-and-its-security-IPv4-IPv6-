@@ -1,3 +1,14 @@
+This file consists of a detailed description about Ingress Controllers and the results to my finding for my research question 1.
+
+# PRECAP:
+
+1. Introduction
+  
+  * Why do we need Ingress and Ingress Controllers ?
+  * How would we provide our clients the access to our application in a secured way?
+
+
+
 ## <ins>Question:</ins> 
 
 <i>What are the best use-cases and scenarios for using Traefik Vs HaProxy Vs Nginx Ingress Controllers and how they differ in their operations?</i>
