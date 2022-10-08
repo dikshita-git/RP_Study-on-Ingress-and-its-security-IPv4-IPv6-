@@ -8,7 +8,7 @@
 In order to understand Ingress Controller and the operational differences between its types, we have to first get along with Ingress and Ingress Controllers: why do we need them and how do they align to support each other in the kubernetes cluster.
 
 
-❓***<ins>1. Why do we need Ingress and Ingress Controllers ?</ins>***
+❓<ins>***1. Why do we need Ingress and Ingress Controllers ?***</ins>
 
 
 Let us consider an application named <b>"App"</b> deployed on Kubernetes cluster with 2 number of replicas which run on 2 different Worker nodes inside the cluster as shown below:
