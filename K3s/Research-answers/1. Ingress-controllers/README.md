@@ -64,8 +64,7 @@ Ingress resource alone cannot do all these job and needs an ***Ingress Controlle
 
 | Daemon Set    | Deployment    |
 | ------------- | ------------- |
-|* A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. 
-* Then the ingress controller is created on each worker node. <p>Eg: If we have 6 worker nodes fro our application, then Ingress controller will be created on 6 worker nodes.</p>   | Then 1,2 or 6 ingress controllers will be created on the worker nodes  |
+|<ul><li>A DaemonSet ensures that all (or some) Nodes run a copy of a Pod.</li> <li>Then the ingress controller is created on each worker node.</li> <p>Eg: If we have 6 worker nodes fro our application, then Ingress controller will be created on 6 worker nodes.</p></ul>   | Then 1,2 or 6 ingress controllers will be created on the worker nodes  |
 
 
 
