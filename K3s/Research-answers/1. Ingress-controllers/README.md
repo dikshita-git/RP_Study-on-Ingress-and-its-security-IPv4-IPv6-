@@ -35,5 +35,9 @@ In order to create Internal service, we need to :
 
 ❓ ***2. How would we provide our clients the access to our application in a secured way?***
 
+This is where for ***Ingress*** comes into the picture.
+
+In Kubernetes terminology, we call it as an ***Ingress Resource***. We can create an INgress Resource by defining an YAML file siilar to defining a service. Here is an overview of content of Ingress YAML file: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/ingress.yaml"><code>Ingress</code></a> 
+
 
 
