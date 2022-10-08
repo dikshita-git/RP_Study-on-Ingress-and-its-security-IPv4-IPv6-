@@ -29,7 +29,7 @@ In order to create Internal service, we need to :
 4. Also, it is to be kept in mind that providing the access to the service directly to the client is not recommended due to security reasons.
 
 
-💡 ><b>NOTE:</b>
+💡><b>NOTE:</b>
 >In order to make our services secure, we can create service as an ***Internal service*** by defining type as ***ClusterIP*** 
 
 
