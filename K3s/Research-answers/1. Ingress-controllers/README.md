@@ -19,7 +19,8 @@ This file consists of a detailed description about Ingress Controllers and the r
 In order to understand Ingress Controller and the operational differences between its types, we have to first get along with Ingress and Ingress Controllers: why do we need them and how do they align to support each other in the kubernetes cluster.
 
 
- #### ❓ 1. <ins>Why do we need Ingress and Ingress Controllers ?</ins>
+
+#### ❓ 1. <ins>Why do we need Ingress and Ingress Controllers ?</ins>
 
 
 Let us consider an application named <b>"App"</b> deployed on Kubernetes cluster with 2 number of replicas which run on 2 different Worker nodes inside the cluster as shown below:
@@ -46,11 +47,30 @@ In order to create Internal service, we need to :
 >In order to make our services secure, we can create service as an ***Internal service*** by defining type as ***ClusterIP***  so that teh service is not accessible outside the cluster.
 >Once we create service as ***Internaal service***, then our clients cannot access our service using IP address and port number.
 
+
+
 #### ❓ 2. <ins>How would we provide our clients the access to our application in a secured way?</ins>
 
 This is where for ***Ingress*** comes into the picture.
 
-In Kubernetes terminology, we call it as an ***Ingress Resource***. We can create an INgress Resource by defining an YAML file siilar to defining a service. Here is an overview of content of Ingress YAML file: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/ingress.yaml"><code>Ingress</code></a> 
+In Kubernetes terminology, we call it as an ***Ingress Resource***. We can create an INgress Resource by defining an YAML file siilar to defining a service. Here is an overview of content of Ingress YAML file: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Certificate_with_k3s%2Btraefik/ingress.yaml"><code>Ingress</code></a>.
+We define:
 
+* ***"kind"*** as Ingress and 
+*Iimportant part is under ***"specs"*** or ***specifications*** where we define the set of routing rules with 
+ * ***host*** as - Domain name. This using this domain name, the clients can access the application. Domain name is assigned to the ***hsot*** attribute and 
+ 
+Ingress resource alone cannot do all these job and needs an ***Ingress Controller*** which is basically an incrementation of teh Ingress resource. Ingress controller can be simply defined as a pod which is running on one of the worker nodes in our kubernetes cluster. We caan define the iNgress Controller as a ***Daemon set*** or ***Deployment***. If the ingress controller is defined as:
+
+| Daemon Set    | Deployment    |
+| ------------- | ------------- |
+|* A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. 
+* Then the ingress controller is created on each worker node. <p>Eg: If we have 6 worker nodes fro our application, then Ingress controller will be created on 6 worker nodes.</p>   | Then 1,2 or 6 ingress controllers will be created on the worker nodes  |
+
+
+
+#### ❓ 3. Types of 3rd party Ingress Controllers:
+
+There are lot of Ingress Controllers
 
 
