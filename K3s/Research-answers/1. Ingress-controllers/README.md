@@ -7,7 +7,7 @@
 
 In order to understand Ingress Controller and the operational differences between its types, we have to first get along with Ingress and Ingress Controllers: why do we need them and how do they align to support each other in the kubernetes cluster.
 
-***1. Why do we need Ingress and Ingress Controllers ?***
+❓***1. Why do we need Ingress and Ingress Controllers ?***
 
 Let us consider an application named <b>"App"</b> deployed on Kubernetes cluster with 2 number of replicas which run on 2 different Worker nodes inside the cluster as shown below:
 
@@ -30,7 +30,10 @@ In order to create Internal service, we need to :
 
 
 💡<b>NOTE:</b> 🔦
->In order to make our services secure, we can create service as an ***Internal service*** by defining type as ***ClusterIP*** 
+>In order to make our services secure, we can create service as an ***Internal service*** by defining type as ***ClusterIP***  so that teh service is not accessible outside the cluster.
+>Once we create service as ***Internaal service***, then our clients cannot access our service using IP address and port number.
+
+❓ ***2. How would we provide our clients the access to our application in a secured way?***
 
 
 
