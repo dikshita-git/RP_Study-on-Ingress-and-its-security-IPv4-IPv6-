@@ -7,6 +7,8 @@ This file consists of a detailed description about Ingress Controllers and the r
   * <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Research-answers/1.%20Ingress-controllers/README.md#-1-why-do-we-need-ingress-and-ingress-controllers-">Why do we need Ingress and Ingress Controllers ?</a>
   * <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Research-answers/1.%20Ingress-controllers/README.md#-2-how-would-we-provide-our-clients-the-access-to-our-application-in-a-secured-way">How would we provide our clients the access to our application in a secured way?</a>
 
+10. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Research-answers/1.%20Ingress-controllers/README.md#-references">References</a>
+
 
 
 ## <ins>Question:</ins> 
