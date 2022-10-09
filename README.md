@@ -25,43 +25,8 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#4-approach-and-goal">4. Approach and Goal</a>
 
 <a href="">5. Research Questions</a>
-
-  - 5.1 Basic properties of underlying implementations
-  
-     - a) What are the princcipal differences between Traefik, HaProxy and Nginx?
-        
-     - b) Which scenarios fit best for the aforementioned alternatives and what are their operational differences?
-
- - 5.2 Certificate analysis
-        
-     - a) compare methods of generating them
-
-     - b) show ways of distributing them and providing them to the ingress and ingress controller
-
-     - c) can wildcard certficiates be beneficial during operations
-
-     - d) how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers. When can self-signed certificates be used without losing security?
-
-     - e) How is the rotation of expiring certificates realized in Ingress and the Ingress controllers?
-        
-  
-  - 5.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
   
 <a href="">6. Methodology</a>
-
-    in methodology wiki page:
-    To answer the conducted research questions we do...:
-    
-    1a) 
-       - making a table with properties to answer 1a
-    1b) 
-       - find a list of szenarios based on the table
-    2a)
-       - list methods of generating the certificates
-       - find main properties and compare them
-    2c)
-       - Getting insights by creating test deployment
-       - write down findings
 
 <a href="">7. Results</a>
 
@@ -123,6 +88,47 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 - to gain insights in the described functionalities, first some research questions shall be conducted. the goal is to answer them in the course of the project
 
+
+## 5. Research Questions
+
+- 5.1 Basic properties of underlying implementations
+  
+     - a) What are the princcipal differences between Traefik, HaProxy and Nginx?
+        
+     - b) Which scenarios fit best for the aforementioned alternatives and what are their operational differences?
+
+ - 5.2 Certificate analysis
+        
+     - a) compare methods of generating them
+
+     - b) show ways of distributing them and providing them to the ingress and ingress controller
+
+     - c) can wildcard certficiates be beneficial during operations
+
+     - d) how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers. When can self-signed certificates be used without losing security?
+
+     - e) How is the rotation of expiring certificates realized in Ingress and the Ingress controllers?
+        
+  
+  - 5.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
+  
+  
+## 6. Methodology
+
+
+    in methodology wiki page:
+    To answer the conducted research questions we do...:
+    
+    1a) 
+       - making a table with properties to answer 1a
+    1b) 
+       - find a list of szenarios based on the table
+    2a)
+       - list methods of generating the certificates
+       - find main properties and compare them
+    2c)
+       - Getting insights by creating test deployment
+       - write down findings
 
 
 ## Literatures:
