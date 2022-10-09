@@ -19,7 +19,7 @@ Study on the Ingress resource type in Kubernetes for mapping incoming traffic to
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#2-motivation">2. Motivation</a>
   
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-fundemantals">3. Fundemantals</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-fundemantals">3. Fundamentals</a>
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#4-approach-and-goal">4. Approach and Goal</a>
 
@@ -61,8 +61,7 @@ In order to proceed further wwith the topic, the project pivots the belowmention
 
 
 
-
-## 3. Fundemantals
+## 3. Fundamentals
 
 The initial step started with gathering the basic operational idea of ingress controller and default/wildcard certificates in kubernetes. Following which, some research was also conducted to analyse the procedures to generate the same and understanding their basic differences in applicability. In addition to this, some demonstrations are also conducted which can be found here under <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo"><code>Codes</code></a>.
 
