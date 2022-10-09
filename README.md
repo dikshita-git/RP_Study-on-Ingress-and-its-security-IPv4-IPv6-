@@ -42,9 +42,7 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-fundemantals">3. Fundemantals</a>
 
-<a href="">4. Approach and Goal</a>
-
-    - to gain insights in the described functionalities, first some research questions shall be conducted. the goal is to answer them in the course of the project
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#4-approach-and-goal">4. Approach and Goal</a>
 
 <a href="">5. Research Questions</a>
 
@@ -69,7 +67,6 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
   
   - 5.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
   
-
 <a href="">6. Methodology</a>
 
     in methodology wiki page:
@@ -123,6 +120,9 @@ The initial step started with gathering the basic operational idea of ingress co
 ## 4. Approach and Goal
 
 This project aims to secure the Ingress in a K3s cluster using different Ingress Cntrollers namely Traefik, HaProxy, Nginx and to study their differences in use-cases. Further, it also tests various certificates like self-signed, wildcard and default certificates and analyse automatic certificate rotation.
+
+- to gain insights in the described functionalities, first some research questions shall be conducted. the goal is to answer them in the course of the project
+
 
 
 ## Literatures:
