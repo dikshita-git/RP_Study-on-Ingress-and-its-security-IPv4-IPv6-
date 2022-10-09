@@ -17,21 +17,19 @@ Study on the Ingress resource type in Kubernetes for mapping incoming traffic to
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">1. Introduction</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#2-motivation">2. Motivation</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#4-approach-and-goal">2. Approach and Goal</a>
+
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#5-research-questions">3. Research Questions</a>
+
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-fundamentals">4. Fundamentals</a>
   
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-fundamentals">3. Fundamentals</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#6-methodology">5. Methodology</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#4-approach-and-goal">4. Approach and Goal</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Results">6. Results</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#5-research-questions">5. Research Questions</a>
-  
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#6-methodology">6. Methodology</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Summary">7. Summary</a> 
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Results">7. Results</a>
-
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Summary">8. Summary</a> 
-
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#literatures">9. Literatures</a> 
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#literatures">8. Literatures</a> 
 
 
 Link to Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki">Click Here</a>
@@ -43,11 +41,6 @@ Link to Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_securit
 The word Ingress describes traffic originating from sources external to the network under investigation. In the Kubernetes context it is the name of one special resource type, dedicated to forward http and https traffic to a service, based on rules specified by the user. Other protocols are not supported.)
 
 In Kubernetes, Ingress can be briefly described as an API object to serve the same purpose by providing some routing rules to manage the access of the external users to the services in the cluster typically via HTTP/HTTPS. Thus, it also becomes equally crucial to secure and filter the Ingress in order to monitor and control the traffic entering the Kubernetes cluster so that only the valid and legitimate traffic enters while the malicious and unauthorised traffic can be discarded or prevented. Though primarily, Ingress only supports one TLS port- 443 and assumes TLS termination, this project aims to study Ingress and its routing rules in a more detailed manner and how we could combine it with TLS, Let’s Encrypt etc. to secure our incoming traffic into the K3s cluster(mainly using an IPV4 address). Since certificate becomes pivotal when considering TLS or security in the cluster, hence studing about various type of certificates in K3s followed by their implementations and study about automatically renew the certificates up and set them running.
-
-
-
-
-## 2. Motivation
 
 In order to proceed further wwith the topic, the project pivots the belowmentioned points of motivaation:
 
@@ -61,14 +54,7 @@ In order to proceed further wwith the topic, the project pivots the belowmention
 
 
 
-## 3. Fundamentals
-
-The initial step started with gathering the basic operational idea of ingress controller and default/wildcard certificates in kubernetes. Following which, some research was also conducted to analyse the procedures to generate the same and understanding their basic differences in applicability. In addition to this, some demonstrations are also conducted which can be found here under <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo"><code>Codes</code></a>.
-
-
-
-
-## 4. Approach and Goal
+## 2. Approach and Goal
 
 This project aims to secure the Ingress in a K3s cluster using different Ingress Cntrollers namely Traefik, HaProxy, Nginx and to study their differences in use-cases. Further, it also tests various certificates like self-signed, wildcard and default certificates and analyse automatic certificate rotation.
 
@@ -76,8 +62,7 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 
 
-
-## 5. Research Questions
+## 3. Research Questions
 
 - 5.1 Basic properties of underlying implementations
   
@@ -102,8 +87,17 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
   
   - 5.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
   
-  
-## 6. Methodology
+
+
+
+## 4. Fundamentals
+
+The initial step started with gathering the basic operational idea of ingress controller and default/wildcard certificates in kubernetes. Following which, some research was also conducted to analyse the procedures to generate the same and understanding their basic differences in applicability. In addition to this, some demonstrations are also conducted which can be found here under <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo"><code>Codes</code></a>.
+
+
+ 
+ 
+## 5. Methodology
 
 With the goal of exercising the roadmap produced, some methodologies to implement the same are carried out:
 
@@ -111,7 +105,7 @@ With the goal of exercising the roadmap produced, some methodologies to implemen
 
 
 
-## Literatures:
+## 8. Literatures:
 
 
 <details><summary>Ingress</summary><p>
