@@ -16,12 +16,22 @@ Study on the Ingress resource type in Kubernetes for mapping incoming traffic to
 
 All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki">Click Here</a>
 
-1. <a href="">Introduction</a>
+1. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">Introduction</a>
+
+2. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">Motivation</a>
+    
+    - <a href="">what are the basic possibilities ?</a>
+    
+    - <a href="">which alternative implementations exist ?</a>
+
 2. <a href="">Fundemantals</a>
+    
     - if appropriate put here what you already did
+
 3. <a href="">Methodology</a>
     in methodology wiki page:
     To answer the conducted research questions we do...:
+    
     1a) 
        - making a table with properties to answer 1a
     1b) 
@@ -32,9 +42,11 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
     2c)
        - Getting insights by creating test deployment
        - write down findings
+
 4. <a href="">Results</a>
     4.1 Comparison of ingress controller implementations
    - if appropriate put here what you already did
+
 5. <a href="">Summary</a> 
 
 
@@ -44,6 +56,11 @@ The word Ingress describes traffic originating from sources external to the netw
 
 Ingress or incoming traffic is one of the crucial object when it comes to accessing our services externally or from outside of the cluster. In Kubernetes, Ingress can be briefly described as an API object to serve the same purpose by providing some routing rules to manage the access of the external users to the services in the cluster typically via HTTP/HTTPS. Thus, it also becomes equally crucial to secure and filter the Ingress in order to monitor and control the traffic entering
 the Kubernetes cluster so that only the valid and legitimate traffic enters while the malicious and unauthorised traffic can be discarded or prevented. Though primarily, Ingress only supports one TLS port- 443 and assumes TLS termination, this project aims to study Ingress and its routing rules in a more detailed manner and how we could combine it with TLS, Let’s Encrypt etc. to secure our incoming traffic into the K3s cluster(mainly using an IPV4 address). Since certificate becomes pivotal when considering TLS or security in the cluster, hence studing about various type of certificates in K3s followed by their implementations and study about automatically renew the certificates up and set them running.
+
+
+## Motivation
+
+
 
 ## Goal
 
