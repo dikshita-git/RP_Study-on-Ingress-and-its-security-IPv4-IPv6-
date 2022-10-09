@@ -20,15 +20,35 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 
 2. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">Motivation</a>
     
-    - <a href="">what are the basic possibilities ?</a>
+    - <a href="">What are the basic possibilities ?</a>
     
-    - <a href="">which alternative implementations exist ?</a>
+    - <a href="">Which alternative implementations exist ?</a>
+
+    - <a href="">Motivation of comparison</a>
+    
+        - <a href="">Comparing the different type of ingress controllers (some popular ones)</a>
+    
+        - <a href="">Securing Ingress with certficates is possible</a>
+        
+        - <a href="">We can compare methods of generating them</a>
+       
+        - <a href="">We can have a look at operations e.g. show ways of distributing them and providing them to the ingress and ingress controller</a>
+        
+        - <a href="">Can wildcard certficiates be beneficial during operations</a>
+  
+        - <a href="">how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers</a> 
+    
+        - <a href="">When can self-signed certificates be used without losing security?</a>
 
 2. <a href="">Fundemantals</a>
     
     - if appropriate put here what you already did
 
-3. <a href="">Methodology</a>
+3. <a href="">Approach and Goal</a>
+
+4. <a href="">Research Questions</a>
+
+5. <a href="">Methodology</a>
     in methodology wiki page:
     To answer the conducted research questions we do...:
     
@@ -254,27 +274,6 @@ This project aims to secure the Ingress in a k3s cluster using different Ingress
 - e) How is the rotation of expiring certificates realized in Ingress and the Ingress controllers?
       3. Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
   
-
-
-
-## Tasks: <- remove this
-
-<b>1.</b> Secure k3s ingress with TLS with ingress controllers 
-
-1.1 <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/k3s/Certificate_with_k3s%2Btraefik">Traefik</a></code>, 
-       
-1.2 <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/treeTable/main/k3s/Certificate_with_k3s%2BHaProxy">HaProxy</a></code>, 
-       
-1.3 <code><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/k3s/Certificate_with_k3s%2Bnginx">Nginx</a></code> and 
-       
-1.4 Compare the applicability differences of these Ingress Controllers.
-       Table
-1.5 Compare the use-cases of the certificates used above.
-    
-    
-<b>2.</b> Test automatic certificate rotation on startup on atleast one of the aforementioned task.
-
-<b>3. </b> Recovering from the expired or old certificates.
 
 
 
