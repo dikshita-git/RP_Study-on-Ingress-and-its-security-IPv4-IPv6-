@@ -20,25 +20,25 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 
 2. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">Motivation</a>
     
-    - <a href="">What are the basic possibilities ?</a>
+   - <a href="">What are the basic possibilities ?</a>
     
-    - <a href="">Which alternative implementations exist ?</a>
+   - <a href="">Which alternative implementations exist ?</a>
 
-    - <a href="">Motivation of comparison</a>
+   - <a href="">Motivation of comparison</a>
     
-        - <a href="">Comparing the different type of ingress controllers (some popular ones)</a>
+       - <a href="">Comparing the different type of ingress controllers (some popular ones)</a>
     
-        - <a href="">Securing Ingress with certficates is possible</a>
+       - <a href="">Securing Ingress with certficates is possible</a>
         
-        - <a href="">We can compare methods of generating them</a>
+       - <a href="">We can compare methods of generating them</a>
        
-        - <a href="">We can have a look at operations e.g. show ways of distributing them and providing them to the ingress and ingress controller</a>
+       - <a href="">We can have a look at operations e.g. show ways of distributing them and providing them to the ingress and ingress controller</a>
         
-        - <a href="">Can wildcard certficiates be beneficial during operations</a>
+       - <a href="">Can wildcard certficiates be beneficial during operations</a>
   
-        - <a href="">how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers</a> 
+       - <a href="">how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers</a> 
     
-        - <a href="">When can self-signed certificates be used without losing security?</a>
+       - <a href="">When can self-signed certificates be used without losing security?</a>
 
 2. <a href="">Fundemantals</a>
     
@@ -49,6 +49,7 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 4. <a href="">Research Questions</a>
 
 5. <a href="">Methodology</a>
+
     in methodology wiki page:
     To answer the conducted research questions we do...:
     
@@ -63,11 +64,11 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
        - Getting insights by creating test deployment
        - write down findings
 
-4. <a href="">Results</a>
+6. <a href="">Results</a>
     4.1 Comparison of ingress controller implementations
    - if appropriate put here what you already did
 
-5. <a href="">Summary</a> 
+7. <a href="">Summary</a> 
 
 6. <a href="">Literatures</a> 
 
