@@ -19,27 +19,7 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">1. Introduction</a>
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">2. Motivation</a>
-    
-   - <a href="">What are the basic possibilities ?</a>
-    
-   - <a href="">Which alternative implementations exist ?</a>
-
-   - <a href="">Motivation of comparison</a>
-    
-       - <a href="">Comparing the different type of ingress controllers (some popular ones)</a>
-    
-       - <a href="">Securing Ingress with certficates is possible</a>
-        
-       - <a href="">We can compare methods of generating them</a>
-       
-       - <a href="">We can have a look at operations e.g. show ways of distributing them and providing them to the ingress and ingress controller</a>
-        
-       - <a href="">Can wildcard certficiates be beneficial during operations</a>
   
-       - <a href="">how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers</a> 
-    
-       - <a href="">When can self-signed certificates be used without losing security?</a>
-
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-fundemantals">3. Fundemantals</a>
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#4-approach-and-goal">4. Approach and Goal</a>
@@ -107,6 +87,26 @@ the Kubernetes cluster so that only the valid and legitimate traffic enters whil
 
 ## 2. Motivation
 
+  
+   - <a href="">What are the basic possibilities ?</a>
+    
+   - <a href="">Which alternative implementations exist ?</a>
+
+   - <a href="">Motivation of comparison</a>
+    
+       - <a href="">Comparing the different type of ingress controllers (some popular ones)</a>
+    
+       - <a href="">Securing Ingress with certficates is possible</a>
+        
+       - <a href="">We can compare methods of generating them</a>
+       
+       - <a href="">We can have a look at operations e.g. show ways of distributing them and providing them to the ingress and ingress controller</a>
+        
+       - <a href="">Can wildcard certficiates be beneficial during operations</a>
+  
+       - <a href="">how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers</a> 
+    
+       - <a href="">When can self-signed certificates be used without losing security?</a>
 
 
 
