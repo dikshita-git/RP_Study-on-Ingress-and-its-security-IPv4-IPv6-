@@ -44,34 +44,23 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 ## 1. Introduction
 The word Ingress describes traffic originating from sources external to the network under investigation. In the Kubernetes context it is the name of one special resource type, dedicated to forward http and https traffic to a service, based on rules specified by the user. Other protocols are not supported.)
 
-Ingress or incoming traffic is one of the crucial object when it comes to accessing our services externally or from outside of the cluster. In Kubernetes, Ingress can be briefly described as an API object to serve the same purpose by providing some routing rules to manage the access of the external users to the services in the cluster typically via HTTP/HTTPS. Thus, it also becomes equally crucial to secure and filter the Ingress in order to monitor and control the traffic entering
-the Kubernetes cluster so that only the valid and legitimate traffic enters while the malicious and unauthorised traffic can be discarded or prevented. Though primarily, Ingress only supports one TLS port- 443 and assumes TLS termination, this project aims to study Ingress and its routing rules in a more detailed manner and how we could combine it with TLS, Let’s Encrypt etc. to secure our incoming traffic into the K3s cluster(mainly using an IPV4 address). Since certificate becomes pivotal when considering TLS or security in the cluster, hence studing about various type of certificates in K3s followed by their implementations and study about automatically renew the certificates up and set them running.
+In Kubernetes, Ingress can be briefly described as an API object to serve the same purpose by providing some routing rules to manage the access of the external users to the services in the cluster typically via HTTP/HTTPS. Thus, it also becomes equally crucial to secure and filter the Ingress in order to monitor and control the traffic entering the Kubernetes cluster so that only the valid and legitimate traffic enters while the malicious and unauthorised traffic can be discarded or prevented. Though primarily, Ingress only supports one TLS port- 443 and assumes TLS termination, this project aims to study Ingress and its routing rules in a more detailed manner and how we could combine it with TLS, Let’s Encrypt etc. to secure our incoming traffic into the K3s cluster(mainly using an IPV4 address). Since certificate becomes pivotal when considering TLS or security in the cluster, hence studing about various type of certificates in K3s followed by their implementations and study about automatically renew the certificates up and set them running.
 
 
 
 
 ## 2. Motivation
 
-  
-   - <a href="">What are the basic possibilities ?</a>
-    
-   - <a href="">Which alternative implementations exist ?</a>
+In order to proceed further wwith the topic, the project pivots the belowmentioned points of motivaation:
 
-   - <a href="">Motivation of comparison</a>
-    
-       - <a href="">Comparing the different type of ingress controllers (some popular ones)</a>
-    
-       - <a href="">Securing Ingress with certficates is possible</a>
-        
-       - <a href="">We can compare methods of generating them</a>
-       
-       - <a href="">We can have a look at operations e.g. show ways of distributing them and providing them to the ingress and ingress controller</a>
-        
-       - <a href="">Can wildcard certficiates be beneficial during operations</a>
-  
-       - <a href="">how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers</a> 
-    
-       - <a href="">When can self-signed certificates be used without losing security?</a>
+* Determining the basic possibilities of protocols supported in ingress in kubernetes.
+
+* Distinguish the kubernetes object type "ingress" from the other type of services. 
+
+* Analysing points of diferences between different variations of ingress controllers in the market.
+
+* Studying the necessity and detailed implementation of type of certificates to secure the ingress and analysing ways to auto-rotate them before expiration.
+
 
 
 
@@ -89,25 +78,29 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 - to gain insights in the described functionalities, first some research questions shall be conducted. the goal is to answer them in the course of the project
 
 
+
+
 ## 5. Research Questions
 
 - 5.1 Basic properties of underlying implementations
   
-     - a) What are the princcipal differences between Traefik, HaProxy and Nginx?
+     - a) What are the principal point of differences between Traefik, HaProxy and Nginx?
         
      - b) Which scenarios fit best for the aforementioned alternatives and what are their operational differences?
 
  - 5.2 Certificate analysis
         
-     - a) compare methods of generating them
+     - a) Compare the methods of generating the certificaates with different type of ingress controllers
 
-     - b) show ways of distributing them and providing them to the ingress and ingress controller
+     - b) Determining the ways to distribute the generated certificate and providing them to the ingress controller
 
-     - c) can wildcard certficiates be beneficial during operations
-
-     - d) how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers. When can self-signed certificates be used without losing security?
-
-     - e) How is the rotation of expiring certificates realized in Ingress and the Ingress controllers?
+     - c) <a href="">Can wildcard certficiates be beneficial during operations?</a>
+  
+     - d) <a href="">How does the complexity of using self-signed certificates compare to the automatic generation of certficiates in ingress controllers?</a> 
+    
+     - e) <a href="">When can self-signed certificates be used without losing security?</a>
+       
+     - f) How is the rotation of expiring certificates realized in ingress in kubernetes?
         
   
   - 5.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
@@ -129,6 +122,9 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
     2c)
        - Getting insights by creating test deployment
        - write down findings
+
+
+
 
 
 ## Literatures:
