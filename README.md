@@ -50,27 +50,26 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 
 4. <a href="">Research Questions</a>
 
-    - 4.1 Basic properties of underlying implementations
-    
-        - a) what are the major differences between haproxy, traefik, nginx
+  - 4.1 Basic properties of underlying implementations
+  
+     * a) What are the princcipal differences between Traefik, HaProxy and Nginx?
         
-        - b) for which scenarios the alternatives are most appropriate
+     * b) Which scenarios fit best for the aforementioned alternatives and what are their operational differences?
 
-        - c) What are the best use-cases and scenarios for using Traefik Vs HaProxy Vs Nginx Ingress Controllers and how they differ in their operations?
-
-   - 4.2 certificate stuff
+ - 4.2 Certificate analysis
         
-        - a) compare methods of generating them
+     * a) compare methods of generating them
 
-        - b) show ways of distributing them and providing them to the ingress and ingress controller
+     * b) show ways of distributing them and providing them to the ingress and ingress controller
 
-        - c) can wildcard certficiates be beneficial during operations
+     * c) can wildcard certficiates be beneficial during operations
 
-        - d) how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers. When can self-signed certificates be used without losing security?
+     * d) how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers. When can self-signed certificates be used without losing security?
 
-        - e) How is the rotation of expiring certificates realized in Ingress and the Ingress controllers?
+     * e) How is the rotation of expiring certificates realized in Ingress and the Ingress controllers?
         
-    - 4.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
+  
+  - 4.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
   
 
 5. <a href="">Methodology</a>
