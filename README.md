@@ -114,12 +114,11 @@ With the goal of exercising the roadmap produced, some methodologies to implemen
 ## Literatures:
 
 
-<details><summary>K3s</summary><p>
+<details><summary>Ingress</summary><p>
   
-  * <code><a href="https://rancher.com/docs/k3s/latest/en/">K3s</a></code>
+  * <code><a href="https://opensource.googleblog.com/2020/09/kubernetes-ingress-goes-ga.html">Ingress</a></code>
   
-  * <code><a href="https://www.kubermatic.com/blog/keeping-the-state-of-apps-1-introduction-to-volume-and-volumemounts/">Volumes</a></code>
-  
+
 </p></details>
 
 <details><summary>TLS</summary><p>
