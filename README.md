@@ -19,7 +19,7 @@ Study on the Ingress resource type in Kubernetes for mapping incoming traffic to
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#2-motivation">2. Motivation</a>
   
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-fundemantals">3. Fundamentals</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-fundamentals">3. Fundamentals</a>
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#4-approach-and-goal">4. Approach and Goal</a>
 
