@@ -129,14 +129,14 @@ Study on the Ingress resource type in Kubernetes for mapping incoming traffic to
 - what is kubernetes ingress
 The word Ingress describes traffic originating from sources external to the network under investigation. In the Kubernetes context it is the name of one special resource type, dedicated to forward http and https traffic to a service, based on rules specified by the user. Other protocols are not supported.)
 
-- what are the basic possibilities 
+### - what are the basic possibilities 
     -> filtering, supported protocols https/https
 - distinguish it from usual service types
 
-- which alternative implementations exist
+### - which alternative implementations exist
     -> traefik, nginx, ...
 
-- Motivation of comparison
+### - Motivation of comparison
     -> what we want is compare the ingress controllers
     
 - securing Ingress with certficates is possible
@@ -145,7 +145,7 @@ The word Ingress describes traffic originating from sources external to the netw
   - can wildcard certficiates be beneficial during operations
   - how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers. When can self-signed certificates be used without losing security?
 
-- Motivation of certificates
+### - Motivation of certificates
   - what do we want to improve?
 
 Ingress or incoming traffic is one of the crucial object when it comes to accessing our services externally or from outside of the cluster. In Kubernetes, Ingress can be briefly described as an API object to serve the same purpose by providing some routing rules to manage the access of the external users to the services in the cluster typically via HTTP/HTTPS. Thus, it also becomes equally crucial to secure and filter the Ingress in order to monitor and control the traffic entering
