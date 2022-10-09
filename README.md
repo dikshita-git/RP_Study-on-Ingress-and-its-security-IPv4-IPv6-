@@ -41,8 +41,6 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
        - <a href="">When can self-signed certificates be used without losing security?</a>
 
 <a href="">3. Fundemantals</a>
-    
-    - if appropriate put here what you already did
 
 <a href="">4. Approach and Goal</a>
 
@@ -99,6 +97,8 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 
 
 
+
+
 ## 1. Introduction
 The word Ingress describes traffic originating from sources external to the network under investigation. In the Kubernetes context it is the name of one special resource type, dedicated to forward http and https traffic to a service, based on rules specified by the user. Other protocols are not supported.)
 
@@ -111,6 +111,7 @@ the Kubernetes cluster so that only the valid and legitimate traffic enters whil
 
 ## 3. Fundemantals
 
+The initial step started with gathering the basic operational idea of ingress controller and default/wildcard certificates in kubernetes. Following which, some research was also conducted to analyse the procedures to generate the same and understanding their basic differences in applicability. In addition to this, some demonstrations are also conducted which can be found here under <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo"><code>Codes</code></a>.
 
 ## 4. Approach and Goal
 
