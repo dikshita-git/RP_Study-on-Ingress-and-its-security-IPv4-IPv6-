@@ -1,6 +1,6 @@
 ## Topic
 
-Study on filtering, mapping and Ingress and securing it in Kubernetes and evaluation of its best possible implementation(s) across different platforms.
+Study on the Ingress resource type in Kubernetes for mapping incoming traffic to services and securing it with certificates. Furthermore investigating and comparing the underlying implementations on the basis of k3s.
 
 ## Team
 
@@ -9,6 +9,35 @@ Study on filtering, mapping and Ingress and securing it in Kubernetes and evalua
 ***Mentor:*** Richard Clauß
 
 ***Candidate:*** Dikshita Kalita
+
+
+
+## Table of Contents
+
+All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki">Click Here</a>
+
+1. Introduction
+    (you are here)
+2. Fundemantals
+    - if appropriate put here what you already did
+3. Methodology
+    in methodology wiki page:
+    To answer the conducted research questions we do...:
+    1a) 
+       - making a table with properties to answer 1a
+    1b) 
+       - find a list of szenarios based on the table
+    2a)
+       - list methods of generating the certificates
+       - find main properties and compare them
+    2c)
+       - Getting insights by creating test deployment
+       - write down findings
+4. Results
+    4.1 Comparison of ingress controller implementations
+   - if appropriate put here what you already did
+5. Summary 
+
 
 
 ## Introduction
@@ -276,10 +305,3 @@ This project aims to secure the Ingress in a k3s cluster using different Ingress
   * <code><a href="https://traefik.io/glossary/kubernetes-ingress-and-ingress-controller-101/">What is a Kubernetes Ingress Controller?</a></code>
   
 </p></details> 
-
-
- 
-
-
-
-
