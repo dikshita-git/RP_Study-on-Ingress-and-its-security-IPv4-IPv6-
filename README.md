@@ -16,9 +16,9 @@ Study on the Ingress resource type in Kubernetes for mapping incoming traffic to
 
 All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki">Click Here</a>
 
-1. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">Introduction</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">1. Introduction</a>
 
-2. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">Motivation</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">2. Motivation</a>
     
    - <a href="">What are the basic possibilities ?</a>
     
@@ -40,39 +40,39 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
     
        - <a href="">When can self-signed certificates be used without losing security?</a>
 
-2. <a href="">Fundemantals</a>
+<a href="">3. Fundemantals</a>
     
     - if appropriate put here what you already did
 
-3. <a href="">Approach and Goal</a>
+<a href="">4. Approach and Goal</a>
 
     - to gain insights in the described functionalities, first some research questions shall be conducted. the goal is to answer them in the course of the project
 
-4. <a href="">Research Questions</a>
+<a href="">5. Research Questions</a>
 
-  - 4.1 Basic properties of underlying implementations
+  - 5.1 Basic properties of underlying implementations
   
-     * a) What are the princcipal differences between Traefik, HaProxy and Nginx?
+     - a) What are the princcipal differences between Traefik, HaProxy and Nginx?
         
-     * b) Which scenarios fit best for the aforementioned alternatives and what are their operational differences?
+     - b) Which scenarios fit best for the aforementioned alternatives and what are their operational differences?
 
- - 4.2 Certificate analysis
+ - 5.2 Certificate analysis
         
-     * a) compare methods of generating them
+     - a) compare methods of generating them
 
-     * b) show ways of distributing them and providing them to the ingress and ingress controller
+     - b) show ways of distributing them and providing them to the ingress and ingress controller
 
-     * c) can wildcard certficiates be beneficial during operations
+     - c) can wildcard certficiates be beneficial during operations
 
-     * d) how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers. When can self-signed certificates be used without losing security?
+     - d) how does the complexity of using self-signed certificates compare to the automatic generation of certficiates in kubernetes Ingress controllers. When can self-signed certificates be used without losing security?
 
-     * e) How is the rotation of expiring certificates realized in Ingress and the Ingress controllers?
+     - e) How is the rotation of expiring certificates realized in Ingress and the Ingress controllers?
         
   
-  - 4.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
+  - 5.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
   
 
-5. <a href="">Methodology</a>
+<a href="">6. Methodology</a>
 
     in methodology wiki page:
     To answer the conducted research questions we do...:
@@ -88,13 +88,14 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
        - Getting insights by creating test deployment
        - write down findings
 
-6. <a href="">Results</a>
-    4.1 Comparison of ingress controller implementations
+<a href="">7. Results</a>
+
+    7.1 Comparison of ingress controller implementations
    - if appropriate put here what you already did
 
-7. <a href="">Summary</a> 
+<a href="">8. Summary</a> 
 
-6. <a href="">Literatures</a> 
+<a href="">9. Literatures</a> 
 
 
 
