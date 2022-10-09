@@ -16,11 +16,10 @@ Study on the Ingress resource type in Kubernetes for mapping incoming traffic to
 
 All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki">Click Here</a>
 
-1. Introduction
-    (you are here)
-2. Fundemantals
+1. <a href="">Introduction</a>
+2. <a href="">Fundemantals</a>
     - if appropriate put here what you already did
-3. Methodology
+3. <a href="">Methodology</a>
     in methodology wiki page:
     To answer the conducted research questions we do...:
     1a) 
@@ -33,10 +32,10 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
     2c)
        - Getting insights by creating test deployment
        - write down findings
-4. Results
+4. <a href="">Results</a>
     4.1 Comparison of ingress controller implementations
    - if appropriate put here what you already did
-5. Summary 
+5. <a href="">Summary</a> 
 
 
 
