@@ -30,9 +30,6 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 
 <a href="">7. Results</a>
 
-    7.1 Comparison of ingress controller implementations
-   - if appropriate put here what you already did
-
 <a href="">8. Summary</a> 
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#literatures">9. Literatures</a> 
@@ -88,7 +85,7 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
         
      - b) Which scenarios fit best for the aforementioned alternatives and what are their operational differences?
 
- - 5.2 Certificate analysis
+ - 5.2 Certificate analysis and comparison
         
      - a) Compare the methods of generating the certificaates with different type of ingress controllers
 
@@ -108,22 +105,9 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
   
 ## 6. Methodology
 
+With the goal of exercising the roadmap produced, some methodologies to implement the same are carried out:
 
-    in methodology wiki page:
-    To answer the conducted research questions we do...:
-    
-    1a) 
-       - making a table with properties to answer 1a
-    1b) 
-       - find a list of szenarios based on the table
-    2a)
-       - list methods of generating the certificates
-       - find main properties and compare them
-    2c)
-       - Getting insights by creating test deployment
-       - write down findings
-
-
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Methodoloy">Methodology</a>
 
 
 
