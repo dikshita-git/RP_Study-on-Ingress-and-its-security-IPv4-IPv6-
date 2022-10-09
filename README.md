@@ -26,7 +26,7 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#5-research-questions">5. Research Questions</a>
   
-<a href="">6. Methodology</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#6-methodology">6. Methodology</a>
 
 <a href="">7. Results</a>
 
