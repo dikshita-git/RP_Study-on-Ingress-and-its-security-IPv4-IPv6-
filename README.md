@@ -40,7 +40,7 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
     
        - <a href="">When can self-signed certificates be used without losing security?</a>
 
-<a href="">3. Fundemantals</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-fundemantals">3. Fundemantals</a>
 
 <a href="">4. Approach and Goal</a>
 
