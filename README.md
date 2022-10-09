@@ -116,7 +116,8 @@ With the goal of exercising the roadmap produced, some methodologies to implemen
 
 <details><summary>Ingress</summary><p>
   
-  * <code><a href="https://opensource.googleblog.com/2020/09/kubernetes-ingress-goes-ga.html">Ingress</a></code>
+  * <code><a href="https://kubernetes.io/docs/concepts/services-networking/ingress/">Ingress</code></a>
+  * <code><a href="https://opensource.googleblog.com/2020/09/kubernetes-ingress-goes-ga.html">Ingress routing types</a></code>
   
 
 </p></details>
