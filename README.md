@@ -18,7 +18,7 @@ All Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IP
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">1. Introduction</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#introduction">2. Motivation</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#2-motivation">2. Motivation</a>
   
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-fundemantals">3. Fundemantals</a>
 
