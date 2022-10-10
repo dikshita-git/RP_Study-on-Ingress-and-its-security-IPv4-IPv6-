@@ -9,7 +9,7 @@ Below marks the steps followed for the tassk with their description:
 
 ### 1. Set up the k3s Cluster
 
-Here is my k3s cluster set-up <code> <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Cluster-setup">file</a></code> .
+I have set up a basic k3s cluster with 1 Master node and 2 worker nodes 
 
 
 ### 2. Install cert-manager (using helm)
