@@ -24,4 +24,4 @@ To further comply the theory with practical implementations, and post reading so
 
 
 💡 **NOTE**
-> the code base is subjected to changes and updates and is under working.
+> The code base is subjected to changes and updates and is under working.
