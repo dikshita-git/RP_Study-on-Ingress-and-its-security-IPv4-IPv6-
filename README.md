@@ -29,18 +29,19 @@ Study on the Ingress resource type in Kubernetes for mapping incoming traffic to
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Summary">7. Summary</a> 
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#literatures">8. Literatures</a> 
-
-
-Link to Wiki pages:  <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki">Click Here</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#literatures">8. Literature</a> 
 
 
 
 
 ## 1. Introduction
-The word Ingress describes traffic originating from sources external to the network under investigation. In the Kubernetes context it is the name of one special resource type, dedicated to forward http and https traffic to a service, based on rules specified by the user. Other protocols are not supported.)
 
-In Kubernetes, Ingress can be briefly described as an API object to serve the same purpose by providing some routing rules to manage the access of the external users to the services in the cluster typically via HTTP/HTTPS. Thus, it also becomes equally crucial to secure and filter the Ingress in order to monitor and control the traffic entering the Kubernetes cluster so that only the valid and legitimate traffic enters while the malicious and unauthorised traffic can be discarded or prevented. Though primarily, Ingress only supports one TLS port- 443 and assumes TLS termination, this project aims to study Ingress and its routing rules in a more detailed manner and how we could combine it with TLS, Let’s Encrypt etc. to secure our incoming traffic into the K3s cluster(mainly using an IPV4 address). Since certificate becomes pivotal when considering TLS or security in the cluster, hence studing about various type of certificates in K3s followed by their implementations and study about automatically renew the certificates up and set them running.
+The word Ingress describes traffic originating from sources external to the network under investigation. In the kubernetes terminology, it is the name of a special resource type or more specifically a kind of an API object which follows some routing rules defined by the user to direct and forward traffic from the external world to the services running in the kubernetes cluster. Ingress has a strong precedence over NodePort or Loadbalancer in a way that it can integrate the routing rules in a single resource instead of exposing multiple services available for a particular application individually. It defines routing rules on layer 7 for the protocols HTTP and HTTPS. Other protocols are not supported. Additional features are loadbalancing, path-based routing, SSL termination, etc. . These features are implemented by dedicated ingress controllers. Since only HTTP and HTTPS rules are supported they usually listen on port numbers 80 and 443 respectively. 
+There are several variations of ingress controllers available which can also be categorized as ***Cloud specific ingress controllers*** which is intended to integrate with the specific cloud loadbalancers and open ***source ingress controllers*** which is defined for more generic uses other than clouds. Some of the most popular and widely used implementations of ingress controllers are Nginx, Haproxy and Traefik. 
+
+Additionally, it also becomes crucial to secure the ingress entering the Kubernetes cluster so that only the valid and legitimate traffic enters while the malicious and unauthorised traffic can be discarded or prevented. Besides the obvious advantage, this furthermore ensures that only the legitimate traffic is included in an application's monitoring. 
+
+This project aims to compare the differences between the most widely used ingress controllers and also determines which could be considered a best choice of all. Moreover, it also compares the ways of generating the certificates in order to secure the ingress traffic and how can these certificates be distributed and provided to the type of ingress controller used. This is followed by understanding and evaluating if wildcard type of certifiacte can be beneficial and what could be the complexity measurement between a self-signed and default certificateconsidering the fact that security is not compromised.
 
 In order to proceed further wwith the topic, the project pivots the belowmentioned points of motivaation:
 
@@ -103,6 +104,11 @@ With the goal of exercising the roadmap produced, some methodologies to implemen
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Methodoloy">Methodology</a>
 
+
+
+## 6. Results
+
+After a thorough investigation of ingress controller and its implementations and usage of certificates to make the traffic secure, there are some observations and results marked. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Results"><code>Read Results</code></a>
 
 
 ## 8. Literatures:
