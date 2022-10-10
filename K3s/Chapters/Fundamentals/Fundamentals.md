@@ -24,4 +24,4 @@ To further comply the theory with practical implementations, and post reading so
 
 
 💡 **NOTE**
-> The code base is subjected to changes and updates and is under working.
+> The <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo">code base</a> is subjective to changes and updates and is under working.
