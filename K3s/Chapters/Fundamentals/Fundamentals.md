@@ -4,7 +4,9 @@ With reading to officially released documentations by kubernetes as starting poi
 
 * Ingress in detail: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Ingress#introduction-to-ingress">Click here</a>
 
-* TLS in kubernetes : <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes">Click here</a>
+* TLS in kubernetes : <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes#tls">Click here</a>
+
+* Cert-manager in kubernetes : <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes#cert-manager">Click here</a>
 
 * Traefik : <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik">Click here</a>
 
