@@ -20,4 +20,8 @@ To further comply the theory with practical implementations, and post reading so
 
 * Testing a self-signed certificate for k3s ingress using nginx ingress controller and replacing the default loadbalancer by Metallb. Click <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo/Certificate_with_k3s%2Bnginx"><code>Codebase</code></a> 
 
-* Testing wildcard certificate for k3s ingress using default ingress controller "Traefik". Click <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo/Certificate_with_k3s%2Btraefik"><code>Codebase</code></a> 
+* Testing the default certificate for k3s ingress using haProxy ingress controller. Click <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo/Certificate_with_k3s%2BHaProxy"><code>Codebase</code></a> 
+
+
+💡 **NOTE**
+> the code base is subjected to changes and updates and is under working.
