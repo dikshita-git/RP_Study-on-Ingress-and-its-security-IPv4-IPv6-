@@ -107,11 +107,13 @@ With the goal of exercising the roadmap produced, some methodologies to implemen
 
 ## 6. Results
 
-After a thorough investigation of ingress controller and its implementations and usage of certificates to make the traffic secure, there are some observations and results marked. The <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Results"><code>Results</code></a> chapter consists of the answers to the research questions mentioned above. Below are the list to the respective chapters for the same:
+After a thorough investigation of ingress controller and its implementations and usage of certificates to make the traffic secure, there are some observations and results marked. The <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Results"><code>Results</code></a> chapter consists of the answers to the research questions mentioned above. Below are the list of links to the respective chapters consisting of results for the same in a detailed manner :
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.1_Basic_properties_of_underlying_implementations.md">* Research Question 3.1: Basic properties of underlying implementations</a>
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.2_Certificate_analysis_and_comparison.md">* Research Question 3.2: Certificate analysis and comparison</a>
+
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.2_Certificate_analysis_and_comparison.md">* Research Question 3.3: Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates</a>
 
 
 
