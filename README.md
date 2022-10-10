@@ -93,8 +93,7 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 ## 4. Fundamentals
 
-The initial step started with gathering the basic operational idea of ingress controller and default/wildcard certificates in kubernetes. Following which, some research was also conducted to analyse the procedures to generate the same and understanding their basic differences in applicability. In addition to this, some demonstrations are also conducted which can be found here under <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo"><code>Codes</code></a>.
-
+The initial step started with gathering the basic operational idea of ingress controller and default/wildcard certificates in kubernetes. Following which, some research was also conducted to analyse the procedures to generate the same and understanding their basic differences in applicability. A more detailed draft of the approaches made can be found here: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Fundamentals"><code>Visit Fundamentals</code></a>.
 
  
  
