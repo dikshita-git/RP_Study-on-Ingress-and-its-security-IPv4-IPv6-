@@ -116,7 +116,7 @@ A short and brief summary of the project is accustomed at this page. <a href="ht
 
 
 
-## 8. Literatures
+## 8. Literature
 
 
 <details><summary>Ingress</summary><p>
