@@ -65,13 +65,13 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 ## 3. Research Questions
 
-- 5.1 Basic properties of underlying implementations
+- 3.1 Basic properties of underlying implementations
   
      - a) What are the principal point of differences between Traefik, HaProxy and Nginx?
         
      - b) Which scenarios fit best for the aforementioned alternatives and what are their operational differences?
 
- - 5.2 Certificate analysis and comparison
+ - 3.2 Certificate analysis and comparison
         
      - a) Compare the methods of generating the certificaates with different type of ingress controllers
 
@@ -86,7 +86,7 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
      - f) How is the rotation of expiring certificates realized in ingress in kubernetes?
         
   
-  - 5.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
+  - 3.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
   
 
 
