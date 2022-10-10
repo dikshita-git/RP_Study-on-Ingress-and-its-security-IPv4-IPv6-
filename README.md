@@ -113,7 +113,7 @@ After a thorough investigation of ingress controller and its implementations and
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.2_Certificate_analysis_and_comparison.md">* Research Question 3.2: Certificate analysis and comparison</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.2_Certificate_analysis_and_comparison.md">* Research Question 3.3: Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/edit/main/K3s/Chapters/Results/3.3_Analysing_how_all_the_used_certificates_could_be_rotated_automatically_on_startup_before_they_expire_and_possible_ways_to_recover_from_expired_certificates.md">* Research Question 3.3: Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates</a>
 
 
 
