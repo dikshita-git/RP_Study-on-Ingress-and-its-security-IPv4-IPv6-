@@ -15,6 +15,7 @@ curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--no-deploy traefik --no-deploy
 
 ### * Using Traefik ingress controller : <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo/Certificate_with_k3s%2Btraefik">Codebase here</a>
 
+This case includes using the default ingress controller of k3s "Traefik" in order to issue a wildcard certificate to our host name. For this, once the cluster is set up, Custom resource definitions are installed before installing cert-manager because cert-manager uses the custom resources to define the resources which the users interact with while using cert-manager like Certificates and Issuers. Once these are defined, we safely install cert-manager because we  
 
 
 ### * Using HaProxy ingress controller : <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Demo/Certificate_with_k3s%2BHaProxy">Codebase here</a>
