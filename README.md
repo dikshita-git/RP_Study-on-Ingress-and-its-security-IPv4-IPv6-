@@ -111,7 +111,14 @@ With the goal of exercising the roadmap produced, some methodologies to implemen
 After a thorough investigation of ingress controller and its implementations and usage of certificates to make the traffic secure, there are some observations and results marked. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Results"><code>Read Results</code></a>
 
 
-## 8. Literatures:
+
+## 7. Summary
+
+A short and brief summary of the project is accustomed at this page. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Summary"><code>Visit Summary</code></a>
+
+
+
+## 8. Literatures
 
 
 <details><summary>Ingress</summary><p>
