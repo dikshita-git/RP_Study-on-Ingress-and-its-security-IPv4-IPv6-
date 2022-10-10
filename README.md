@@ -63,6 +63,7 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
 
 
+
 ## 3. Research Questions
 
 - 3.1 Basic properties of underlying implementations
@@ -100,6 +101,7 @@ The initial step started with gathering the basic operational idea of ingress co
 ## 5. Methodology
 
 With the goal of exercising the roadmap produced, some methodologies to implement the same are carried out: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Methodoloy">Visit Methodology</a>
+
 
 
 
