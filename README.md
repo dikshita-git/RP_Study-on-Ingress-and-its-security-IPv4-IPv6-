@@ -43,7 +43,7 @@ Additionally, it also becomes crucial to secure the ingress entering the Kuberne
 
 This project aims to compare the differences between the most widely used ingress controllers and also determines which could be considered a best choice of all. Moreover, it also compares the ways of generating the certificates in order to secure the ingress traffic and how can these certificates be distributed and provided to the type of ingress controller used. This is followed by understanding and evaluating if wildcard type of certifiacte can be beneficial and what could be the complexity measurement between a self-signed and default certificateconsidering the fact that security is not compromised.
 
-In order to proceed further wwith the topic, the project pivots the belowmentioned points of motivaation:
+In order to proceed further with the topic, the project pivots the belowmentioned points of motivation:
 
 * Determining the basic possibilities of protocols supported in ingress in kubernetes.
 
