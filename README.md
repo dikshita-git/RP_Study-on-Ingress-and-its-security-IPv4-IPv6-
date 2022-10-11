@@ -74,17 +74,15 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 
  - 3.2 Certificate analysis and comparison
         
-     - a) Compare the methods of generating the certificaates with different type of ingress controllers
+     - a) Compare the methods of generating the certificates with different type of ingress controllers and determining the ways to distribute the generated certificate and providing them to the ingress controller
 
-     - b) Determining the ways to distribute the generated certificate and providing them to the ingress controller
-
-     - c) Can wildcard certficiates be beneficial during operations?
+     - b) Can wildcard certficiates be beneficial during operations?
   
-     - d) How does the complexity of using self-signed certificates compare to the automatic generation of certficiates in ingress controllers?
+     - c) How does the complexity of using self-signed certificates compare to the automatic generation of certficiates in ingress controllers?
     
-     - e) When can self-signed certificates be used without losing security?</a>
+     - d) When can self-signed certificates be used without losing security?</a>
        
-     - f) How is the rotation of expiring certificates realized in ingress in kubernetes?
+     - e) How is the rotation of expiring certificates realized in ingress in kubernetes?
         
   
   - 3.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
