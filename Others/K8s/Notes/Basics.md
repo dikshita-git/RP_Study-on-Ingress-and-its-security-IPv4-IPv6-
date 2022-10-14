@@ -1,4 +1,3 @@
---------
 # DOMAINS
 
 1. Domain Name is the address of our website that we type in the URL bar of browser.
@@ -286,6 +285,90 @@ Let us create a Development environment in our Docker swarm cluster. Here, in th
 
 These 3 replicas should-------> internally communicate with the MySQL Database so that the wp (wordpress) website can be developed.But, these 4 containers namely WP Replica 1, WP Replica 2, WP Replica 3 and MySQL can be running anywhere on the manager or workers because they are in our swarm cluster. For this scenario, our docker compose will look like:
 
-  ---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+# K8s
+
+## What is it?
+
+
+1. K8s is a system for running and co-ordinating the containerized applications across a cluster of machines
+2. It is a portable, extensible, open-source platform designed to completely manage the workloads, lifecycle of containerized applications and services using methods that provide portability, scalability and high-availability(HA).
+3. In K8s, users can define how our applications ***should run*** and ***the ways they should be able to interact with other applications or outside world***.
+
+---------------------------------------------------------------------------------------------------------------------------
+## Usages
+
+
+1. Scale our services up or down
+2. Perform graceful rolling updates
+3. Switch the traffic between different versions of our applications to test the features or rollback the problematic deployments. This process is called ***CANARY DEPLOYMENTS***
+
+---------------------------------------------------------------------------------------------------------------------------
+## K8s Architecture
+
+
+K8s is mainly composed of:
+
+| Master Node   | Worker Node(s) |
+| ------------- | -------------  |
+| It hosts the K8s Control Plane that controls and manages the whole K8s system  | Worker nodes run the actual application we deploy  |
+
+![](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/K8s_components.PNG)
+<p>Fig Fk8s_1: Components in Kubernetes</p>
+<p>Source courtesy: Kubernetes in Action by Luksa, Marko</p>
+
+The description of Master server components are:
+| Component     | Description |
+| ------------- | -------------  |
+|   etcd        | <ul><li>It is a fundamental component which is a globally available configuration store.</li><li>It is a lightweight, distributed key-value store that can be configured to span across multiple nodes.</li><li>K8s uses ***etcd*** to store configuration data that can be accessed by each of the nodes in the cluster</li><li>It can be used for service delivery and can help components configure or re-configure themselves according to the up-to-date information.</li><li>Also helps maintain cluster state with features like leader election and distributed locking.</li><li>Like most of the other components in the ***Control Plane***, etcd can be configured on a single master server or in production scenarios, distributed among a number of machines.</li>***Only requirement is that---> it should be network accessible to each of the Kubernetes machines***</ul>|
+|  API server/ kube-api server  | <ul><li>It is one of the most important master services</li><li>It is the main management point of the entire cluster as it allows a user to configure Kubernetes workloads and organizational units. </li><li>It is responsible for making sure that etcd store and the service details of deployed containers are in agreement.</li><li>It acts as a bridge between various components to maintain cluster health and distributed information and commands.</li><li>The API server implements a RESTful interface, which means that many different tools and libraries can readily communicate with it.</li><li>Client ***kubectl*** is available----> as a default method of interacting with the K8s cluster from a local computer.</li></ul>  |
+|    kube-controller manager   | <ul><li>It is a general service that has many responsibilities.</li><li>***Primarily:***<ul><li>It manages different controllers that regulate the state of the cluster, manage the workload lifecycle and perform routine tasks.</li><li>Eg: A Replication Controller ensures that the number if replicas defined for a pod matches the number currently deployed in the cluster.<p>The details of these operations are written to ***etcd***, where the controller manager watches for changes through the API server</p></li></ul></li><li>When a change is seen, the controller reads the new information and implements the procedure that fulfils the desired state. This can involve scaling an application up or down, adjusting endpoints etc.</li></ul>  |
+|   kube-scheduler      | <ul><li>It is the process that actually assigns workloads to the specific nodes in the cluster</li><li>This service reads in a workloads' operating requirements, analyzes the current infrastructure environment and places the work on an acceptable node or nodes.</li><li>Scheduler is responsible for tracking available capacity on each host to make sure that workloads are not scheduled in excess of the available resources.</li><li>The scheduler must know the total capacity as well as the resources already allocated to existing workloads on each server.</li></ul> |
+|   Cloud-controller-manager   | <ul><li>Cloud controller-managers act as the glue that allows Kubernetes to interact the providers with different capabilities, features and APIs while maintaining relatively generic constructs internally.</li><li>This allows Kubernetes to update its state information according to information gathered from the cloud provider, adjust cloud resources as changes are needed in the system and create and use the additional cloud services to satisfy the work requirements submitted to the cluster.</li></ul>   |
+|  Node server components  |  <ul><li>***Nodes***--> are servers that perform work by running containers</li><li>Node servers have a few requirements that are necessary for communicating with the master components, configuring the container networking and running the actual workloads assigned to each other.</li><li><ul>***Container Runtime:***<li>It is the first component that each node must have.</li><li>Typically this requirement is satisfied by installing and running Docker, but alternatives like ***rkt*** and ***runc*** are also available.</li><li>Container runtime is responsible for starting and managing containers, applications encapsulated in a relatively isolated but lightweight operating environment.</li><li>Each unit of work on the cluster is, as its basic level, implemented as one or more containers that must be deployed.</li><li>The container runtime on each node is the component that finally runs the containers defined in workloads submitted to cluster.</li></ul></li></ul>   |
+|   kubelet  (It is a service)  | <ul><li>It is the main contact point for each nodes with the cluster group.</li><li>This service is responsible for relaying/broadcasting the information ***to*** and ***from*** the Control plane services, as well as interacting with the "etcd" store to read configuration details or write the new values.</li><li>This service communicates with the master components to authenticate to the cluster and receive commands and ***:bulb:work***.</li><li>***:bulb:Work:*** It is received in the form of a manifest which defines the workload and the operating parameters.</li><li>The kubelet process then assumes responsibility for maintaining the sate of the work on node server.</li><li>It controls the container runtime to launch or destroy the container as needed.</li></ul>  |
+| kube-proxy |  <ul><li>This is a small proxy service that is run on each node server to manage the individual host subnetting  and make the services available to other components.</li><li>This process forwards the request to correct containers, can do the primitive load-balancing and is generally responsible for making sure the networking environment is predictable and accessible but isolated where appropriate </li></ul>   |
+
+---------------------------------------------------------------------------------------------------------------------------
+## K8s Objects and Workloads
+
+
+1. Usually containers are the underlying mechanism to deploy the applications.
+2. Kubernetes uses additional layers of abstraction over teh container interface to provide scaling, resiliency/elasticity and life-cycle management features.
+
+![](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/K8s_objects.drawio.png)
+<p>Fig Fk8s_2: K8s Objects</p>
+
+
+### 🟣 <u>1. Pods</u> 
+
+|    Description |  Illustration   |
+| -------------- | --------------  |
+|  <ul><li>It is the most basic unit</li><li>Containers themselves are not assigned to Hosts, but one or more tightly coupled containers are encapsulated in an object called ***Pod***.</li><li>Pod represents----> 1 or more containers that should be controlled as a single application.</li><li>Pods consists of containers------> that operates closely together, share a life-cycle and should always be scheduled on same node.</li><li>Pods consists of containers----> and they are managed entirely as a unit and share their environments, volumes and IP space.</li><li>Usually pods contain of a main container that satisfies the general purpose of workload and optionally some helper containers that facilitate closely related tasks.</li><li>***Eg:*** Pods may have ----><p><b>1 container</b> => running the primary application server</p><p><b>Helper container</b> => pulling down files to the shared file system when changes are detected in an external repository.</p></li><li>Horizontal scaling is usually ***discouraged*** on the pod level as there are other high level objects more suited for the task.</li><li>Within a cluster ----> Pod represents the process that is running.</li></ul>   | <p align="center"><img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/k8s_pods_new.png">Fig Fk8s_3: Pods</p> |
+
+
+
+### 🟣 <u>2. Replication Controller (RC)</u> 
+
+|    Description |  Illustration   |
+| -------------- | --------------  |
+|  In K8s, rather than working with single pods, we have to manage groups of identical, replicated pods.<p>These are created from pod templates and can be horizontally scaled by controllers "Replication Controller" and "Replica Sets"</p> <ul><li>Kubernetes resource or an object that defines a pod template and control parameters to scale identical replicas of pod horizontally by increasing or decreasing the number of running copies.</li><li>It makes sure that a pod or a homogeneous set of pods (replica of pods) is always up and running.</li><li>This is an easy way to distribute load and increase availability natively within Kubernetes.</li><li>RC is responsible for ensuring that the number of pods deployed in the cluster matches the number of pods in its configuration.</li><li>If the number of replicas in a configuration of a controller changes, the controllers either :green_heart: ***starts up*** or :red_circle: ***kills*** the containers to match the desired number.</li><li>If a pod or underlying hosts fails, the controller will start new pods to compensate.</li><li>RC can also perform rolling updates to roll over a set of pods to a new version one by one, minimizing the impact on application availability.</li><li>If a pod disappears for any reason, such as in the event of  a node disappearing from the cluster of because the pod was evicted from the node, the RC notices the missing pod and creates a replacement pod.<p> These happens only when a pod is managed by a RC. as shown in the Fig Fk8s_4.</p></li></ul><p>In the Fig Fk8s_4, <ul>In Node 1,<li><b>POD A ---></b>is ***not*** managed and created by RC.</li><li><b>POD B ---></b>is managed and created by RC.</li><p>Thus, when Node 1 fails => POD A goes :small_red_triangle_down: ***down*** with Node 1 and is not recreated because there is no RC overseeing it. </p><p>=> But RC notices POD B is missing and :green_heart: ***creates*** a new pod instance.</p></ul></p> <p><u>***Benefits of RC:***</u></p><ul><li>It enables us to easily create multiple pods and then makes sure that number of pods always exists and matches.</li><li><b>When a cluster node fails =></b> it creates the replacement replica pods for those pods which were under the control of RC.</li><li>It enables us to ***scale*** the pods ***horizontally.***</li><li>Allows us to update or delete multiple pods with a single command.</li><li>K8s provides a built-in feature called ***Horizontal Pod Autoscaler (HPA)***(<a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#:~:text=In%20Kubernetes%2C%20a%20HorizontalPodAutoscaler%20automatically,is%20to%20deploy%20more%20Pods.">Read More</a>) which adjusts the number of replica pods of an application (horizontal scaling). Fig Fk8s_5:</li></ul><p><u>***Parts of RC Template:***</u></p>We create an RC by posting a JSON or YAML descriptor to the Kubernetes API server. <p>A Replication Controller has three essential parts (also shown in figure 6):</p><ul><li>A ***label selector***, which determines what pods are in the Replication Controller’s scope.</li><li>A ***pod template***, which is used when creating new pod replica</li><li>A ***replica count***, which specifies the desired number of pods that should be running</li></ul><p>:orange_book: ***NOTE:*** A ReplicationController’s replica count, the label selector, and even the pod template can all be modified at any time, but only changes to the replica count affect existing pods.</p><p>Refer Fig Fk8s_6 and Fk8s_7</p> | <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Latest_RC.drawio.png"><p>Fig Fk8s_4: Replication controller</p> <p align="center">Source: <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">Click here</a></p>-------------------------------------------- <p align="center"><img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/HPA.drawio.png"><p>Fig Fk8s_5: HPA</p> <p align="center">Source: Kubernetes in Action by Marko Lukša</p></p>-------------------------------------------- <p align="center"><img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Parts_RC.png"><p>Fig Fk8s_6: Parts of RC</p> <p align="center">Source: Kubernetes in Action by Marko Lukša</p></p>-------------------------------------------- <p align="center"><img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Demo_RC_template.png"><p>Fig Fk8s_7: RC Template </p><p align="center">Source: Kubernetes in Action by Marko Lukša</p></p> |
+
+
+### 🟣 <u>3. Replica Sets</u> 
+
+|    Description |  Illustration   |
+| -------------- | --------------  |
+|    <ul><li>It is the iteration on RC design with greater flexibility in how the controller identifies the pods it is meant to manage.</li><li>These are the next generation RC.</li><li>Supports the ***"set-based label-selector"***. That is why they can match pods based on the presence of a label-key regardless of its value. <p>***Eg:*** </p><p>***1 RC*** :red_circle: ***cannot match*** pods with the label env=prod and those with the env=dev at the same time. It can only match either pods with env=prod label or with env=dev because it uses ***Equity-Based selectors***</p><p align="center">BUT</p> <p>***1 RS*** :green_heart: ***can match*** both sets of prods and treat them as 1 group.</p></li><li>They are most powerful than RC and are meant to be used as backend for deployments.</li></ul> <p><u>***Preferring RS over RC?:***</u></p><ul><li>A ReplicaSet behaves exactly like a ReplicationController, but it has more expressive pod selectors.</li><li>A ReplicaSet behaves exactly like a ReplicationController, but it has more expressive pod selectors.</li><li>The first thing to note is that ReplicaSets aren’t part of the v1 API, so you need to ensure you specify the proper apiVersion when creating the resource.</li><li>We're creating a resource of type ReplicaSet which has much the same contents as the ReplicationController you created earlier. The only difference is in the selector. Instead of listing labels the pods need to have directly under the selector property, you’re specifying them under ***selector.matchLabels***. </li></ul>  | <p align="center"><img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Demo_RC_template.png"><p>Fig Fk8s_8: RS Template </p><p align="center">Source: Kubernetes in Action by Marko Lukša</p></p>  |
+
+
+### 🟣 <u>4. Deployments</u> 
+
+|    Description |  Illustration   |
+| -------------- | --------------  |
+|  <ul><li>Kubernetes objects that are used for managing pods. </li><li>The first thing a Deployment does when it’s created is to create a replicaset.</li><li>The replicaset creates pods according to the number specified in the replica option. </li><li>Deployments can be used to scale your application by increasing the number of running pods, or update the running application. <p>A Kubernetes Deployment can be in either of 3 states during its lifecycle: </p></li><li><p>The ***progressing*** state indicates that the deployment is still working on creating or scaling the pods. </p><p>The ***completed*** state indicates that the deployment has finished its task successfully, while the ***failed*** state indicates that an error occurred with the deployment.</li></ul>             |                  |
   
   
