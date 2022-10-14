@@ -94,7 +94,7 @@ After a thorough investigation of ingress controller and its implementations and
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.1_Basic_properties_of_underlying_implementations.md">* Research Question 3.1: Basic properties of underlying implementations</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.2_Certificate_analysis_and_comparison.md">* Research Question 3.2: Distribution of certificates</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.2_Distribution_of_certificates.md">* Research Question 3.2: Distribution of certificates</a>
 
 
 
