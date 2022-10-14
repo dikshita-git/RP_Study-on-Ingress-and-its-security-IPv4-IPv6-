@@ -54,9 +54,8 @@ In order to proceed further with the topic, the project pivots the belowmentione
 
 ## 2. Approach and Goal
 
-This project aims to secure the Ingress in a K3s cluster using different Ingress Cntrollers namely Traefik, HaProxy, Nginx and to study their differences in use-cases. Further, it also tests various certificates like self-signed, wildcard and default certificates and analyse automatic certificate rotation.
-
-- to gain insights in the described functionalities, first some research questions shall be conducted. the goal is to answer them in the course of the project
+This project aims to secure ingress in a K3s cluster by investigating the varied methods of certificate generation using the three most popular implementations of open-source igress cntrollers namely Traefik, HaProxy, Nginx.
+Further, in order to gain more insights in the described functionalities, some research questions shall be conducted which will be answered in the course of the project on the basis of research and demonstrations.
 
 
 
@@ -66,23 +65,12 @@ This project aims to secure the Ingress in a K3s cluster using different Ingress
 - 3.1 Basic properties of underlying implementations
   
      - a) What are the principal point of differences between Traefik, HaProxy and Nginx?
-        
-     - b) Which scenarios fit best for the aforementioned alternatives and what are their operational differences?
 
  - 3.2 Certificate analysis and comparison
         
-     - a) Compare the methods of generating the certificates with different type of ingress controllers and determining the ways to distribute the generated certificate and providing them to the ingress controller
-
-     - b) Can wildcard certficiates be beneficial during operations?
-  
-     - c) How does the complexity of using self-signed certificates compare to the automatic generation of certficiates in ingress controllers?
-    
-     - d) When can self-signed certificates be used without losing security?</a>
-       
-     - e) How is the rotation of expiring certificates realized in ingress in kubernetes?
+     - a) Compare the methods of generating the certificates with different type of ingress controllers.
         
-  
-  - 3.3 Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates.
+     - b) Analysing how the utilized certificates could be rotated automatically.
   
 
 
