@@ -372,3 +372,172 @@ The description of Master server components are:
 |  <ul><li>Kubernetes objects that are used for managing pods. </li><li>The first thing a Deployment does when it’s created is to create a replicaset.</li><li>The replicaset creates pods according to the number specified in the replica option. </li><li>Deployments can be used to scale your application by increasing the number of running pods, or update the running application. <p>A Kubernetes Deployment can be in either of 3 states during its lifecycle: </p></li><li><p>The ***progressing*** state indicates that the deployment is still working on creating or scaling the pods. </p><p>The ***completed*** state indicates that the deployment has finished its task successfully, while the ***failed*** state indicates that an error occurred with the deployment.</li></ul>             |                  |
   
   
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+# K8s in IPV6
+
+#### Headnote:
+------------
+
+The ***NOTE*** in this document consists of 2 types:
+
+<b>1. Knowledge Note</b>
+
+It contains knowledge about the topic or idea marked with 💡 .
+
+<b>2. Error Note:</b>
+
+It contains the solution to appeared error while running the commands ❌ .
+
+********************************************************************************************************************************************************
+
+## 🟣 Introduction
+
+
+Kubernetes using IPv6 infers that we can assign our IPV6 address to the kubernetes pods and other resources at the same time. Though, the implementation of IPv6 makes the scenario a bit more complex than using IPv4 addresses but it also enables us to save many IPv4 address as they are relatively very narrow and we  could assign many unique public IPs which again infers that each pod in kubernetes can have its own internet-facing address which was not possible with IPv4a addresses.
+
+This advantage comes with a big security responsibility as well since we will have an extra risk factor associated with public IP address which are exposed to internet. Thus the implementation of Kubernetes with IPv6 requires a very tight layer of security.
+
+Enabling this security further also implies that we are securing our Kubernetes as well and saving it from the hackers.
+
+IPv6 in Kubernetes also complicates the Load-balancing because the admins will have to ensure that external resources do not bypass the loadbalancers or ingress controllers by sending the requests directly to the IPv6 address of the Kubernetes Pods instead of teh controller that is assigned to manage teh traffic to it.
+
+Here again, Kubernetes Ipv6 implementation makes the Kubernetes IoT friendly.
+
+-----------------------------------------
+
+## 🟣 Prerequisites to enable ipv6 
+
+Sources referred: <a href="https://kubernetes.io/docs/setup/production-environment/container-runtimes/">Container Runtime</a>, <a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/">Install Kubeadm</a>, <a href="https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/">kubeadm Init</a>, <a href="https://github.com/sgryphon/kubernetes-ipv6">K8s using IPv6</a>, <a href="https://projectcalico.docs.tigera.io/networking/ipv6">Configure IPv6 only</a>
+
+
+
+### <i>1. Docker Container Runtime:</i>
+=========================
+
+Kubernetes using IPv6 addrress is enabled only the versions after 1.23, which was assisted by Dockershim but due to the burden of its management for the Kubernetes maintainer, it is disabled in the later versions of kubernetes which actually support IPv6. Instead of Dockershim, we have the Docker Container Runtime which is to be installed and configured before the installation of Kubernetes. The detailed descriptions are penned below:
+
+First, we have to enable IPv6 forwarding and IP tables.
+
+                cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
+                net.ipv6.conf.all.forwarding        = 1
+                net.bridge.bridge-nf-call-ip6tables = 1
+                EOF
+               
+                sudo sysctl --system    #Apply sysctl params without reboot
+
+               # Prerequisite packages
+                sudo apt-get update
+                sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common gnupg2
+
+               # Add Docker's official GPG key:
+               curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
+                    | sudo apt-key --keyring /etc/apt/trusted.gpg.d/docker.gpg add -
+
+               # Add the Docker apt repository:
+               sudo add-apt-repository \
+                   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+                    $(lsb_release -cs) \
+                    stable"
+
+               # Install Docker CE
+               sudo apt-get update
+               sudo apt-get install -y \
+                       containerd.io=1.2.13-2 \
+                       docker-ce=5:19.03.11~3-0~ubuntu-$(lsb_release -cs) \
+                       docker-ce-cli=5:19.03.11~3-0~ubuntu-$(lsb_release -cs)
+
+***NOTE : Check docker version before proceeding further as sometimes we might need to purge and remove the docker files(if any) and clean up again to start installing container runtime. If docker version returns a success code, the following setting up of Daemon an creating docker.service.d works as well.***
+
+               # Set up the Docker daemon
+               cat <<EOF | sudo tee /etc/docker/daemon.json
+               {
+                    "exec-opts": ["native.cgroupdriver=systemd"],
+                    "log-driver": "json-file",
+                    "log-opts": {
+                    "max-size": "100m"
+                },
+                    "storage-driver": "overlay2"
+                     }
+               EOF
+
+               # Create /etc/systemd/system/docker.service.d
+               sudo mkdir -p /etc/systemd/system/docker.service.d
+
+               # Restart Docker
+              sudo systemctl daemon-reload
+              sudo systemctl restart docker
+
+              # Set docker to start on boot
+              sudo systemctl enable docker
+
+<b>To purge Docker,</b> follow these commands:
+
+                   1. sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli
+                   
+                   2. sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce  
+
+                   3. sudo rm -rf /var/lib/docker /etc/docker
+
+                   4. sudo rm /etc/apparmor.d/docker
+
+                   5. sudo rm -rf /var/run/docker.sock
+
+<b>To purge Kubernetes,</b> follow these commands:
+
+                   1. kubeadm reset
+
+                   2. sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube* 
+
+                   3. sudo apt-get autoremove
+
+                   4. sudo rm -rf ~/.kube
+
+
+
+### <i>2. Installing kubeadm, kubelet and kubectl:</i>
+======================================
+
+                    # Prerequisite packages
+                    sudo apt-get update
+                    sudo apt-get install -y apt-transport-https curl
+
+                    curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
+                    cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+                    deb https://apt.kubernetes.io/ kubernetes-xenial main
+                    EOF
+
+                    sudo apt-get update
+                    sudo apt-get install -y kubelet kubeadm kubectl
+                    sudo apt-mark hold kubelet kubeadm kubectl
+
+
+
+### <i>3. Setting up Kubernetes Control Plane:</i>
+======================================
+
+sudo kubeadm init :bulb:
+
+:bulb: <b>Kubeadm </b>
+
+              Kubeadm is a tool built to provide kubeadm init and kubeadm join as best-practice "fast paths" for creating Kubernetes clusters. 
+              During kubeadm init, kubeadm uploads the ClusterConfiguration object to our cluster in a ConfigMap called kubeadm-config in the kube-system 
+              namespace. This configuration is then read during kubeadm join, kubeadm reset and kubeadm upgrade.
+
+
+***NOTE : It is possible that kubeadm init returns an error of swap and container runtime not running. In that case disable swap by ***swapoff -a*** and run these commands:***
+
+                    1. sudo rm /etc/containerd/config.toml
+                    
+                    2. sudo systemctl restart containerd
+
+                    3. sudo kubeadm init
+
+***NOTE:***
+
+Sometimes while running <b>sudo kubeadm init</b>, there might be fatal errors showing ports are in use. It is because <b>sudo kubeadm init</b> command is already run. In that case, <b>sudo kubeadm reset</b> command is to be run which will unmount the ports and then we can run <b>sudo kubeadm init</b> with success.
+
+
+
+
