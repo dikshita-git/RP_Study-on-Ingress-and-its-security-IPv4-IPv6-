@@ -374,6 +374,195 @@ The description of Master server components are:
   
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
+## 🟣 Rules of Kubernetes Basic Model
+
+
+1. Every pod gets its own IP address.
+2. NAT is not required to connect containers in a pod or multiple pods in a node.
+3. Agents like system daemon, kubelet get all-access passes
+4. Shared namespaces(IP, MAC address)
+
+
+
+**********************
+
+
+
+## 🟣 Kubernetes Networking involves
+
+This content section is a reference from <a href="https://digitalvarys.com/kubernetes-networking-models/">Link 1</a>, <a href="https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-networking-guide-beginners.html">Link 2</a>
+
+
+### 1. <u>Container-Container Networking: </u>
+
+
+<p align="center"><img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/C-2-C-networking.drawio.png"></p>
+
+<p align="center">Fig: Container to container networking</p>
+
+
+
+1. Container-to-container networking happens through the pod network namespace. This allows two containers in a same pod to communicate each other via ***Localhost*** and ***Port number***.
+
+   Containers in the same pod are in the same network namespace. That is why communication between containers is possible via localhost while port 
+   numbers need to be taken care of in case of multiple containers in the same pod.
+
+***a) Network namespace:***
+
+- Collection of network interfaces (connection between two pieces of the equipment on a network)and routing tables (instruction from where to send the network packets)
+- Namespaces are helpful as we can have many network namespaces on the same VM without interference
+- Each pod get its own namespace.
+
+   
+          NOTE 💡 
+         
+          - There is a secret container called <b>PAUSE CONTAINER</b> that runs on every pod in K8s.
+
+          - The 1st job of this container is to keep namespace open if all the other containers in the pod die.
+
+
+2. Network namespace allows us to have a separate network interface and routing tables that are isolated from the rest of the system and operate independently.
+
+3."Eht0" is a virtual ethernet device and a tunnel which connects the pod's network with the node on the pod's side.
+
+This same device is renamed as "VethX" (Why the X? There’s a vethX connection for every pod on the node. So they’d be veth1, veth2, veth3, etc.) in the node's side.
+
+4. In other words, each pod's eth0 device is actually connected to a virtual ethernet device in the node.
+
+5. Typically, in network communication, we view the virtual machine to interact directly wit the Ethernet device Eth0
+
+5. Whilst each pod thinks it has a normal ethernet device called "Eth0" to make the network requests through but in real kubernetes is faking it as it i s just a virtual ethernet connection.
+
+
+
+
+### 2. <u>Pod-Pod Networking (on same node): </u>
+
+
+<p align="center"><img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Detail_networking.drawio.png"></p>
+<p align="center">Fig: Pod-to-Pod networking in single node overview</p>
+
+
+1. When a pod makes a request to the IP address of another node, it makes that request through its own eth0 interface. This tunnels to the node’s respective virtual vethX interface.
+
+2. This request made gets to the other pod because the node uses a ***network Bridge***
+
+3. ***Network Bridge:***
+
+- It is used to connect two networks together.
+- Whenever a request hits the bridge, teh bridge asks all the connected devices i.e. pods if they have the right IP address to handle the original request.
+- If one of the pods responds to the bridge then the bridge stores this information and also forwards the data to the original sender so that teh request can be completed.
+- In k8s, it is called ***Cbr0***.
+- Every pod in the node is a part of this bridge and this bridge connects all the pods in the same node together.
+
+
+      As shown in figure above , If, one Pod wants to send data to another Pod,
+
+      * First, it will connect using Pod-1’s interface (eth0) to root network namespace’s virtual interface-0 (veth0).
+
+      (From the Root Network Namespace, root interface (eth0) will create a virtual interface (veth0, veth1,.) for every Pods and which is assigned to 
+      each Pod network namespace. Then, every Virtual interface will connect through the virtual bridge which will send and receive data using [ARP] 
+      (https://en.wikipedia.org/wiki/Address_Resolution_Protocol) protocol.)
+
+       * Then, Root Network Namespace’s virtual interface-0 (veth0) will connect to the virtual bridge (vbr0).
+
+       * Next, data will send from vbr0 to virtual interface-1 (veth1).
+
+       * Finally, data will be sent from veth1 to eth0 of pod-2’s Network Namespace.
+
+
+
+
+### 3. <u>Pod-Pod Networking (on different node): </u>
+
+
+<p align="center"><img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/P2p%20_different_node.png"></p>
+<p align="center">Fig: Pod to Pod networking on different node </p>
+
+
+1. Firstly, when the network bridge br0 asks the pods if they have the right IP address, then this time "none" of them will say "YES".
+
+2. Then this bridge will fall back to the default gateway. This goes upto the cluster level and looks for the IP address.
+
+3. At the cluster level, there is a table that maps IP address range to various nodes.
+
+4. Pods on these nodes have been assigned IP address from those ranges.
+
+5. ***Eg:***:   
+
+Kubernetes might give pods on Node 1 addresses like 100.96.1.1, 100.96.1.2, etc. 
+
+Kubernetes gives pods on node 2 addresses like 100.96.2.1, 100.96.2.2, and so on.
+
+Then this table will store the fact that IP addresses that look like 100.96.1.xxx should go to node 1, and addresses like 100.96.2.xxx need to go to node 2.
+
+6. After we’ve figured out which node to send the request to, the process proceeds the roughly same as if the pods had been on the same node all along.
+
+
+
+
+
+### 4. <u>Pod-Service Networking: </u>
+
+1. In Kubernetes, a service lets you map a single IP address to a set of pods. You make requests to one endpoint (domain name/IP address) and the service proxies requests to a pod in that service.
+
+2. This happens via ***kube-proxy*** a small process that Kubernetes runs inside every node.
+
+3. This process maps virtual IP addresses to a group of actual pod IP addresses.
+
+4. Once kube-proxy has mapped the service virtual IP to an actual pod IP, the request proceeds as in the above sections.
+
+
+
+
+### 5. <u>Internet - Cluster Networking: (Project scenario) </u>
+
+External internet network traffic can be divided into 2 parts:
+
+<b>i) Ingress</b>
+
+- Network traffic from Internet-to-Cluster
+
+<b>ii) Egress</b>
+
+- Network traffic from Cluster-to-Internet
+
+
+<u>***Ingress - Internet to Cluster Networking:***</u>
+
+* This internet traffic routing to the k8s cluster or in short "ingress" has 2 different implementations:
+
+|   Load-balancer           |     Ingress Controller          |
+|---------------------------|---------------------------------|
+| <ul><li>Ideally, Cloud providers or proxy servers like NGINX provide the loadbalancer (IP address of the loadbalancer)</li><li>Through this IP address, external world will communicate with the Kubernetes cluster</li><li>Inside the kubernetes, configured iptables will take care of routing to the right pod inside K8s. </li></ul> |    <ul><li>Ingress Controller works with "NodePort" service type of K8s.</li><li>When we use Nodeport type servcie, the K8s master will asign a range of network ports and the iptable rules will rule the respective traffic to the respective pod</li><li>Ingress Object is used to expose NodePort to Internet</li></ul> |
+
+<p align="center"><img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Ingress_network.png"></p>
+
+<p align="center">Fig: Ingress- Internet to cluster networking</p>
+
+In the figure above,
+
+* The data flow from Internet too the k8ss cluster is taking place using the Ingress load balancer.
+
+* ***Step 1:***
+
+When the traffic comes from the Internet to the Ingress Loadbalancer, then it creates an Ingress Object to identify the "IPTABLES".
+
+* ***Step 2:***
+
+The IPtables rules will know which Nodeport has been assigned to which pod
+
+* ***Step 3:***
+
+Through the Nodeport, the traffic will move to the right pod.
+
+
+This way, Ingress controller will route the traffic from the internet to the kubernetes cluster
+
+
+
+--------------------------------------------------------------------------------------------
+
 # K8s in IPV6
 
 #### Headnote:
