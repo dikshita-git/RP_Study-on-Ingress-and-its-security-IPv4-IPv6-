@@ -68,7 +68,7 @@ Further, in order to gain more insights in the described functionalities, some r
 
 - 3.2 Distribution of certificates
         
-     - a) Compare methods of generating the certificates with different type of ingress controllers.
+     - a) Compare methods of generating automatic certificates with different type of ingress controllers.
         
      - b) Analyse how the utilized certificates could be rotated automatically.
   
@@ -77,7 +77,7 @@ Further, in order to gain more insights in the described functionalities, some r
 
 ## 4. Fundamentals
 
-The initial step started with gathering the basic operational idea of ingress controller and certificates in kubernetes. Extending the research to various methodologies available in order to generate the certificates, some trials and experiments are also conducted. Following which, the associated research questions of the project shall be answered in detail. A more detailed draft of the approaches made can be found here: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Fundamentals/Fundamentals.md"><code>Visit Fundamentals</code></a>.
+The initial step started with gathering the basic operational idea of ingress controller and certificates in kubernetes. Extending the research to various methodologies available in order to generate the certificates automatically in order to secure our ingress, some trials and experiments are also conducted. Following which, the associated research questions of the project shall be answered in detail. A more detailed draft of the approaches made can be found here: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Fundamentals/Fundamentals.md"><code>Visit Fundamentals</code></a>.
 
  
  
