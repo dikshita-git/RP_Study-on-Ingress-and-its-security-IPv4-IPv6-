@@ -729,4 +729,150 @@ Sometimes while running <b>sudo kubeadm init</b>, there might be fatal errors sh
 
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Fundamentals of Reverse-proxy
+
+
+**Reverse-proxy:**
+
+If we as a client want to run a web application and host it on some server, and if a Reverse-proxy sits in between the Client and server and takes the connection from the client and forwards it to the server where it is processed. This use of reverse-proxy is beneficial in many ways:
+
+_**<u>1. It helps us in security purposes:</u>**_
+
+Reverse-proxy can handle SSL certificates to decrypt the connection between the client and the server without any additional configuration or certificate management on the server itself.
+
+This is often used to expose any unsecured protocols or to off-load the encryption and decryption process from the server for performance basis.
+
+
+_**<u>2. It helps us to load-balance the connections:</u>**_
+
+Eg: If our application is running on multiple servers, we can use a Reverse-proxy acting as a Load-balancer to route the connections to multiple target servers. This allows us to **scale the applications dynamically** meaning we can add or remove servers at any time based on the number of requests we get.
+
+It is essentially cloud environments. Eg: If we are using technologies like Kubernetes, to set up a HA cluster, it helps us to scale and deploy the applications.
+
+**Traefik** comes here in the picture as it a flexible tool. Below are some situations where Traefik becomes the game-player:
+
+1. If we are running a Docker host and want to protect all the services with trusted SSL certificates automatically,
+2. If we are running a Kubernetes production cluster in the cloud where we need Ingress Controllers, or we might also want to add a digital authentication services to it.....
+
+***
+### Introduction to Traefik
+---------------------------
+
+1. An open-source and cloud-native Edge Router, HTTP reverse-proxy and load-balancer for HTTP and TCP that is very easily integrated with Docker, Kubernetes, Lets Encrypt etc.
+2. It is very easy to integrate with Docker and Lets Encrypt and much more features
+3. It has automatic TLS
+4. Supports Auto-Service Discovery
+5. Supports HTTP2, WebSockets
+6. High Availability(HA) mode is available
+
+
+***
+### Working Principle
+------------------------
+![](https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Page_images/Traefik_working.PNG)
+
+Traefik has 4 fundamental concepts:
+
+
+_**1. ENTRYPOINTS:**_
+
+a) Entrypoints are the network entry points into Traefik and are the ports where Traefik listens for traffic. 
+
+b) They can be defined using:
+
+      *A port: 80, 443,….
+
+      *SSL (Certificates, keys, authentication with a client certificate signed by a trusted CA)
+
+      *Redirection to another entrypoint. _**Eg:**_ redirection from HTTP--->HTTPS
+
+
+_**2. ROUTERS:**_
+
+a) They are the ones who listen to entrypoints and match domains and paths to services.
+
+b) A route has a rule, which defines the route, a service and a set of middleware.
+
+
+_**3.MIDDLEWARE:**_
+
+a) They run in between Router and Service
+
+b) They can modify the request and response.
+
+c) Traefik has useful middlwares for adding headers, redirecting, rate limiting etc.
+
+
+_**4. SERVICES:**_
+
+a) They are our applications to where traffic should be routed.
+
+b) A service may be a single container or  a multi-container in a load-balancing set-up.
+
+c) Eg: of services: HTTP, UDP or TCP
+
+
+***
+### Why do we need it?
+-----------------------
+
+1. It makes deployment of microservices easier.
+
+2. Traefik integrates with our existing infrastructure components and configures itself automatically and dynamically.
+
+3. Traefik comes with a powerful set of middlewares that enhances its capabilities to include Load-balancing, API Gateway, orchestrator Ingress, east-west service communications and more.
+
+
+***
+### Configuration
+-----------------
+
+Two sections/ways to do it:
+
+**1. Dynamic routing Configuration**
+**2. Static / startup Configuration** :  This can be done in 3 different ways:
+                 <ul>
+                  <li>In a configuration file (Check my <a href="">Demo</a>)</li>
+                  <li>In command line arguments</li>
+                  <li>As the environment variables</li>
+                 </ul>
+
+
+***
+### TLS and Traefik
+--------------------
+
+1. Traefik supports TLS both with manually defined keys and through Lets Encrypt
+
+2. When using Lets Encrypt: Traefik will automatically renew certificates when needed and automatically provision them when new services are added
+
+3. Traefik supports HTTP and DNS challenges although more configuration might be needed for DNS
+
+4. Traefik stores their certificates in custom JSON format rather than storing it in .crt and .key format
+
+
+***
+### Its Use cases
+------------------
+
+### _**1. Load Balancing**_  
+ <details>
+  <summary>Read More</summary>
+  <ul>
+<li>Traefik is a modern reverse proxy and load balancing server that supports layer 4 (TCP) and layer 7 (HTTP) load balancing.</li>
+<li>It means to distribute incoming HTTP(S) and TCP requests from the Internet to front-end services that can handle these requests.</li>
+<li>Its configuration can be defined in JSON, YML, or in TOML format.</li>
+<li> It consists of entry point (frontend), service (backend), router (rules), middlewares (optional features).</li>
+<li><a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/Codes/Hands-on_with_Traefik/Traefik_as_Loadbalancer">Click here</a> for demo</li>
+</ul>
+  
+</details> 
+
+### _**2. API Gateway**_  
+
+### _**3. Kubernetes Ingress**_  
+
+### _**4. Certificate Management**_  
 
