@@ -66,18 +66,18 @@ Further, in order to gain more insights in the described functionalities, some r
   
      - a) What are the principal point of differences between Traefik, HaProxy and Nginx?
 
- - 3.2 Certificate analysis and comparison
+- 3.2 Distribution of certificates
         
-     - a) Compare the methods of generating the certificates with different type of ingress controllers.
+     - a) Compare methods of generating the certificates with different type of ingress controllers.
         
-     - b) Analysing how the utilized certificates could be rotated automatically.
+     - b) Analyse how the utilized certificates could be rotated automatically.
   
 
 
 
 ## 4. Fundamentals
 
-The initial step started with gathering the basic operational idea of ingress controller and default/wildcard certificates in kubernetes. Following which, some research was also conducted to analyse the procedures to generate the same and understanding their basic differences in applicability. A more detailed draft of the approaches made can be found here: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Fundamentals/Fundamentals.md"><code>Visit Fundamentals</code></a>.
+The initial step started with gathering the basic operational idea of ingress controller and certificates in kubernetes. Extending the research to various methodologies available in order to generate the certificates, some trials and experiments are also conducted. Following which, the associated research questions of the project shall be answered in detail. A more detailed draft of the approaches made can be found here: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Fundamentals/Fundamentals.md"><code>Visit Fundamentals</code></a>.
 
  
  
@@ -94,9 +94,7 @@ After a thorough investigation of ingress controller and its implementations and
 
 <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.1_Basic_properties_of_underlying_implementations.md">* Research Question 3.1: Basic properties of underlying implementations</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.2_Certificate_analysis_and_comparison.md">* Research Question 3.2: Certificate analysis and comparison</a>
-
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/edit/main/K3s/Chapters/Results/3.3_Analysing_how_all_the_used_certificates_could_be_rotated_automatically_on_startup_before_they_expire_and_possible_ways_to_recover_from_expired_certificates.md">* Research Question 3.3: Analysing how all the used certificates could be rotated automatically on startup before they expire and possible ways to recover from expired certificates</a>
+<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.2_Certificate_analysis_and_comparison.md">* Research Question 3.2: Distribution of certificates</a>
 
 
 
