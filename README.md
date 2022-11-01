@@ -65,7 +65,7 @@ Further, in order to gain more insights in the described functionalities, some r
 
 - 3.2 Automatic certificates and ingress authentication
           
-     - a) Analyse how the utilized certificates could be rotated automatically.
+     - a) How can certificates be automatically generated and auto-rotated to secure the ingress?
      
      - b) Authentication and authorization of applications running in the cluster.
      
