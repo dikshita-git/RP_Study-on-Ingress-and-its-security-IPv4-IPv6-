@@ -70,7 +70,7 @@ Further, in order to gain more insights in the described functionalities, some r
           
      - a) Analyse how the utilized certificates could be rotated automatically.
      
-     - b) Analysing the authentication and authorization of applications running in the cluster.
+     - b) Authentication and authorization of applications running in the cluster.
      
   
 
