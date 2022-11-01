@@ -15,21 +15,21 @@ Study on the Ingress resource type in Kubernetes for mapping incoming traffic to
 ## Table of Contents
 
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#1-introduction">1. Introduction</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/README.md#1-introduction">1. Introduction</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#2-approach-and-goal">2. Approach and Goal</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/README.md#2-approach-and-goal">2. Approach and Goal</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#3-research-questions">3. Research Questions</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/README.md#3-research-questions">3. Research Questions</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#4-fundamentals">4. Fundamentals</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/README.md#4-fundamentals">4. Fundamentals</a>
   
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#5-methodology">5. Methodology</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/README.md#5-methodology">5. Methodology</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#6-results">6. Results</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/README.md#6-results">6. Results</a>
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#7-summary">7. Summary</a> 
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/README.md#7-summary">7. Summary</a> 
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/README.md#8-literatures">8. Literature</a> 
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/README.md#8-literature">8. Literature</a> 
 
 
 
