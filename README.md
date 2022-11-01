@@ -66,11 +66,12 @@ Further, in order to gain more insights in the described functionalities, some r
   
      - a) What are the principal point of differences between Traefik, HaProxy and Nginx?
 
-- 3.2 Distribution of certificates
-        
-     - a) Compare methods of generating automatic certificates with different type of ingress controllers.
-        
-     - b) Analyse how the utilized certificates could be rotated automatically.
+- 3.2 Automatic certificates and ingress authentication
+          
+     - a) Analyse how the utilized certificates could be rotated automatically.
+     
+     - b) Analysing the authentication and authorization of applications running in the cluster.
+     
   
 
 
