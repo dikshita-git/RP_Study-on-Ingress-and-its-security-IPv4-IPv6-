@@ -1,4 +1,4 @@
-# Auto-generate and auto-renew certificate for k3s Ingress with Traefik
+# Auto-generate and auto-renew certificate for k3s ingress with Traefik
 
 
 As automatic deployments of certificates and their auto-renewal plays a pivotal role in easing the development, hence here is a demonstartion of teh same with <a href="https://dkrp2.xyz/">my domain</a> where I have used cert-manager and integrated it with Lets-Encrypt.
