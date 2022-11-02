@@ -1,14 +1,14 @@
-# Auto-generate and auto-renew certificate for k3s ingress with Traefik
+## Auto-generate and auto-renew certificate for k3s ingress with Traefik
 
 
 As automatic deployments of certificates and their auto-renewal plays a pivotal role in easing the development, hence here is a demonstartion of teh same with <a href="https://dkrp2.xyz/">my domain</a> where I have used cert-manager and integrated it with Lets-Encrypt.
 
 Below marks the steps followed for the task with their description:
 
-## Steps:
+### Steps:
 
 
-### 1. Set up the k3s Cluster
+#### 1. Set up the k3s Cluster
 
 1.1) Install K3s server in any node we wish to make it as control plane or a master using the command below:
 
@@ -24,7 +24,7 @@ This is achieved by copying the node-token under <code>/var/lib/rancher/k3s/serv
 curl -sfL https://get.k3s.io | K3S_URL=https://[IP_address_of_master_node]:6443 K3S_TOKEN="PASTE_TOKEN" sh -
 ```
 
-### 2. Install cert-manager (using helm)
+#### 2. Install cert-manager (using helm)
 
 Once our cluster is up and running, we can now install Cert-manager. Read more about <code> <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes#cert-manager">Cert-manager</a></code>
 
