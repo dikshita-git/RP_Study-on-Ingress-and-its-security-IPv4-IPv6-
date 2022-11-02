@@ -135,6 +135,10 @@ A short and brief summary of the project is accustomed at this page. <a href="ht
   
   * <code><a href="https://bryanbende.com/development/2021/07/01/k3s-raspberry-pi-cert-manager">Cert-manager in K3s</a></code>
   
+  * <code><a href="https://www.techtarget.com/searchitoperations/tip/Learn-to-use-Kubernetes-CRDs-in-this-tutorial-example">CRDs </a></code>
+
+  * <code><a href="https://www.howtogeek.com/devops/what-are-kubernetes-custom-resource-definitions-crds/">K8s CRDs </a> </code>
+  
 </p></details> 
 
 
