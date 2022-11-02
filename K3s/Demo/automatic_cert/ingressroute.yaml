@@ -8,7 +8,7 @@ spec:
     - websecure
   routes:
   - kind: Rule
-    match: Host("dkrp1.xyz")
+    match: Host("dkrp2.xyz")
     services:
     - name: whoami
       port: 80
