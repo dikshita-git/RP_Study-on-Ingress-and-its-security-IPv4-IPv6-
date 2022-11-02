@@ -26,15 +26,15 @@ curl -sfL https://get.k3s.io | K3S_URL=https://[IP_address_of_master_node]:6443 
 
 #### 2. Install cert-manager (using helm)
 
-Once our cluster is up and running, we can now install Cert-manager. Read more about <code> <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/TLS-in-Kubernetes#cert-manager">Cert-manager</a></code>
+Once our cluster is up and running, we can now install Cert-manager. Read more about <code> <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Wiki#22-tls-and-its-working-principle">Cert-manager</a></code>
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/helm_install.PNG" height="300">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Wiki-page-images/manual_cert/Certificate_with_k3s%2Btraefik/helm_install.PNG" height="300">
 <p><i>Fig: Installing cert-manager using helm</i></p>
 
 
 Now we could check ns to see if cert-manager is running:
 
-<img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/cert-man_ns.PNG">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Wiki-page-images/manual_cert/Certificate_with_k3s%2Btraefik/cert-man_ns.PNG">
 <p><i>Fig: Checking namespace named cert-manager</i></p>
 
 
