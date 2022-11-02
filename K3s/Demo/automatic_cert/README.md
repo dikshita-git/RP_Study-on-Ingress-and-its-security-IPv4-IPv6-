@@ -1,17 +1,28 @@
 # Auto-generate and auto-renew certificate for k3s Ingress with Traefik
 
 
-In this particular folder, our primary focus is on using default Wildcard certificate for K3s's in-built Ingress Controller ***Traefik***. To deep dive into the steps followed and their declarative aspects, here is a basic draft about <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/wiki/Traefik">Traefik</a> to read.
+As automatic deployments of certificates and their auto-renewal plays a pivotal role in easing the development, hence here is a demonstartion of teh same with <a href="https://dkrp2.xyz/">my domain</a> where I have used cert-manager and integrated it with Lets-Encrypt.
 
-Below marks the steps followed for the tassk with their description:
+Below marks the steps followed for the task with their description:
 
 ## Steps:
 
 
 ### 1. Set up the k3s Cluster
 
-Here is my k3s cluster set-up <code> <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Cluster-setup">file</a></code> .
+1.1) Install K3s server in any node we wish to make it as control plane or a master using the command below:
 
+```
+curl -sfL https://get.k3s.io | sh -
+```
+
+1.2) Join the agent or worker nodes to this server node
+
+This is achieved by copying the node-token under <code>/var/lib/rancher/k3s/server/node-token</code> and putting it in 
+
+```
+curl -sfL https://get.k3s.io | K3S_URL=https://[IP_address_of_master_node]:6443 K3S_TOKEN="PASTE_TOKEN" sh -
+```
 
 ### 2. Install cert-manager (using helm)
 
@@ -19,7 +30,6 @@ Once our cluster is up and running, we can now install Cert-manager. Read more a
 
 <img src="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/Wiki-page-images/Certificate_with_k3s%2Btraefik/helm_install.PNG" height="300">
 <p><i>Fig: Installing cert-manager using helm</i></p>
-
 
 
 Now we could check ns to see if cert-manager is running:
