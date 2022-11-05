@@ -63,11 +63,13 @@ Further, in order to gain more insights in the described functionalities, some r
   
      - a) What are the principal point of differences between Traefik, HaProxy and Nginx?
 
-- 3.2 Automatic certificates and ingress authentication
+- 3.2 Security in kubernetes
+
+     - a) Determining different methodologies to secure kubernetes components
           
      - a) How can certificates be automatically generated and auto-rotated to secure the ingress?
      
-     - b) Authentication and authorization of applications running in the cluster.
+     - b) Authentication and authorization of applications running in the clusterto limit the access.
      
   
 
