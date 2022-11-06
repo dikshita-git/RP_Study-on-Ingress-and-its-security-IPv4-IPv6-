@@ -40,13 +40,13 @@ The word Ingress describes traffic originating from sources external to the netw
 
 Additionally, it also becomes crucial to secure the ingress layer so that only the valid and legitimate traffic enters while the malicious and unauthorised traffic can be discarded or prevented. This also appends with the authentication of the application srunning inside the cluster to which the traffic is intended to. With smaller application which do not uphold frequent releases, this common non-functional requirement can be adjusted wwith manageable amount of complexity. However, the scenario alters with applications having very fast releasing velocities. 
 
-This project aims to compare the differences between the most widely used ingress controllers. Moreover, it also anaylses the underlying methodologies for authenticating and authorising the kubernetes applicationns.
+This project aims to compare the differences between the most widely used ingress controllers. Moreover, it also anaylses various external authentication and authorization plugins which could be used to limit the access of unauthorized users or traffic in order to secure the kubernetes cluster.
 
 In order to proceed further with the topic, the project pivots the belowmentioned points of motivation:
 
 * Analyse points of diferences between three-most variations of open-source ingress controllers.
 
-* Determine possible prospects to limit the access to the kubernetes application and integration with the identity providers ensuring a secured administrtaion of the cluster.
+* Determine possible prospects to limit the access to the kubernetes application and integration with the identity providers ensuring a secured administrataion of the cluster.
 
 
 ## 2. Approach and Goal
@@ -64,15 +64,13 @@ Further, in order to gain more insights in the described functionalities, some r
      - a) What are the principal point of differences between Traefik, HaProxy and Nginx?
 
 - 3.2 Security in kubernetes
-
-     - a) Determining different methodologies to secure kubernetes components
-          
-     - a) How can certificates be automatically generated and auto-rotated to secure the ingress?
      
-     - b) Authentication and authorization of applications running in the clusterto limit the access.
+     - a) Analyse various external plugins to authenticate and authorize running applications inside the cluster.
+     
+     - b) How can certificates be automatically generated and auto-rotated to secure the ingress with ease?
+     
      
   
-
 
 
 ## 4. Fundamentals
