@@ -51,7 +51,7 @@ In order to proceed further with the topic, the project pivots the belowmentione
 
 ## 2. Approach and Goal
 
-This project aims to secure ingress in a K3s cluster by investigating the varied methods of certificate generation using the three most popular implementations of open-source igress cntrollers namely Traefik, HaProxy, Nginx.
+This project aims to secure ingress in a K3s cluster by investigating the varied methods of certificate generation using the three most popular implementations of open-source igress cntrollers namely Traefik, HaProxy, Nginx. IN addition to this, it investigates various modes of kubernetes authentication and authorization modes in order to limit the user access to the cluster and its components ensuring its solid security.
 Further, in order to gain more insights in the described functionalities, some research questions shall be conducted which will be answered in the course of the project on the basis of research and demonstrations.
 
 
@@ -75,7 +75,7 @@ Further, in order to gain more insights in the described functionalities, some r
 
 ## 4. Fundamentals
 
-The initial step started with gathering the basic operational idea of ingress controller and certificates in kubernetes. Extending the research to various methodologies available in order to generate the certificates automatically in order to secure our ingress, some trials and experiments are also conducted. Following which, the associated research questions of the project shall be answered in detail. A more detailed draft of the approaches made can be found here: <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-fundamentals"><code>Visit Fundamentals</code></a>.
+The initial step started with gathering the basic operational idea of ingress controller and certificates in kubernetes. Extending the research to various methodologies available in order to generate the certificates automatically in order to secure our ingress, some trials and experiments are also conducted. It also involves a descriptive inspection of abundant authentication and authorization modes in kubernetes. Following which, the associated research questions of the project shall be answered in detail. A more detailed draft of the approaches made can be found here: <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-fundamentals"><code>Visit Fundamentals</code></a>.
 
  
  
@@ -90,9 +90,9 @@ With the goal of exercising the roadmap produced, some methodologies to implemen
 
 After a thorough investigation of ingress controller and its implementations and usage of certificates to make the traffic secure, there are some observations and results marked. The <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-results"><code>Results</code></a> chapter consists of the answers to the research questions mentioned above. Below are the list of links to the respective chapters consisting of results for the same in a detailed manner :
 
-<a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#a-nginx-based-ingress-controller-vs-haproxy-based-ingress-controller-vs-traefik">* Research Question 3.1: Basic properties of underlying implementations</a>
+<a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#this-consists-of-the-results-to-research-question--basic-properties-of-underlying-implementations-with-the-following-sub-questions">* Research Question 3.1: Basic properties of underlying implementations</a>
 
-<a href="https://github.com/dikshita-git/Research-Project/blob/main/K3s/Chapters/Results/3.2_Authentication_and_authorization_of_applications%20_running_in_the_cluster.md">* Research Question 3.2: Automatic certificates and ingress authentication</a>
+<a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#this-consists-of-the-results-to-research-question--security-in-kubernetes-with-the-following-sub-questions">* Research Question 3.2: Security in kubernetes</a>
 
 
 
