@@ -40,7 +40,7 @@ The word Ingress describes traffic originating from sources external to the netw
 
 Additionally, it also becomes crucial to secure the ingress layer so that only the valid and legitimate traffic enters while the malicious and unauthorised traffic can be discarded or prevented. This also appends with the authentication of the application srunning inside the cluster to which the traffic is intended to. With smaller application which do not uphold frequent releases, this common non-functional requirement can be adjusted wwith manageable amount of complexity. However, the scenario alters with applications having very fast releasing velocities. 
 
-This project aims to compare the differences between the most widely used ingress controllers. Moreover, it also anaylses various external authentication and authorization plugins which could be used to limit the access of unauthorized users or traffic in order to secure the kubernetes cluster.
+This project aims to compare the differences between the most widely used ingress controllers. Moreover, it also anaylses various modes of authentication and authorization plugins which could be used to limit the access of unauthorized users or traffic in order to secure the kubernetes cluster.
 
 In order to proceed further with the topic, the project pivots the belowmentioned points of motivation:
 
@@ -65,7 +65,7 @@ Further, in order to gain more insights in the described functionalities, some r
 
 - 3.2 Security in kubernetes
      
-     - a) Analyse various external plugins to authenticate and authorize running applications inside the cluster.
+     - a) Analyse various modes to authenticate and authorize running applications inside the cluster.
      
      - b) How can certificates be automatically generated and auto-rotated to secure the ingress with ease?
      
