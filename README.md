@@ -77,22 +77,22 @@ Further, in order to gain more insights in the described functionalities, some r
 
 ## 4. Fundamentals
 
-The initial step started with gathering the basic operational idea of ingress controller and certificates in kubernetes. Extending the research to various methodologies available in order to generate the certificates automatically in order to secure our ingress, some trials and experiments are also conducted. Following which, the associated research questions of the project shall be answered in detail. A more detailed draft of the approaches made can be found here: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Fundamentals/Fundamentals.md"><code>Visit Fundamentals</code></a>.
+The initial step started with gathering the basic operational idea of ingress controller and certificates in kubernetes. Extending the research to various methodologies available in order to generate the certificates automatically in order to secure our ingress, some trials and experiments are also conducted. Following which, the associated research questions of the project shall be answered in detail. A more detailed draft of the approaches made can be found here: <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-fundamentals"><code>Visit Fundamentals</code></a>.
 
  
  
 ## 5. Methodology
 
-With the goal of exercising the roadmap produced, some methodologies to implement the same are carried out: <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Methodology/Methodologies.md">Visit Methodology</a>
+With the goal of exercising the roadmap produced, some methodologies to implement the same are carried out: <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-methodology">Visit Methodology</a>
 
 
 
 
 ## 6. Results
 
-After a thorough investigation of ingress controller and its implementations and usage of certificates to make the traffic secure, there are some observations and results marked. The <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Results"><code>Results</code></a> chapter consists of the answers to the research questions mentioned above. Below are the list of links to the respective chapters consisting of results for the same in a detailed manner :
+After a thorough investigation of ingress controller and its implementations and usage of certificates to make the traffic secure, there are some observations and results marked. The <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-results"><code>Results</code></a> chapter consists of the answers to the research questions mentioned above. Below are the list of links to the respective chapters consisting of results for the same in a detailed manner :
 
-<a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/blob/main/K3s/Chapters/Results/3.1_Basic_properties_of_underlying_implementations.md">* Research Question 3.1: Basic properties of underlying implementations</a>
+<a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#a-nginx-based-ingress-controller-vs-haproxy-based-ingress-controller-vs-traefik">* Research Question 3.1: Basic properties of underlying implementations</a>
 
 <a href="https://github.com/dikshita-git/Research-Project/blob/main/K3s/Chapters/Results/3.2_Authentication_and_authorization_of_applications%20_running_in_the_cluster.md">* Research Question 3.2: Automatic certificates and ingress authentication</a>
 
@@ -100,7 +100,7 @@ After a thorough investigation of ingress controller and its implementations and
 
 ## 7. Summary
 
-A short and brief summary of the project is accustomed at this page. <a href="https://github.com/dikshita-git/RP_Ingress_security-IPv4_and_IPv6/tree/main/K3s/Chapters/Summary"><code>Visit Summary</code></a>
+A short and brief summary of the project is accustomed at this page. <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#4-summary"><code>Visit Summary</code></a>
 
 
 
