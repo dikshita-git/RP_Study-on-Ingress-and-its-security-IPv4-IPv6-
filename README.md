@@ -1,6 +1,6 @@
 ## Topic
 
-Study on the Ingress resource type in Kubernetes for mapping incoming traffic to services and securing it with certificates. Furthermore investigating and comparing the underlying implementations on the basis of k3s.
+Study on ingress resource type in kubernetes and securing it with automatic certificates. Furthermore investigating various modes to authenticate and authorize users to ensure security to applications running in k3s cluster.
 
 ## Team
 
