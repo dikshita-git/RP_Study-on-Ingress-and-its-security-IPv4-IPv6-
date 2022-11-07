@@ -2,7 +2,6 @@
 
 Comparison of ingress controllers and methods to secure applications based on authentication and certificates
 
---------------------------------------------------------
 
 ## Topic
 
