@@ -14,4 +14,7 @@ spec:
       port: 80
   tls:
     certResolver: le
+    options:
+      name: tlsoptions
+      namespace: dev
 
