@@ -52,3 +52,6 @@ k3s kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/
 ```      
 
 Here I tried to apply a higher version of cert-manager. v1.2.0 already moved to use "admissionregistration.k8s.io/v1".
+
+
+#### 3. Deploy resources
