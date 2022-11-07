@@ -6,5 +6,7 @@ Study on ingress resource type in kubernetes and securing it with automatic cert
 
 Here is the wiki link to the project report--> <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report">Read project report</a>
 
+and here is the link to the practical demo---> <a href="https://github.com/dikshita-git/Research-Project/tree/main/K3s/Demo">Visit demo</a>
+
 --------------------------------------------------------
 
