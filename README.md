@@ -1,6 +1,6 @@
 ## Topic
 
-Study the operational differences between three main ingress controllers and securing it with automatic certificates. Furthermore investigating various modes to authenticate and authorize users to ensure security to applications running in k3s cluster.
+Study the operational differences between three main ingress controllers and securing one of them with automatic certificates. Furthermore investigating various modes to authenticate and authorize users to ensure security to applications running in k3s cluster.
 
 ## Project Report:
 
