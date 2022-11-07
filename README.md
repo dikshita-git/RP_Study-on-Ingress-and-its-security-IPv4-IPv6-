@@ -1,3 +1,9 @@
+## Title
+
+Comparison of ingress controllers and methods to secure applications based on authentication and certificates
+
+--------------------------------------------------------
+
 ## Topic
 
 Study the operational differences between three main ingress controllers and securing one of them with automatic certificates. Furthermore investigating various modes to authenticate and authorize users to ensure security to applications running in a kubernetes cluster based on k3s.
