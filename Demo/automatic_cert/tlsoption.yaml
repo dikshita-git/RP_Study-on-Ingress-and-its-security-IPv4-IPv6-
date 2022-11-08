@@ -21,3 +21,25 @@ spec:
     - CurveP521
     - CurveP384
   sniStrict: false
+
+---
+
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: whoami
+  namespace: dev
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - kind: Rule
+    match: Host("dkrp2.xyz")
+    services:
+    - name: whoami
+      port: 80
+  tls:
+    certResolver: le
+    options:
+      name: tlsoptions
+      namespace: dev
