@@ -1,4 +1,4 @@
-K100f51f4ddc4d653d1afb32ee6531ba69267853f7cc811fe302d32011b39e2ccf5::server:6b30b7a5a9a95fb4dd9435e10eac5d2e
+Next :13 dec,14:00
 
 Here the SSH keys and GPG keys are established and synchronised between my proxmox server and the github account. The GIT commands used thereby are:
 
