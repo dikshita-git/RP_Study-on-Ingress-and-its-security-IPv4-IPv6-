@@ -79,7 +79,7 @@ Here we need to add <code>tls.certResolver</code> to <code><a href="https://gith
 
 Traefik has an advantage that it provides multiple options to control and to configure the various aspects of TLS handshake like TLS versions, exchange ciphers etc. which might be a weak category in the deployed application. This can be checked in <a href="https://www.ssllabs.com/">SSLabs</a>. While I made a check for my domain, I got the results as grade B.
 
-<img src="https://github.com/dikshita-git/Research-Project/blob/main/Wiki-page-images/Research_Question/lets_encyrpt_domain.png">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Wiki-page-images/Research_Question/dkrp2_before_TLS.png">
 Fig: TLS scenario before 
 
 
