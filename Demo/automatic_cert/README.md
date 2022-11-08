@@ -82,7 +82,7 @@ Traefik has an advantage that it provides multiple options to control and to con
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Wiki-page-images/Research_Question/dkrp2_before_TLS.png">
 Fig: TLS scenario before 
 
-This is where and why, a <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/automatic_cert/tlsoption.yaml">TLS_option file</a></code> is created which consists of a resource called "tlsoption" with specific TLS curves and ciphers and this fle 
+This is where and why, a <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/automatic_cert/tlsoption.yaml">TLS_option file</a></code> is created which consists of a resource called "tlsoption" with specific TLS curves and ciphers and this file is applied to ingressroute "whoami".
 
 ## 7. Summary
 
