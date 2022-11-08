@@ -62,6 +62,6 @@ A namespace called "dev" is created using the command:
 k3s kubectl create ns dev
 ```  
 
-<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/automatic_cert/ingressroute.yaml">IngressRoute</a> is a resource file consisting of its name "whoami" and entrypoints. Whoami will listen to all the incoming requests to <a href="https://dkrp2.xyz/">dkrp2.xyz on the websecure entrypoint. </a>Traefik handles HTTPS requests using entrypoint "websecure" | port 443. Traeik has the role to perform HTTPS exchange and once established it will delegate the requests to my <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/automatic_cert/service.yaml">service</a> named as "whoami".
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/automatic_cert/ingressroute.yaml">IngressRoute</a> is a resource file consisting of its name "whoami" and entrypoints. Whoami will listen to all the incoming requests to <a href="https://dkrp2.xyz/">dkrp2.xyz</a> on the websecure entrypoint. Traefik handles HTTPS requests using entrypoint "websecure" | port 443. Traeik has the role to perform HTTPS exchange and once established it will delegate the requests to my <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/automatic_cert/service.yaml">service</a> named as "whoami".
 
 
