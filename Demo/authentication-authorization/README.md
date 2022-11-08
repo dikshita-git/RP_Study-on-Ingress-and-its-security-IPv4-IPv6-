@@ -1,4 +1,4 @@
-This practical demonstration is conducted with an aim to authenticate my kubernetes web app dkrp3.xyz using Open ID connect as the authentication plugin and keycloak as the identity provider and token giver.
+This practical demonstration is conducted with an aim to authenticate my kubernetes web app dkrp3.xyz using Open ID connect as the authentication plugin and keycloak as the identity provider and token issuer.
 
 ## STEPS :
 
