@@ -1,4 +1,6 @@
-Next :13 dec,14:00
+# Next meeting :13 dec,14:00
+
+
 
 Here the SSH keys and GPG keys are established and synchronised between my proxmox server and the github account. The GIT commands used thereby are:
 
