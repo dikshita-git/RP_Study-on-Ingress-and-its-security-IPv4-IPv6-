@@ -23,28 +23,27 @@ Here the SSH keys and GPG keys are established and synchronised between my proxm
 PS: OpenSSh server could be installed on the machine beforehand because the latest GIT operations hold right only either via SSH or Authentication apps like Twilio Authy etc.
 
 ### Install kubernetes:
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key
-add
-sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
-sudo apt update
-sudo apt install kubeadm kubelet kubectl
-sudo apt-mark hold kubeadm kubelet kubectl
-kubeadm init
-mkdir -p $HOME/.kube
-cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-chown $(id -u):$(id -g) $HOME/.kube/config
+1. curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+2. sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+3. sudo apt update
+4. sudo apt install kubeadm kubelet kubectl
+5. sudo apt-mark hold kubeadm kubelet kubectl
+6. kubeadm init
+7. mkdir -p $HOME/.kube
+8. cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+9. chown $(id -u):$(id -g) $HOME/.kube/config
 
 
 ### Remove kubernetes:
-kubeadm reset
-sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*
-sudo apt-get autoremove
-sudo rm -rf ~/.kube
+1. kubeadm reset
+2. sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*
+3. sudo apt-get autoremove
+4. sudo rm -rf ~/.kube
 
 
 ### Install k3s:
-curl -sfL https://get.k3s.io | sh - 
-k3s kubectl get node 
+1. curl -sfL https://get.k3s.io | sh - 
+2. k3s kubectl get node 
 
 
 
