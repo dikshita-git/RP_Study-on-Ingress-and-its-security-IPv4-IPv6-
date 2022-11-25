@@ -48,4 +48,4 @@ k3s kubectl get node
 
 
 
-💡NOTE: We might need to delete the <code>ertificate-authority-data:</code> from /etc/kubernetes/admin.conf if an error of "Unable to connect to server.X509 certificate is valid for these ip address" persists.
+💡NOTE: We might need to delete the <code>certificate-authority-data:</code> from /etc/kubernetes/admin.conf if an error of "Unable to connect to server.X509 certificate is valid for these ip address" persists.
