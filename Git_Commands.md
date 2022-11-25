@@ -45,3 +45,7 @@ sudo rm -rf ~/.kube
 ### Install k3s:
 curl -sfL https://get.k3s.io | sh - 
 k3s kubectl get node 
+
+
+
+💡NOTE: We might need to delete the <code>ertificate-authority-data:</code> from /etc/kubernetes/admin.conf if an error of "Unable to connect to server.X509 certificate is valid for these ip address" persists.
