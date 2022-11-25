@@ -66,8 +66,8 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 * kubeadm init
 
 ### Possible errors:
-1. To know port forwarding:
+1. Port in use:
 
-       1. ps -ef|grep port-forward
-
-       2. kill -9 <port-id>
+       1. Install netstat with: apt install net-tools
+       2. netstat -ltnp | grep -w ":10250"
+       3. kill -9 <job_is(will be on the right)>
