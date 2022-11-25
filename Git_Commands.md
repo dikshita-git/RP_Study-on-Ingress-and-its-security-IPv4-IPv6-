@@ -51,4 +51,10 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 
 
-💡NOTE: We might need to delete the <code>certificate-authority-data:</code> from /etc/kubernetes/admin.conf if an error of "Unable to connect to server.X509 certificate is valid for these ip address" persists.
+💡NOTE: 
+1. We might need to delete the <code>certificate-authority-data:</code> from /etc/kubernetes/admin.conf if an error of "Unable to connect to server.X509 certificate is valid for these ip address" persists.
+2. Errors like ***container runtime problem*** may occur while doing ***kubeadm init*** in that case do: 
+
+* rm /etc/containerd/config.toml
+* systemctl restart containerd
+* kubeadm init
