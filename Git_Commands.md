@@ -28,10 +28,14 @@ PS: OpenSSh server could be installed on the machine beforehand because the late
 3. sudo apt update
 4. sudo apt install kubeadm kubelet kubectl
 5. sudo apt-mark hold kubeadm kubelet kubectl
-6. kubeadm init
-7. mkdir -p $HOME/.kube
-8. cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-9. chown $(id -u):$(id -g) $HOME/.kube/config
+6. /***First diasbale swap***/
+sudo swapoff -a
+7. /***And then to disable swap on startup in /etc/fstab***/
+sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+8. kubeadm init
+9. mkdir -p $HOME/.kube
+10. cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+11. chown $(id -u):$(id -g) $HOME/.kube/config
 
 
 ### Remove kubernetes:
