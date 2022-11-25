@@ -22,6 +22,12 @@ Here the SSH keys and GPG keys are established and synchronised between my proxm
  
 PS: OpenSSh server could be installed on the machine beforehand because the latest GIT operations hold right only either via SSH or Authentication apps like Twilio Authy etc.
 
+### Instal docker
+
+1. curl -fsSL https://get.docker.com -o get-docker.sh
+2. sudo sh get-docker.sh
+ 
+ 
 ### Install kubernetes:
 1. curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 2. sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
