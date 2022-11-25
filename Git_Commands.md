@@ -41,4 +41,7 @@ sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*
 sudo apt-get autoremove
 sudo rm -rf ~/.kube
 
+
 ### Install k3s:
+curl -sfL https://get.k3s.io | sh - 
+k3s kubectl get node 
