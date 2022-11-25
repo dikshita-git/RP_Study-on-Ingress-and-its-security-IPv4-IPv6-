@@ -44,19 +44,19 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 11. chown $(id -u):$(id -g) $HOME/.kube/config
 12. Install helm:
    
-       1. curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+        1. curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
   
-       2. chmod 700 get_helm.sh
+        2. chmod 700 get_helm.sh
  
-       3. ./get_helm.sh
+        3. ./get_helm.sh
 
 13. Update helm repo
 
-       helm repo update
+        helm repo update
    
 14. Install CRDs
 
-       kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.crds.yaml
+        kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.crds.yaml
 
 
 ### Remove kubernetes:
