@@ -64,3 +64,10 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 * rm /etc/containerd/config.toml
 * systemctl restart containerd
 * kubeadm init
+
+### Possible errors:
+1. To know port forwarding:
+
+       1. ps -ef|grep port-forward
+
+       2. kill -9 <port-id>
