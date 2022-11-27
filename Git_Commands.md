@@ -59,6 +59,19 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
         kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.crds.yaml
 
 
+### REmove Docker:
+
+1. sudo apt-get purge -y docker-engine docker docker.io docker-ce  
+2. sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce  
+3. sudo umount /var/lib/docker/
+4. sudo rm -rf /var/lib/docker /etc/docker
+5. sudo rm /etc/apparmor.d/docker
+6. sudo groupdel docker
+7. sudo rm -rf /var/run/docker.sock
+8. sudo rm -rf /usr/bin/docker-compose
+9. apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli
+
+
 ### Remove kubernetes:
 1. kubeadm reset
 2. sudo apt-get purge kubeadm kubectl kubelet kubernetes-cni kube*
