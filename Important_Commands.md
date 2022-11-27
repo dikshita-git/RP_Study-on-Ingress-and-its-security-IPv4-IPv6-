@@ -1,7 +1,6 @@
 # Next meeting :13 dec,14:00
 
 
-
 Here the SSH keys and GPG keys are established and synchronised between my proxmox server and the github account. The GIT commands used thereby are:
 
 #### 1. git init
@@ -16,11 +15,13 @@ Here the SSH keys and GPG keys are established and synchronised between my proxm
   4.  git commit -m "Message"
   5.  git remote set-url origin <SSH_Link_of Git_repo>
   6.  git push
+
 ### GIT PULL:
   1. mkdir 
   2. git clone <ssh_repo_link>
  
 PS: OpenSSh server could be installed on the machine beforehand because the latest GIT operations hold right only either via SSH or Authentication apps like Twilio Authy etc.
+
 
 ### Instal docker
 
@@ -59,7 +60,7 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
         kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.crds.yaml
 
 
-### REmove Docker:
+### Remove Docker:
 
 1. sudo apt-get purge -y docker-engine docker docker.io docker-ce  
 2. sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce  
@@ -83,6 +84,32 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 1. curl -sfL https://get.k3s.io | sh - 
 2. k3s kubectl get node 
 
+### Install Minikube:
+
+1. apt update -y
+2. reboot
+3. apt install -y curl wget apt-transport-https
+4. wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+5. cp minikube-linux-amd64 /usr/local/bin/minikube
+6. chmod +x /usr/local/bin/minikube
+
+##### Install cri-dockerd
+
+8. systemctl status docker
+9. apt update
+10. apt install git wget curl (Install them if not already installed)
+11. wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.2.6/cri-dockerd-0.2.6.amd64.tgz (Check for version: https://github.com/Mirantis/cri-dockerd/releases/download/v0.2.6/cri-dockerd-0.2.6.amd64.tgz)
+12. tar xvf cri-dockerd-${VER}.amd64.tgz
+13. mv cri-dockerd/cri-dockerd /usr/local/bin/
+14. cri-dockerd --version
+15. wget https://raw.githubusercontent.com/Mirantis/cri-dockerd/master/packaging/systemd/cri-docker.service
+16. wget https://raw.githubusercontent.com/Mirantis/cri-dockerd/master/packaging/systemd/cri-docker.socket
+17. mv cri-docker.socket cri-docker.service /etc/systemd/system/
+18. sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/systemd/system/cri-docker.service
+19. systemctl daemon-reload
+20. systemctl enable cri-docker.service
+21. systemctl enable --now cri-docker.socket
+22. systemctl status cri-docker.socket
 
 
 💡NOTE: 
