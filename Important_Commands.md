@@ -111,8 +111,19 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 21. systemctl enable --now cri-docker.socket
 22. systemctl status cri-docker.socket
 
+💡***NOTE:***
 
-💡NOTE: 
+ In case of errors of using drivers in minikube while minikube start , remove all the unused containers, network images both dangling and unreferenced and volumes using the following:
+ 
+```
+1. docker system prune
+2. minikube delete
+3. minikube start --driver=docker
+
+```
+
+
+💡***NOTE:***
 1. We might need to delete the <code>certificate-authority-data:</code> from /etc/kubernetes/admin.conf if an error of "Unable to connect to server.X509 certificate is valid for these ip address" persists.
 2. Errors like ***container runtime problem*** may occur while doing ***kubeadm init*** in that case do: 
 
