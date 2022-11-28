@@ -35,8 +35,8 @@ For this experiment, we would want to use traefik as the ingress to our domain d
  1. curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
  2. chmod 700 get_helm.sh
  3. ./get_helm.sh 
- 4. helm repo add jetstack https://charts.jetstack.io   /**adding helm repo**/
- 5. helm repo update   /**Update your local Helm chart repository cache:**/
+ 4. helm repo add jetstack https://charts.jetstack.io   //adding helm repo//
+ 5. helm repo update   //Update your local Helm chart repository cache://
 ```
   
   
