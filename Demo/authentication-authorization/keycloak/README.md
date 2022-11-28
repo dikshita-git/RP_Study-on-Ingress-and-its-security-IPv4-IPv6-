@@ -3,9 +3,3 @@ Reference: https://www.keycloak.org/getting-started/getting-started-kube
 
 STEPS:
 
-### 1. Install Minikube and enable the ingress addon
-
-```
-sudo minikube start --driver=docker --force
-
-```
