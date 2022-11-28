@@ -27,7 +27,7 @@ This <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/D
 The deployment.yaml and service.yaml will deploy 3 keycloak pods.
   
 
-## Deploy traefik ingress:
+## 4. Deploy traefik ingress:
   
 For this experiment, we would want to use traefik as the ingress to our domain dkrp3.xyz and this requires an easy set up using helm. The folllowing steps were carried out:
 
@@ -61,5 +61,32 @@ This leads to the details of the pods created which further enables us to check 
   
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/curl.png">
 <p>Fig: Curl pod</p>
-  
+ 
+ 
+## 6. SSH tunnelling to access keycloak:
+
+This step of local forwarding is optional and is recommended only when the VM has no GUI feature to access the browser. In this case, the working VM IP was ***masterdev@10.20.116.213*** and the IP of keycloak pod that we want in to access in a browser are: ***10.42.1.27, 10.42.2.19, 10.42.0.15***, thus we run the command below in our VM terminal where we have our browser access:
+
+```
+ssh -L 8080:10.42.1.27:8080 masterdev@10.20.116.213
+```
+This would tunnel us to accessing our keycloak dashboard using http://localhost:8080/ which looks like below (afetr signing in via Keycloak admin console):
+
+<img src="<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/get_pods_o_wide.png">
+<p>Fig: Keycloak dashboard in localhost</p>">
+
+ 
+## 7. Create Realm:
+ 
+By default, ***master*** Realm is created which is basically the admin user which we created in our deployment file. Realm in keycloak is an object that manages users/set of users, its credentials, roles and groups. It can be thought of having a similar way of functionality like a namespace holding different resources and groups in it. Here, to create the Realm, we followed:
+
+```
+1. Click on the dropdown near "master" realm on the side-menu onleft.
+2. Click "Create Realm"
+3. Give a realm name at :arrow-right: Realm-name:myrealm
+4. Hit Save
+```
+ 
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/create_realm.png">
+<p>Fig: Creating keycloak Realm</p>">
 
