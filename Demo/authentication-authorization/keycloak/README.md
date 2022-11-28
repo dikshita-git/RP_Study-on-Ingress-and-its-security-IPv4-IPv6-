@@ -83,10 +83,10 @@ By default, ***master*** Realm is created which is basically the admin user whic
 ```
 1. Click on the dropdown near "master" realm on the side-menu onleft.
 2. Click "Create Realm"
- 3. Give a realm name at → <b>Realm-name:myrealm</b>
+3. Give a realm name at → <b>Realm-name:myrealm</b>
 4. Hit Save
 ```
  
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/create_realm.png">
-<p>Fig: Creating keycloak Realm</p>">
+<p>Fig: Creating keycloak Realm</p>
 
