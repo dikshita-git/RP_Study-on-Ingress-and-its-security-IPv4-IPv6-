@@ -113,7 +113,7 @@ Since we want to login with this new username ***dk***, we would assign a new pa
 2. Click "Set password"
 3. Give the password and confirm it.
 4. Disable the "temporary" as we dont want to set it every time.
-4. Hit Save
+5. Hit Save
 ```
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/set_pass.png">
@@ -128,3 +128,32 @@ By clicking on ***Personal Info***, we will be redirected to the page where we s
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/check_user_3.png">
 <p>Fig: Testing the created user_part 2</p>
+ 
+## 10. Create a client:
+ 
+Next we set up a Client in the realm. In keycloak, clients are entities which can interact with keycloak to authenticate a user and obtain tokens. IN order to create one, 
+
+```
+1. Click on the "Clients" tab on the side-menu on left.
+2. Click "Create Client"
+3. Select Client-type: Open ID Connect.
+4. Give a name to ClientId
+5. Click Next
+6. Select Authentication Flow as "Standard flow"
+```
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/create_client.png">
+<p>Fig: Create client_part 1</p>
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/create_client_2.png">
+<p>Fig: Create client_part 2</p>
+
+The Standard Flow authentication is used to activate the Authorization Code Flow as defined in the OIDC standard. It's the recommended protocol to use for authenticating and authorizing browser-based applications. The Authorization Code Flow mechanism authenticates the user of our kubernetes web application by redirecting them to an OIDC provider, such as Keycloak, in order to log in.
+ 
+## 11. Set the URL for the client:
+
+The final step is to set the web origna nd validate URI for the client created. The web origin can be the application homepage but the validate URI should be the webpage that is to be displayed after teh successful keycloak login.
+ 
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/client_settings.png">
+<p>Fig: Validate and web origin URL for client</p> 
+ 
