@@ -83,7 +83,7 @@ By default, ***master*** Realm is created which is basically the admin user whic
 ```
 1. Click on the dropdown near "master" realm on the side-menu onleft.
 2. Click "Create Realm"
-3. Give a realm name at :arrow-right: Realm-name:myrealm
+3. Give a realm name at → Realm-name:myrealm
 4. Hit Save
 ```
  
