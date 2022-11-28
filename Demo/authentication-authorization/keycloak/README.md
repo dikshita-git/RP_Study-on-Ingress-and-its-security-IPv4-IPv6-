@@ -2,6 +2,10 @@ This practical demonstration is conducted with an aim to authenticate my kuberne
 
 ## STEPS :
 
+As a mandatory and a considerable prerequisite for the demonstration, a k3s cluster with multi-worker is created which has tehfollwoing  nodes with their IP addresses:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/get_nodes.png">
+<p>Fig: Node check</p>
 
 ## 1. Create a namespace called keycloak:
 
