@@ -35,10 +35,16 @@ For this experiment, we would want to use traefik as the ingress to our domain d
  1. curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
  2. chmod 700 get_helm.sh
  3. ./get_helm.sh 
- 4. helm repo add jetstack https://charts.jetstack.io   //adding helm repo//
- 5. helm repo update   //Update your local Helm chart repository cache://
+ 4. helm repo add jetstack https://charts.jetstack.io   //Adding helm repo//
+ 5. helm repo update                                   //Update your local Helm chart repository cache://
+ 6. kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.10.1/cert-manager.crds.yaml         ##Install CRDs//
+ 7. helm install \
+      cert-manager jetstack/cert-manager \
+      --namespace cert-manager \
+      --create-namespace \
+      --version v1.10.1                                      //Install cert-manager//
 ```
-  
+Once these steps are completed, we deploy our <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/keycloak_ingress.yaml">keycloak-ingress.yaml</a></code> and to store the certificates the <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/traefik_config.yaml">traefik_config.yaml</a></code>.
   
 ## 5. Check pods and curl them
  
