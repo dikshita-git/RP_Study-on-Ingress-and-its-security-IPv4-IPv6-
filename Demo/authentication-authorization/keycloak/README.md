@@ -119,7 +119,12 @@ Since we want to login with this new username ***dk***, we would assign a new pa
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/set_pass.png">
 <p>Fig: Setting password for user</p>
 
-Now, we can test if the user is actually functioning. For this, click on the "Acount" tab and copy the URL of the created realm and paste in browser where we willbe promted to the account setting as shown below:
+Now, we can test if the user is actually functioning. For this, click on the "Acount" tab and copy the URL of the created realm and paste in browser where we will be promted to the account setting as shown below:
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/check_user_account_2.png">
-<p>Fig: Setting password for user</p>
+<p>Fig: Testing the created user_part 1</p>
+
+By clicking on ***Personal Info***, we will be redirected to the page where we see the user as we created as shown below:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/check_user_3.png">
+<p>Fig: Testing the created user_part 2</p>
