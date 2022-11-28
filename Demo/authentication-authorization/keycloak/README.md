@@ -103,3 +103,23 @@ Once a realm is created, now we can assign users to it which  can be further use
 ```
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/create_user.png">
 <p>Fig: Creating user</p>
+
+## 9. Set credentials for the user created:
+
+Since we want to login with this new username ***dk***, we would assign a new password too which would be a permanent on . IN order to do so:
+
+```
+1. Click on the "Credentials" tab next to Attributes as shown in the figure below.
+2. Click "Set password"
+3. Give the password and confirm it.
+4. Disable the "temporary" as we dont want to set it every time.
+4. Hit Save
+```
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/set_pass.png">
+<p>Fig: Setting password for user</p>
+
+Now, we can test if the user is actually functioning. For this, click on the "Acount" tab and copy the URL of the created realm and paste in browser where we willbe promted to the account setting as shown below:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/check_user_account_2.png">
+<p>Fig: Setting password for user</p>
