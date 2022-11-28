@@ -81,12 +81,25 @@ This would tunnel us to accessing our keycloak dashboard using http://localhost:
 By default, ***master*** Realm is created which is basically the admin user which we created in our deployment file. Realm in keycloak is an object that manages users/set of users, its credentials, roles and groups. It can be thought of having a similar way of functionality like a namespace holding different resources and groups in it. Here, to create the Realm, we followed:
 
 ```
-1. Click on the dropdown near "master" realm on the side-menu onleft.
+1. Click on the dropdown near "master" realm on the side-menu on left.
 2. Click "Create Realm"
-3. Give a realm name at → <b>Realm-name:myrealm</b>
+3. Give a realm name at → Realm-name:myrealm
 4. Hit Save
 ```
  
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/create_realm.png">
 <p>Fig: Creating keycloak Realm</p>
 
+## 8. Create User:
+Once a realm is created, now we can assign users to it which  can be further used to login to our kubernetes application. In this case, we craete a user named ***dk*** by following the steps below:
+
+```
+1. Click on the "Users" tab under myrealm on the side-menu on left.
+2. Click "Create User"
+3. Give a username at → Username:dk
+4. Give First Name
+5. Give Last Name
+6. Hit Save
+```
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/keycloak/image/create_user.png">
+<p>Fig: Creating user</p>
