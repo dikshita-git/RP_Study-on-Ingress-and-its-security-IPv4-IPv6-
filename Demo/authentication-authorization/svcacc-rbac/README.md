@@ -8,8 +8,10 @@ A special thanks to <a href="https://hub.docker.com/r/bibinwilson/docker-kubectl
 
 <a href="">2. Kubernetes access control types</a>
 
-<a href="">3. STEPS</a>
+<a href="">3. Steps</a>
 
+
+### Introduction:
 
 Allowing limited access to kubernetes resources are a foundation ot the security of the cluster thus protecting it from malwares and phishing attacks. By default, kubernetes uses client certificates, bearer tokensor authentication proxy in order to authenticate the incoming API requests through the authentication plugins. Authentication in kubernetes validation of ***"who"*** and ***"what"*** is issuing the requests. Parallel to it, authorization means ***"verifies whether a certain action to list pods or services is allowed or permitted to a certain user(under a certain namespace may be)."***
 
