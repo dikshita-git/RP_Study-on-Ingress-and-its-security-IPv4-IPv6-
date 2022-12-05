@@ -1,6 +1,7 @@
 ## Authenticating kubernetes based on service token and Role-based access control
 
-A special thanks to <a href="https://hub.docker.com/r/bibinwilson/docker-kubectl">Bibin Wilson</a> for the reference to kubectl utility image used in this experiment.
+This experiment is conducted with RBAC and service account.
+
 
 ## Table of Contents:
 
@@ -9,6 +10,9 @@ A special thanks to <a href="https://hub.docker.com/r/bibinwilson/docker-kubectl
 <a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/README.md#kubernetes-provides-two-main-access-control-choices-namely">2. Kubernetes access control types</a>
 
 <a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/README.md#steps">3. Steps</a>
+
+<a href="">4. References</a>
+
 
 
 ### Introduction:
@@ -41,12 +45,9 @@ It is an authorization method in which evaluates attributes or characteristics i
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-This experiment is conducted with RBAC and service account.
 
 
---------------------------------------------------------------------------------------------------------------
-
-### STEPS:
+### Steps:
 
 #### 1. Verify if RBAC is enabled in the kubernetes version :
 
@@ -176,4 +177,16 @@ k3s kubectl get pods -n test-sa
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/success_screen.png">
 <i>Fig: Test permission to pod </i>
+
+
+### References:
+
+<a href="https://hub.docker.com/r/bibinwilson/docker-kubectl">1. Bibin Wilson docker image</a>
+
+<a href="https://medium.com/the-programmer/working-with-service-account-in-kubernetes-df129cb4d1cc">2. Working with Service Account In Kubernetes</a>
+
+<a href="https://medium.com/rahasak/kubernetes-role-base-access-control-with-service-account-e4c65e3f25cc">3. Kubernetes Role Based Access Control with Service Account
+</a>
+
+<a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">4. Configure Service Accounts for Pods</a>
 
