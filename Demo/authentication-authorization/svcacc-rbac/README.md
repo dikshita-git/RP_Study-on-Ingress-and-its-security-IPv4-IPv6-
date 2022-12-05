@@ -141,7 +141,7 @@ k3s kubectl apply -f role-binding.yaml
 We can check the rolebindings with the command:
 
 ```
-k3s kubectl get rolebindings -n default
+k3s kubectl get rolebindings -n <namespace_name>
 ```
 
 as shown in the image below
@@ -154,7 +154,7 @@ as shown in the image below
 The secret token we retrieved in step 3 should now be set to the config credentials. Here I used "masterdev" as the username which is my VM name.
 
 ```
-k3s kubectl config set-credentials masterdev --token=<paste_the_secret_token_here>
+k3s kubectl config set-credentials <user_name> --token=<paste_the_secret_token_here>
 ```
 My command is shown in the image below:
 
@@ -168,9 +168,19 @@ For this specific step, the docker image <code>bibinwilson/docker-kubectl</code>
 Now we create a <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/pod.yaml">pod.yaml</a></code> named "sa-test" which allows to perform only the functions ["get", "list", "watch"] pods in the default namespace and assigned the serviceaccount "sa" to it. To deploy this pod:
 
 ```
-k3s kubectl exec -it --namespace=default sa-test -- /bin/bash
+k3s kubectl exec -it --namespace=<namespace_name> <pod_name> -- /bin/bash
 ```
 Here is the image reference:
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/9.png">
-<i>Fig: Test permission using pod </i>
+<i>Fig: Apply pod </i>
+
+This command will forward us to the bash script of the "sa-test" and here we can test our access to the pod. For this purpose, I have created another namespace called "test-sa" which will try to access the pod to check if our permissions are set right.
+
+```
+k3s kubectl get pods -n test-sa
+```
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/success_screen.png">
+<i>Fig: Test permission to pod </i>
+
