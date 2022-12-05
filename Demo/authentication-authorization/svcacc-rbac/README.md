@@ -15,7 +15,7 @@ Usually the API server authenticates every incoming human-made request (not a pr
 
 * 🟥 ***Disadvantage:***
  
-Though it is a secur way to access the kubernezes cluster, but it has a biggest disadvantage that the certificates isssued by the cluster cannot be revoked. In other words, if this issued certificate gets stolen, it will still remain active until it expires by its expiry date or unless the adminsitrator replaces the entire CA in the cluster.
+Though it is a secure way to access the kubernezes cluster, but it has a biggest disadvantage that the certificates isssued by the cluster cannot be ***revoked***. In other words, if this issued certificate gets stolen, it will still remain active until it expires by its expiry date or unless the adminsitrator replaces the entire CA in the cluster.
 
 * 🟩 ***Suitable solution to reduce risk:***
 
@@ -23,7 +23,7 @@ Issuing certificate with shorter validation dates.
 
 
 
-### <u>2. Static token file / Static passsword file:</u>
+### <ins>2. Static token file / Static passsword file:</ins>
 
 * It is a type of method in which the administrator defines a set of credentials for users in a <code>password.csv</code> file without defining or configuring any validity period.
 
@@ -36,13 +36,13 @@ password2,user_2,user2_ID
 
 ```
 
-### <u>3. Bootstrap Tokens:</u>
+### <ins>3. Bootstrap Tokens:</ins>
 
 ```
 
 ```
 
-### <u>4. Service account tokens:</u>
+### <ins>4. Service account tokens:</ins>
 
 ```
 
