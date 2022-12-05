@@ -25,22 +25,46 @@ Issuing certificate with shorter validation dates.
 
 ### <ins>2. Static token file / Static passsword file:</ins>
 
-* It is a type of method in which the administrator defines a set of credentials for users in a <code>password.csv</code> file without defining or configuring any validity period.
+* It is a type of method in which the administrator defines a set of credentials for users in a <code>password.csv</code> file without defining or configuring any validity period. Best for beginner in kubernetes
 
-* This <code>password.csv</code> consists of password, username and userID, respectively, for the users we want to authenticate.
-
-```
-password1,user_1,user1_ID
-
-password2,user_2,user2_ID
+* This <code>password.csv</code> consists of password, username and userID,followed by optional group names respectively, for the users we want to authenticate.
 
 ```
+password1,user_1,user1_ID,"group1,group2,group3"
+
+password2,user_2,user2_ID,"group1,group2,group3"
+```
+
+* Once this file is created, simply identify it on the kube-apiserver command line using the flag <code>--basic-auth-file=filename</code>.
+
+* 🟥 ***Disadvantage:***
+
+i) Since it is a static file, so any person who gains access to it can modify the file.
+ii) Additionally, this file should be manually modified every time for any changes in its data.
+
+
 
 ### <ins>3. Bootstrap Tokens:</ins>
 
-```
+* These are 23-character bearer tokens which are stored as secrets in the kubernetes cluster which are then issued to individual kubelets and are meant to be used when creating the cluster or while joining nodes in the cluster.
+
+* These Secrets are then read by the Bootstrap Authenticator in the API Server. 
+
+* Expired tokens are removed with the TokenCleaner controller in the Controller Manager. 
+
+* Consists two distinct parts separated by a dot: <code>{token-id}</code>.<code>{token-secret}</code>
+
 
 ```
+1. <code>{token-id}</code>, with the size of six characters, is considered the public information of the key that identifies the token and used when referring to a token without leaking the secret part used for authentication. . 
+
+2. <code>{token-secret}</code> acts as the secret and should only be shared with trusted parties..
+```
+
+* 🟥 ***Disadvantage:***
+
+No expiration dates.
+
 
 ### <ins>4. Service account tokens:</ins>
 
