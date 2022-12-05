@@ -7,7 +7,7 @@ Allowing limited access to kubernetes resources are a foundation ot the security
 Usually the API server authenticates every incoming human-made request (not a program/pod request). By default kubernetes does not maintain any database to store the credentials of the users. This means that it expects it to be managed by an external source. Thus, the human user accounts have to be managed by one of the supported authentication strategies like:
 
 
-#### 1 X509 certificates:
+### 1.  X509 certificates:
 
 * Simplest method to authenticate.
 
@@ -23,7 +23,7 @@ Issuing certificate with shorter validation dates.
 
 
 
-#### 2 Static token file / Static passsword file:
+### 2. Static token file / Static passsword file:
 
 * It is a type of method in which the administrator defines a set of credentials for users in a <code>password.csv</code> file without defining or configuring any validity period.
 
@@ -36,13 +36,13 @@ password2,user_2,user2_ID
 
 ```
 
-#### 3 Bootstrap Tokens:
+### 3. Bootstrap Tokens:
 
 ```
 
 ```
 
-#### 4 Service account tokens:
+### 4. Service account tokens:
 
 ```
 
