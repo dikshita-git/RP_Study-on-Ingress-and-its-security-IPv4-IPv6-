@@ -115,6 +115,7 @@ Now, we can see the token which is generated using the command:
 ```
 k3s kubectl get secret/sa-token -o yaml
 ```
-
+Here we have to specify secret/<name_of_secret>. IN this case, the secret name is "sa-token".
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/4_secret-token.png">
+Fig: Extract secret token
