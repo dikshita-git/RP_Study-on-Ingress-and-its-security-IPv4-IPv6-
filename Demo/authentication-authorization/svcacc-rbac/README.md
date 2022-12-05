@@ -68,7 +68,16 @@ No expiration dates.
 
 ### <ins>4. Service account tokens:</ins>
 
-```
+* These are the most fundamental tool for the pods to access the kube API server.
 
-```
+* It is an automatically enables authenticator by the kube API server  that uses signed bearer tokens to verify requests and are associated with pods running in the cluster through the ServiceAccount Admission Controller.
+
+* Service account bearer tokens are perfectly valid to use outside the cluster and can be used to create identities for long standing jobs that wish to talk to the Kubernetes API.
+
+
+### STEPS:
+
+#### 1. Create the serviceaccount name:
+
+
 
