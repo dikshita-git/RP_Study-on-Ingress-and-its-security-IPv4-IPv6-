@@ -1,0 +1,13 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+   name: sarbacbinding
+   namespace: default
+subjects:
+ - kind: ServiceAccount
+   name: sa
+   namespace: default
+roleRef:
+   kind: Role
+   name: sarbac
+   apiGroup: rbac.authorization.k8s.io
