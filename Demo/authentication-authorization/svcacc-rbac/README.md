@@ -90,9 +90,31 @@ Fig: Verify the RBAC
 For this experiment, a read-only serviceaccount named "sa" is created which has access to only the "default" namespace of the kubernetes cluster. This is done using the command:
 
 ```
-kubectl create serviceaccount sa -n default
+k3s kubectl create serviceaccount sa -n default
 ```
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/2.png">
 Fig: Create serviceaccount
 
+
+#### 3. Extract the service token created:
+
+In more recent versions, including Kubernetes v1.25, API credentials are obtained directly by using the TokenRequest API in comparison to versions of kubernetes before v1.22 automatically created long term credentials for accessing the Kubernetes API. This older mechanism was based on creating token secrets that could then be mounted into running Pods. But we can also create a serviceaccount token secret manually by creating a <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/secret.yaml">secret.yaml</a></code>.
+Because of the annotation we set in this secret.yaml, the control plane automatically generates a token for that serviceaccount, and stores them into the associated secret. The control plane also cleans up tokens for deleted serviceaccounts.
+We deploy this file using the command:
+
+```
+k3s kubectl apply -f secret.yaml
+```
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/3.png">
+Fig: Create secret.yaml
+
+Now, we can see the token which is generated using the command:
+
+```
+k3s kubectl get secret/sa-token -o yaml
+```
+
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/4_secret-token.png">
