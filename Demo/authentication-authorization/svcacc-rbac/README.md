@@ -82,7 +82,7 @@ No expiration dates.
 Before proceeding, it is recommended to check the RBAC if enabled in order to get the version number as it might change as per kubernetes version.
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/check_rbac_enabled_new.png">
-Fig: Verify the RBAC 
+<i>Fig: Verify the RBAC </i>
 
 
 #### 2. Create serviceaccount:
@@ -94,7 +94,7 @@ k3s kubectl create serviceaccount sa -n default
 ```
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/2.png">
-Fig: Create serviceaccount
+<i>Fig: Create serviceaccount</i>
 
 
 #### 3. Extract the service token created:
@@ -108,7 +108,7 @@ k3s kubectl apply -f secret.yaml
 ```
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/3.png">
-Fig: Create secret.yaml
+<i>Fig: Create secret.yaml</i>
 
 
 Now, we can see the token which is generated using the command:
@@ -120,4 +120,4 @@ k3s kubectl get secret/sa-token -o yaml
 Here we have to specify secret/<name_of_secret>. IN this case, the secret name is "sa-token".
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/4_secret-token.png">
-Fig: Extract secret token
+<i>Fig: Extract secret token</i>
