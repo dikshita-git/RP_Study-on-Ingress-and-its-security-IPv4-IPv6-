@@ -4,7 +4,33 @@ A special thanks to <a href="https://hub.docker.com/r/bibinwilson/docker-kubectl
 
 Allowing limited access to kubernetes resources are a foundation ot the security of the cluster thus protecting it from malwares and phishing attacks. By default, kubernetes uses client certificates, bearer tokensor authentication proxy in order to authenticate the incoming API requests through the authentication plugins. Authentication in kubernetes validation of ***"who"*** and ***"what"*** is issuing the requests. Parallel to it, authorization means ***"verifies whether a certain action to list pods or services is allowed or permitted to a certain user(under a certain namespace may be)."***
 
-Usually the API server authenticates every incoming human-made request (not a program/pod request). By default kubernetes does not maintain any database to store the credentials of the users. This means that it expects it to be managed by an external source. Thus, the human user accounts have to be managed by one of the supported authentication strategies <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#there-are-various-kubernetes-built-in-api-authentication-process-which-are-suitable-only-for-smaller-clusters-or-at-the-staging-level-which-are-intended-to-implement-only-specific-authentication-methods-thus-they-can-also-be-regarded-as-closed-end-authentication-plugins">Read here</a>x
+Usually the API server authenticates every incoming human-made request (not a program/pod request). By default kubernetes does not maintain any database to store the credentials of the users. This means that it expects it to be managed by an external source. Thus, the human user accounts have to be managed by one of the supported authentication strategies → <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#there-are-various-kubernetes-built-in-api-authentication-process-which-are-suitable-only-for-smaller-clusters-or-at-the-staging-level-which-are-intended-to-implement-only-specific-authentication-methods-thus-they-can-also-be-regarded-as-closed-end-authentication-plugins">Read here</a>.
+
+Kubernetes provides two main access control chooces namely:
+
+1. Role-Based Access Control (RBAC):
+
+It is a method of regulating the access to the kubernetes resources and enables us to configure fine-grained and specific set of permissions which will specify what or how a mentioned user or a group can/should perform. ***Verbs*** define the actions like "get", "list", "watch", "create", "update", "patch", "delete" that should be performed
+
+When we deploy pod using <code>kubectl apply -f </code>command, a few things happen behind the scenes:
+
+i) Reads the configs from your KUBECONFIG, 
+
+ii) Discovers APIs and objects from the API, 
+
+iii) Validates the resource client-side (is there any obvious error?), 
+
+iv) Sends a request with the payload to the kube-apiserver. 
+
+When the kube-apiserver receives the request, it doesn't store it in etcd immediately. First, it has to verify that the requester is legitimate. In other words, it has to authenticate the request. Just because you have access to the cluster doesn’t mean you can create or read all the resources. So, once authenticated, it checks the requester have permission to create the resource. In other words, check request authorization. The authorization is commonly done with Role-Based Access Control (RBAC).
+
+2. Attribute-Based Access Control (ABAC)
+
+It is an authorization method in which evaluates attributes or characteristics inorder to determine the access. The administrator defines a set of user authorization policies into a file with one JSON per line format.THe main drawback of this method is that any modification in the file requires the API server to be restarted.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+This experiment is conducted with RBAC.
 
 
 ### STEPS:
@@ -18,6 +44,16 @@ Before proceeding, it is recommended to check the RBAC if enabled in order to ge
 
 
 #### 2. Create serviceaccount:
+
+Kubernetes mainly has two categories of users: Useraccount/normal users and serviceaccount.
+
+
+|  Useraccount  | Serviceaccount |
+| ------------- | -------------- |
+| 1. Human users | 1. Kubernetes internal account  |
+| 2. Allows humans to access the kubernetes cluster  | 2. Provides an identity for process that runs in a pod  |
+| 3. Used by administrators and developers to access the cluster and develop something or for maintenance.| 3.   Used by applications and process in order to authenticate the process to get access to our cluster. API server authenticates the process running in pod.                                    | 
+
 
 For this experiment, a read-only serviceaccount named "sa" is created which has access to only the "default" namespace of the kubernetes cluster. This is done using the command:
 
