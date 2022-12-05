@@ -13,11 +13,11 @@ Usually the API server authenticates every incoming human-made request (not a pr
 
 * We must first create a private key and a Certificate Signing Request, or CSR, for the user account you want to authenticate for using this authentication strategy.
 
-* ***Disadvantage:***
+* 🟥 ***Disadvantage:***
  
 Though it is a secur way to access the kubernezes cluster, but it has a biggest disadvantage that the certificates isssued by the cluster cannot be revoked. In other words, if this issued certificate gets stolen, it will still remain active until it expires by its expiry date or unless the adminsitrator replaces the entire CA in the cluster.
 
-* ***Suitable solution to reduce risk:***
+* 🟩 ***Suitable solution to reduce risk:***
 
 Issuing certificate with shorter validation dates.
 
