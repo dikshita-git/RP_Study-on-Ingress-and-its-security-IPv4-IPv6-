@@ -160,3 +160,17 @@ My command is shown in the image below:
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/4_secret-token.png">
 <i>Fig: Set user and token </i>
+
+
+#### 7. Set test permissions:
+
+For this specific step, the docker image <code>bibinwilson/docker-kubectl</code> is used which has a kubectl command inside.  
+Now we create a <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/pod.yaml">pod.yaml</a></code> named "sa-test" which allows to perform only the functions ["get", "list", "watch"] pods in the default namespace and assigned the serviceaccount "sa" to it. To deploy this pod:
+
+```
+k3s kubectl exec -it --namespace=default sa-test -- /bin/bash
+```
+Here is the image reference:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/9.png">
+<i>Fig: Test permission using pod </i>
