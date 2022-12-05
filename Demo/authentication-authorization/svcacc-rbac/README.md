@@ -77,7 +77,22 @@ No expiration dates.
 
 ### STEPS:
 
-#### 1. Create the serviceaccount name:
+#### 1. Verify if RBAC is enabled in the kubernetes version :
+
+Before proceeding, it is recommended to check the RBAC if enabled in order to get the version number as it might change as per kubernetes version.
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/check_rbac_enabled_new.png">
+Fig: Verify the RBAC 
 
 
+#### 2. Create serviceaccount:
+
+For this experiment, a read-only serviceaccount named "sa" is created which has access to only the "default" namespace of the kubernetes cluster. This is done using the command:
+
+```
+kubectl create serviceaccount sa -n default
+```
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/2.png">
+Fig: Create serviceaccount
 
