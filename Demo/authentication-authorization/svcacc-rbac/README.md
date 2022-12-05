@@ -133,4 +133,8 @@ k3s kubectl apply -f default-role.yaml
 
 #### 5. Create a role binding:
 
-THis role created should now be binded to the serviceaccount "sa" by this rolebinding. This is necessary in order to make sure that the serviceaccount "sa" can only ["get", "list", "watch"]  pods in the "default" namespace. Here is my <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/role-binding.yaml">role-binding.yaml</a></code>.
+THis role created should now be binded to the serviceaccount "sa" by this rolebinding. This is necessary in order to make sure that the serviceaccount "sa" can only ["get", "list", "watch"]  pods in the "default" namespace. Here is my <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/role-binding.yaml">role-binding.yaml</a></code>. Deploy the file:
+
+```
+k3s kubectl apply -f role-binding.yaml
+```
