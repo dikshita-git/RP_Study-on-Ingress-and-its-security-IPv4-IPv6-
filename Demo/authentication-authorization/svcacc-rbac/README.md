@@ -7,7 +7,7 @@ Allowing limited access to kubernetes resources are a foundation ot the security
 Usually the API server authenticates every incoming human-made request (not a program/pod request). By default kubernetes does not maintain any database to store the credentials of the users. This means that it expects it to be managed by an external source. Thus, the human user accounts have to be managed by one of the supported authentication strategies like:
 
 
-### 1.  <u>X509 certificates:</u>
+### 1.  <ins>X509 certificates:</ins>
 
 * Simplest method to authenticate.
 
