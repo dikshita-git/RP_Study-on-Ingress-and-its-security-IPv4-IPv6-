@@ -2,11 +2,20 @@
 
 A special thanks to <a href="https://hub.docker.com/r/bibinwilson/docker-kubectl">Bibin Wilson</a> for the reference to kubectl utility image used in this experiment.
 
+## Table of Contents:
+
+<a href="">1. Introduction</a>
+
+<a href="">2. Kubernetes access control types</a>
+
+<a href="">3. STEPS</a>
+
+
 Allowing limited access to kubernetes resources are a foundation ot the security of the cluster thus protecting it from malwares and phishing attacks. By default, kubernetes uses client certificates, bearer tokensor authentication proxy in order to authenticate the incoming API requests through the authentication plugins. Authentication in kubernetes validation of ***"who"*** and ***"what"*** is issuing the requests. Parallel to it, authorization means ***"verifies whether a certain action to list pods or services is allowed or permitted to a certain user(under a certain namespace may be)."***
 
 Usually the API server authenticates every incoming human-made request (not a program/pod request). By default kubernetes does not maintain any database to store the credentials of the users. This means that it expects it to be managed by an external source. Thus, the human user accounts have to be managed by one of the supported authentication strategies → <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#there-are-various-kubernetes-built-in-api-authentication-process-which-are-suitable-only-for-smaller-clusters-or-at-the-staging-level-which-are-intended-to-implement-only-specific-authentication-methods-thus-they-can-also-be-regarded-as-closed-end-authentication-plugins">Read here</a>.
 
-Kubernetes provides two main access control chooces namely:
+Kubernetes provides two main access control choices namely:
 
 ### 1. Role-Based Access Control (RBAC):
 
@@ -32,12 +41,6 @@ It is an authorization method in which evaluates attributes or characteristics i
 
 This experiment is conducted with RBAC and service account.
 
-### Working of serviceaccount:
-
-#### Case 1: When you have an external application trying to access Kubernetes cluster API servers.
-
-
-#### Case 2: When the application is hosted and running within the Cluster POD (our case)
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -60,7 +63,15 @@ Kubernetes mainly has two categories of users: Useraccount/normal users and serv
 | ------------- | -------------- |
 | 1. Human users | 1. Kubernetes internal account  |
 | 2. Allows humans to access the kubernetes cluster  | 2. Provides an identity for process that runs in a pod  |
-| 3. Used by administrators and developers to access the cluster and develop something or for maintenance.| 3.   Used by applications and process in order to authenticate the process to get access to our cluster. API server authenticates the process running in pod.                                    | 
+| 3. Used by administrators and developers to access the cluster and develop something or for maintenance.| 3.   Used by applications and process in order to authenticate the process to get access to our cluster. API server authenticates the process running in pod.    | 
+
+
+#### Working of serviceaccount:
+
+#### Case 1: When you have an external application trying to access Kubernetes cluster API servers.
+
+
+#### Case 2: When the application is hosted and running within the Cluster POD (our case)
 
 
 For this experiment, a read-only serviceaccount named "sa" is created which has access to only the "default" namespace of the kubernetes cluster. This is done using the command:
