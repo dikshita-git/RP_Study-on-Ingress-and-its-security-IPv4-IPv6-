@@ -8,7 +8,7 @@ Usually the API server authenticates every incoming human-made request (not a pr
 
 Kubernetes provides two main access control chooces namely:
 
-1. Role-Based Access Control (RBAC):
+### 1. Role-Based Access Control (RBAC):
 
 It is a method of regulating the access to the kubernetes resources and enables us to configure fine-grained and specific set of permissions which will specify what or how a mentioned user or a group can/should perform. ***Verbs*** define the actions like "get", "list", "watch", "create", "update", "patch", "delete" that should be performed
 
@@ -24,7 +24,7 @@ iv) Sends a request with the payload to the kube-apiserver.
 
 When the kube-apiserver receives the request, it doesn't store it in etcd immediately. First, it has to verify that the requester is legitimate. In other words, it has to authenticate the request. Just because you have access to the cluster doesn’t mean you can create or read all the resources. So, once authenticated, it checks the requester have permission to create the resource. In other words, check request authorization. The authorization is commonly done with Role-Based Access Control (RBAC).
 
-2. Attribute-Based Access Control (ABAC)
+### 2. Attribute-Based Access Control (ABAC)
 
 It is an authorization method in which evaluates attributes or characteristics inorder to determine the access. The administrator defines a set of user authorization policies into a file with one JSON per line format.THe main drawback of this method is that any modification in the file requires the API server to be restarted.
 
