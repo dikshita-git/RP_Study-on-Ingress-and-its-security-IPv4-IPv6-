@@ -133,8 +133,30 @@ k3s kubectl apply -f default-role.yaml
 
 #### 5. Create a role binding:
 
-THis role created should now be binded to the serviceaccount "sa" by this rolebinding. This is necessary in order to make sure that the serviceaccount "sa" can only ["get", "list", "watch"]  pods in the "default" namespace. Here is my <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/role-binding.yaml">role-binding.yaml</a></code>. Deploy the file:
+This role created should now be binded to the serviceaccount "sa" by this rolebinding. This is necessary in order to make sure that the serviceaccount "sa" can only ["get", "list", "watch"]  pods in the "default" namespace. Here is my <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/role-binding.yaml">role-binding.yaml</a></code>. Deploy the file:
 
 ```
 k3s kubectl apply -f role-binding.yaml
 ```
+We can check the rolebindings with the command:
+
+```
+k3s kubectl get rolebindings -n default
+```
+
+as shown in the image below
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/6.png">
+<i>Fig: Check rolebindings </i>
+
+#### 6. Set an user and token in kubeconfig:
+
+The secret token we retrieved in step 3 should now be set to the config credentials. Here I used "masterdev" as the username which is my VM name.
+
+```
+k3s kubectl config set-credentials masterdev --token=<paste_the_secret_token_here>
+```
+My command is shown in the image below:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/4_secret-token.png">
+<i>Fig: Set user and token </i>
