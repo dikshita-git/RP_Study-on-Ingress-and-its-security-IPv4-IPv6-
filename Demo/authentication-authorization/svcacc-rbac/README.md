@@ -117,7 +117,12 @@ Now, we can see the token which is generated using the command:
 k3s kubectl get secret/sa-token -o yaml
 ```
 
-Here we have to specify secret/<name_of_secret>. IN this case, the secret name is "sa-token".
+Here we have to specify secret/<name_of_secret>. In this case, the secret name is "sa-token".
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/4_secret-token.png">
 <i>Fig: Extract secret token</i>
+
+
+#### 4. Create a role:
+
+Now we create role (<code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/default-role.yaml">default-role.yaml</a></code>)with the name "sarbac" with different permissions. Here the actions: verbs: ["get", "list", "watch"] can be performed for the resources : ["pods"] only in the "default" namespace.
