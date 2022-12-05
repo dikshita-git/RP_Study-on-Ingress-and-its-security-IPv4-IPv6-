@@ -30,8 +30,16 @@ It is an authorization method in which evaluates attributes or characteristics i
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-This experiment is conducted with RBAC.
+This experiment is conducted with RBAC and service account.
 
+### Working of serviceaccount:
+
+#### Case 1: When you have an external application trying to access Kubernetes cluster API servers.
+
+
+#### Case 2: When the application is hosted and running within the Cluster POD (our case)
+
+--------------------------------------------------------------------------------------------------------------
 
 ### STEPS:
 
