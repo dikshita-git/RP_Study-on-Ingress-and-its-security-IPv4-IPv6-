@@ -6,7 +6,7 @@ A special thanks to <a href="https://hub.docker.com/r/bibinwilson/docker-kubectl
 
 <a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/README.md#introduction">1. Introduction</a>
 
-<a href="">2. Kubernetes access control types</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/README.md#kubernetes-provides-two-main-access-control-choices-namely">2. Kubernetes access control types</a>
 
 <a href="">3. Steps</a>
 
