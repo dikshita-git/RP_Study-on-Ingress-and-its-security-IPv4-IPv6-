@@ -159,6 +159,11 @@ My command is shown in the image below:
 #### 7. Set test permissions:
 
 For this specific step, the docker image <code>bibinwilson/docker-kubectl</code> is used which has a kubectl command inside.  
+For this purpose, I have created another namespace called "test-sa" which will try to access the pod to check if our permissions are set right as shown in the figure below:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/list_ns_new.png">
+<i>Fig: Latest get ns </i>
+
 Now we create a <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/pod.yaml">pod.yaml</a></code> named "sa-test" which allows to perform only the functions ["get", "list", "watch"] pods in the default namespace and assigned the serviceaccount "sa" to it. To deploy this pod:
 
 ```
@@ -170,11 +175,6 @@ Here is the image reference:
 <i>Fig: Apply pod </i>
 
 This command will forward us to the bash script of the "sa-test" and here we can test our access to the pod. 
-
-For this purpose, I have created another namespace called "test-sa" which will try to access the pod to check if our permissions are set right as shown in the figure below:
-
-<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/list_ns_new.png">
-<i>Fig: Latest get ns </i>
 
 
 ```
