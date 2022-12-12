@@ -97,19 +97,26 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 8. systemctl status docker
 9. apt update
-10. apt install git wget curl (Install them if not already installed)
-11. wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.2.6/cri-dockerd-0.2.6.amd64.tgz (Check for version: https://github.com/Mirantis/cri-dockerd/releases/download/v0.2.6/cri-dockerd-0.2.6.amd64.tgz)
-12. tar xvf cri-dockerd-${VER}.amd64.tgz
-13. mv cri-dockerd/cri-dockerd /usr/local/bin/
-14. cri-dockerd --version
-15. wget https://raw.githubusercontent.com/Mirantis/cri-dockerd/master/packaging/systemd/cri-docker.service
-16. wget https://raw.githubusercontent.com/Mirantis/cri-dockerd/master/packaging/systemd/cri-docker.socket
-17. mv cri-docker.socket cri-docker.service /etc/systemd/system/
-18. sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/systemd/system/cri-docker.service
-19. systemctl daemon-reload
-20. systemctl enable cri-docker.service
-21. systemctl enable --now cri-docker.socket
-22. systemctl status cri-docker.socket
+
+# 10. Add user to docker
+# password@Add User to the Docker Group
+
+* sudo groupadd docker
+* sudo usermod -aG docker $USER
+* 
+### - Re-Login or Restart the Server
+
+#### Install Minikube
+
+* curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+* chmod +x minikube
+
+* mv ./minikube /usr/local/bin/minikube
+
+#### Start minikube with Docker Driver
+
+minikube start --driver=docker
 
 💡***NOTE:***
 
