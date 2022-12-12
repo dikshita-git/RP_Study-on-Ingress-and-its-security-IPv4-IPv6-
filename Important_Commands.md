@@ -103,7 +103,8 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
 * sudo groupadd docker
 * sudo usermod -aG docker $USER
-* 
+
+
 ### - Re-Login or Restart the Server
 
 #### Install Minikube
