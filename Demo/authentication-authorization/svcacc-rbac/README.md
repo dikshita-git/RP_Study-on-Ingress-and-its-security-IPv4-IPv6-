@@ -169,7 +169,13 @@ Here is the image reference:
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/9.png">
 <i>Fig: Apply pod </i>
 
-This command will forward us to the bash script of the "sa-test" and here we can test our access to the pod. For this purpose, I have created another namespace called "test-sa" which will try to access the pod to check if our permissions are set right.
+This command will forward us to the bash script of the "sa-test" and here we can test our access to the pod. 
+
+For this purpose, I have created another namespace called "test-sa" which will try to access the pod to check if our permissions are set right as shown in the figure below:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/list_ns_new.png">
+<i>Fig: Latest get ns </i>
+
 
 ```
 k3s kubectl get pods -n test-sa
