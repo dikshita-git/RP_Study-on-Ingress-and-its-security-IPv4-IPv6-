@@ -9,3 +9,4 @@
 8. ***Make reqiremenets*** of what we want to actually achiebve from the research questions and make it in the initial slides
 9. answer reseacrh question too in the presentatations
 10. Make state of the art in preentatin to explain how much my topics are already reserched and how is the successs rates
+11. Make test scenarios in demo
