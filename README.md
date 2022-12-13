@@ -1,6 +1,6 @@
 ## Title
 
-Comparison between ingress controllers and methods to secure applications in k3s cluster based on authentication and automated certificates
+Comparison between ingress controllers and methods to secure web applications and the kube-API server in kubernetes clusters
 
 
 ## Topic
