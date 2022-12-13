@@ -1,1 +1,8 @@
 
+1. Shorten title (should be precise and concise)
+2. 30 mins presentation including demo
+3. Focus on OIDC and how it works with traefk
+4. Make a slide specially to explin requirements and how it works with OIDC
+5. Alos tell in presentation that how it works with traefik
+6. Make a crisp presentataion. 
+7. Say that I am giivng ooverview aout security but focus is on OIDC. Why OIDC? How is it related to traefik? whree does it sit in the cluster and association with traefik
