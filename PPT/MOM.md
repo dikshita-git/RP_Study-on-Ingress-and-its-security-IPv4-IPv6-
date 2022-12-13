@@ -7,3 +7,4 @@
 6. Make a crisp presentataion. 
 7. Say that I am giivng ooverview aout security but focus is on OIDC. Why OIDC? How is it related to traefik? whree does it sit in the cluster and association with traefik
 8. ***Make reqiremenets*** of what we want to actually achiebve from the research questions and make it in the initial slides
+9. answer reseacrh question too in the presentatations
