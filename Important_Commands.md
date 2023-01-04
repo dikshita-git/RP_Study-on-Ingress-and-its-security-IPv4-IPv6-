@@ -42,7 +42,22 @@ sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 9. mkdir -p $HOME/.kube
 10. cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 11. chown $(id -u):$(id -g) $HOME/.kube/config
-12. Install helm:
+
+### Possible error:
+
+```
+unknown service runtime.v1alpha2.RuntimeService"
+```
+
+#### Solution:
+
+```
+rm /etc/containerd/config.toml
+systemctl restart containerd
+kubeadm init
+```
+
+13. Install helm:
    
         1. curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
   
