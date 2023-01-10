@@ -1,4 +1,4 @@
-# Final meeting: 20th January, Friday
+# Final meeting: 20th January, Friday at 13:00 Uhr for 15 mins and 5 mins discussion. Together 20 mins
 
 Here the SSH keys and GPG keys are established and synchronised between my proxmox server and the github account. The GIT commands used thereby are:
 
