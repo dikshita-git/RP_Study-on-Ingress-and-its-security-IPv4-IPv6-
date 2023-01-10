@@ -1,6 +1,6 @@
 ## Title
 
-GRANULAR ACCESS CONTROL TO KUBERNETES COMPONENT USING OPENID CONNECT
+Granular access control to kubernetes componenet using OPenID Connect 
 
 
 ## Topic
