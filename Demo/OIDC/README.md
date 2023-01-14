@@ -21,5 +21,8 @@ In this demonstration, we will implement OIDC using Keycloak as the OpenID Ident
 
 
 ### Setup Identity Provider:
+
 For this demo, I used Google identity provider wherein I retrieved the JSON Web Token as shown below:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/OIDC/Screenshots/jwt.png">
 
