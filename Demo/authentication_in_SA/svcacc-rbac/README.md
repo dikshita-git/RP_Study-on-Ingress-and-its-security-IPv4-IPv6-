@@ -5,13 +5,13 @@ This experiment is conducted with RBAC and service account.
 
 ## Table of Contents:
 
-<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/README.md#introduction">1. Introduction</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/README.md#introduction">1. Introduction</a>
 
-<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/README.md#kubernetes-provides-two-main-access-control-choices-namely">2. Kubernetes access control types</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/README.md#kubernetes-provides-two-main-access-control-choices-namely">2. Kubernetes access control types</a>
 
-<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/README.md#steps">3. Steps</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/README.md#steps">3. Steps</a>
 
-<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/README.md#references">4. References</a>
+<a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/README.md#references">4. References</a>
 
 
 
@@ -21,7 +21,7 @@ Allowing limited access to kubernetes resources are a foundation ot the security
 
 Usually the API server authenticates every incoming human-made request (not a program/pod request). By default kubernetes does not maintain any database to store the credentials of the users. This means that it expects it to be managed by an external source. Thus, the human user accounts have to be managed by one of the supported authentication strategies → <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#there-are-various-kubernetes-built-in-api-authentication-process-which-are-suitable-only-for-smaller-clusters-or-at-the-staging-level-which-are-intended-to-implement-only-specific-authentication-methods-thus-they-can-also-be-regarded-as-closed-end-authentication-plugins">Read here</a>.
 
-#### Kubernetes provides two main access control choices namely:
+### Kubernetes provides two main access control choices namely:
 
 ### 1. Role-Based Access Control (RBAC):
 
