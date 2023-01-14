@@ -21,7 +21,7 @@ The kube-apiserver is the forefront of kubernetes architecture and plays the mos
 In this demonstration, we will implement OIDC using Keycloak as the OpenID Identity Provider which is further connected to our kube-apiserver followed by setting up an RBAC rule to allow permissions to specific users categorized under the namespace to perform the requested actions.
 
 
-### 1. Setup Identity Provider:
+### 1. Setup Identity Provider(IdP):
 
 For this demo, I used Google identity provider wherein I retrieved the JSON Web Token as shown below:
 
@@ -30,3 +30,13 @@ For this demo, I used Google identity provider wherein I retrieved the JSON Web 
 This client_ID helps us to verify ID tokens on our kubernetes clusters. With its help, I generated teh access_token and refresh_token which looks like:
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/OIDC/Screenshots/access_token.png">
+
+As we see here, it consists of the expiry timing along with tokens. The refresh token is used to authenticate the user and also helps us to generate new tokens after our token has expired.
+
+
+### 2. Connect IdP to kubernetes cluster:
+
+After, we have received all the tokens and credentials, we have to let our kubernetes connect to the Identity provider in order for the users to get authenticated to access the cluster. This follows with setting up the kube-apiserver.yaml undet /etc/kubernetes/manifest/kube-apiserver.yaml which I configured using the Client_Id, issuerURL etc. as shown below:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/OIDC/Screenshots/oidc-api.png">
+
