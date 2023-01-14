@@ -1,0 +1,25 @@
+{
+    "web": {
+        "client_id": "11307461922-qpiv7gqpvqjv82b034uf6o67309r70of.apps.googleusercontent.com",
+        "project_id": "round-runner-371404",
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+        "client_secret": "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",
+        "redirect_uris": [
+            "http://localhost:8000/"
+        ],
+        "javascript_origins": [
+            "https://dkrp2.xyz"
+        ]
+    }
+}
+
+
+{
+    "access_token": "ya29.a0AX9GBdXhk7hiDVSIbHq9pMOREBWiWwiKmAVTg82M_cujk8z277QKaWO_KmU-I-snoZMrMJwy7GoFuExlYFRwHhrsS-IuhgnpOO-jbK92_zhnW5mKdDZDKdzxPCGSqsFvPPWTSr16TaQP4bBHPrPzlORHl9qGaCgYKATkSARISFQHUCsbC1F3pVpMs5skyJkodsVcJaQ0163", 
+    "scope": "https://www.googleapis.com/auth/cloud-platform", 
+    "token_type": "Bearer", 
+    "expires_in": 3599, 
+    "refresh_token": "1//044WoBVGKMlRpCgYIARAAGAQSNwF-L9IrOo99ToKL8bNfw0COwhzH5wVi7tdJFXAqPRxTlV4H1T-rejc9H6rYh4-0lBUDw7DG9ow"
+  }
