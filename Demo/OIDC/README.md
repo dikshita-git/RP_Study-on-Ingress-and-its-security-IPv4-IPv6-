@@ -18,7 +18,7 @@ The kube-apiserver is the forefront of kubernetes architecture and plays the mos
 ```
 ------------------------------------------
 
-In this demonstration, we will implement OIDC using Keycloak as the OpenID Identity Provider which is further connected to our kube-apiserver followed by setting up an RBAC rule to allow permissions to specific users categorized under the namespace to perform the requested actions.
+In this demonstration, we will implement OIDC using Google as the OpenID Identity Provider which is further connected to our kube-apiserver followed by setting up an RBAC rule to allow permissions to specific users categorized under the namespace to perform the requested actions.
 
 
 ### 1. Setup Identity Provider(IdP):
