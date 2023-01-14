@@ -40,3 +40,7 @@ After, we have received all the tokens and credentials, we have to let our kuber
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/OIDC/Screenshots/oidc-api.png">
 
+Since the kube-apiserver uses the cetificates or secrets stored in kubeconfig file to authenticate the user, now we have to set the kubeconfig file with an additional information "client_secret" which will serve as a credential to authentiate. My kubeconfig after the set up:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/OIDC/Screenshots/oidc_config_correct.png">
+
