@@ -1,4 +1,4 @@
-## Authenticating kubernetes based on service token and Role-based access control
+## Securing kubernetes based on service token and Role-based access control
 
 This experiment is conducted with RBAC and service account.
 
@@ -53,7 +53,7 @@ It is an authorization method in which evaluates attributes or characteristics i
 
 Before proceeding, it is recommended to check the RBAC if enabled in order to get the version number as it might change as per kubernetes version.
 
-<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/check_rbac_enabled_new.png">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/images/check_rbac_enabled_new.png">
 <i>Fig: Verify the RBAC </i>
 
 
@@ -83,7 +83,7 @@ For this experiment, a read-only serviceaccount named "sa" is created which has 
 k3s kubectl create serviceaccount sa -n default
 ```
 
-<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/2.png">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/images/2.png">
 <i>Fig: Create serviceaccount</i>
 
 
@@ -97,7 +97,7 @@ We deploy this file using the command:
 k3s kubectl apply -f secret.yaml
 ```
 
-<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/3.png">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/images/3.png">
 <i>Fig: Create secret.yaml</i>
 
 
@@ -109,7 +109,7 @@ k3s kubectl get secret/sa-token -o yaml
 
 Here we have to specify secret/<name_of_secret>. In this case, the secret name is "sa-token".
 
-<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/4_secret-token.png">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/images/4_secret-token.png">
 <i>Fig: Extract secret token</i>
 
 
@@ -117,7 +117,7 @@ Here we have to specify secret/<name_of_secret>. In this case, the secret name i
 
 RBAC authorization defines permissions or policies to limit the access to the cluster resource. This set of permissions is called "Role" and is defined within a namespace. On the contraast, ClusterRole is a non-namespaced resource.
 
-Now we create role (<code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/default-role.yaml">default-role.yaml</a></code>) with the name "sarbac" with different permissions. Here the actions: verbs: ["get", "list", "watch"] can be performed for the resources : ["pods"] only in the "default" namespace. THen deploy the file suing:
+Now we create role (<code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/default-role.yaml">default-role.yaml</a></code>) with the name "sarbac" with different permissions. Here the actions: verbs: ["get", "list", "watch"] can be performed for the resources : ["pods"] only in the "default" namespace. THen deploy the file suing:
 
 ```
 k3s kubectl apply -f default-role.yaml
@@ -140,7 +140,7 @@ k3s kubectl get rolebindings -n <namespace_name>
 
 as shown in the image below
 
-<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/6.png">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/images/6.png>
 <i>Fig: Check rolebindings </i>
 
 #### 6. Set an user and token in kubeconfig:
@@ -161,17 +161,17 @@ My command is shown in the image below:
 For this specific step, the docker image <code>bibinwilson/docker-kubectl</code> is used which has a kubectl command inside.  
 For this purpose, I have created another namespace called "test-sa" which will try to access the pod to check if our permissions are set right as shown in the figure below:
 
-<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/list_ns_new.png">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/images/list_ns_new.png">
 <i>Fig: Latest get ns </i>
 
-Now we create a <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/pod.yaml">pod.yaml</a></code> named "sa-test" which allows to perform only the functions ["get", "list", "watch"] pods in the default namespace and assigned the serviceaccount "sa" to it. To deploy this pod:
+Now we create a <code><a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/pod.yaml">pod.yaml</a></code> named "sa-test" which allows to perform only the functions ["get", "list", "watch"] pods in the default namespace and assigned the serviceaccount "sa" to it. To deploy this pod:
 
 ```
 k3s kubectl exec -it --namespace=<namespace_name> <pod_name> -- /bin/bash
 ```
 Here is the image reference:
 
-<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/9.png">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/images/9.png">
 <i>Fig: Apply pod </i>
 
 This command will forward us to the bash script of the "sa-test" and here we can test our access to the pod. 
@@ -181,7 +181,7 @@ This command will forward us to the bash script of the "sa-test" and here we can
 k3s kubectl get pods -n test-sa
 ```
 
-<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication-authorization/svcacc-rbac/images/success_screen.png">
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/authentication_in_SA/svcacc-rbac/images/success_screen.png">
 <i>Fig: Test permission to pod </i>
 
 
