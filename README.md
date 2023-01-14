@@ -5,7 +5,7 @@ Granular access control to kubernetes componenet using OPenID Connect
 
 ## Topic
 
-Investigating various modes to authenticate and authorize users to ensure security to applications running in a kubernetes cluster using the protocol "OpenID Connect".
+Thi sproject aims to improve the security of kube-apiserver on the basis óf token-based authentication protocol called OpenID Connect.
 
 ## Project Report:
 
