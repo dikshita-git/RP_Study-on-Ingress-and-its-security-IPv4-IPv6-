@@ -43,4 +43,14 @@ After, we have received all the tokens and credentials, we have to let our kuber
 Since the kube-apiserver uses the cetificates or secrets stored in kubeconfig file to authenticate the user, now we have to set the kubeconfig file with an additional information "client_secret" which will serve as a credential to authentiate. My kubeconfig after the set up:
 
 <img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/OIDC/Screenshots/oidc_config_correct.png">
+These credentials are user-specific to "dkdemo" only. 
 
+Here, also I have setup kubectl with kubelogin which is a client-go credential plugin and is intended for client side integrations with authentication protocols not natively supported by k8s.io/client-go like LDAP, Kerberos, OAuth2, SAML, etc. After authentication, kubelogin returns the credentials to kubectl and finally kubectl calls the Kubernetes APIs with the credential.
+
+### 3. Create Roles and rolebindings:
+
+Now, we assign the user "dkdemo" a role of "cluster-admin" as here in the <a href="https://github.com/dikshita-git/Research-Project/blob/main/Demo/OIDC/clusterrolebinding.yaml"><code>clusterrolebinding.yaml</code></a> and allow some permsissions. Once we apply the file, we can check teh resources:
+
+When we try to access kubernetes resources with another user, for eg: default in this case, we see that there is an authenetication error saying theis user is not permitted to do so as shown below:
+
+<img src="https://github.com/dikshita-git/Research-Project/blob/main/Demo/OIDC/Screenshots/auth_default_user.png">
