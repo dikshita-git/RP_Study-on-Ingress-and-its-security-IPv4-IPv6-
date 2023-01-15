@@ -1,6 +1,6 @@
 ## Title
 
-Granular access control to kub-apiserver using OPenID Connect 
+Granular access control to kub-apiserver using OpenID Connect 
 
 
 ## Topic
