@@ -1,6 +1,6 @@
 ## Title
 
-Granular access control to kubernetes componenet using OPenID Connect 
+Granular access control to kub-apiserver using OPenID Connect 
 
 
 ## Topic
