@@ -14,7 +14,7 @@
 
 5. sudo apt-mark hold kubeadm kubelet kubectl
 
-6. /First diasbale swap/ sudo swapoff -a
+6. sudo swapoff -a 
 
 7. kubeadm init
 
