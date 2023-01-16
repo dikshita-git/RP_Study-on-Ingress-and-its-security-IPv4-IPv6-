@@ -1,16 +1,25 @@
 ### Install kubernetes:
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
-sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
-sudo apt update
-sudo apt install kubeadm kubelet kubectl
-sudo apt-mark hold kubeadm kubelet kubectl
-/First diasbale swap/ sudo swapoff -a
-/And then to disable swap on startup in /etc/fstab/ sudo sed -i '/ swap / s/^(.*)$/#\1/g' /etc/fstab
-kubeadm init
-mkdir -p $HOME/.kube
-cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-chown 
-(id -g) $HOME/.kube/config
+1. curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+
+2. sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+
+3. sudo apt update
+
+4. sudo apt install kubeadm kubelet kubectl
+
+5. sudo apt-mark hold kubeadm kubelet kubectl
+
+6. /First diasbale swap/ sudo swapoff -a
+
+7. kubeadm init
+
+8. mkdir -p $HOME/.kube
+
+9. cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+
+10. chown (id -g) $HOME/.kube/config
+
+
 #### Possible error:
 ```
 unknown service runtime.v1alpha2.RuntimeService"
