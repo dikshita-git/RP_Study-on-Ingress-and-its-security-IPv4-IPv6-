@@ -32,5 +32,8 @@ kubeadm init
 
 ### Join workers to master
 
-1. ***In worker:***  kubeadm join 10.20.116.209:6443 --token 2fxg38.7tx3ph8hptzv33no \
+1. ***In worker:***  
+```
+kubeadm join 10.20.116.209:6443 --token 2fxg38.7tx3ph8hptzv33no \
 	--discovery-token-ca-cert-hash sha256:4450af2092fee1447e1e27f4fb350dc470ccd08a91c43fd61473e508bf5a6eab
+```
