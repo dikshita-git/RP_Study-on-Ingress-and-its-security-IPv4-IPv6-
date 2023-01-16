@@ -1,3 +1,8 @@
+### Install docker to use containerd as container runtime for kubernetes
+1. curl -fsSL https://get.docker.com -o get-docker.sh
+
+2. sudo sh get-docker.sh
+
 ### Install kubernetes:
 1. curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 
@@ -19,6 +24,20 @@
 
 10. chown $(id -u):$(id -g) $HOME/.kube/config
 
+### Install CNI and CRD:
+
+1. kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/tigera-operator.yaml
+2. curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/custom-resources.yaml -O
+3. kubectl create -f custom-resources.yaml
+
+
+### Join workers to master
+
+1. ***In worker:***  
+```
+kubeadm join 10.20.116.209:6443 --token 2fxg38.7tx3ph8hptzv33no \
+	--discovery-token-ca-cert-hash sha256:4450af2092fee1447e1e27f4fb350dc470ccd08a91c43fd61473e508bf5a6eab
+```
 
 #### Possible error:
 ```
@@ -30,16 +49,3 @@ systemctl restart containerd
 kubeadm init
 
 
-### Join workers to master
-
-1. ***In worker:***  
-```
-kubeadm join 10.20.116.209:6443 --token 2fxg38.7tx3ph8hptzv33no \
-	--discovery-token-ca-cert-hash sha256:4450af2092fee1447e1e27f4fb350dc470ccd08a91c43fd61473e508bf5a6eab
-```
-
-### Install CNI and CRD:
-
-1. kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/tigera-operator.yaml
-2. curl https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/custom-resources.yaml -O
-3. kubectl create -f custom-resources.yaml
