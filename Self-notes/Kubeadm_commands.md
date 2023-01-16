@@ -17,7 +17,7 @@
 
 9. cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 
-10. chown (id -g) $HOME/.kube/config
+10. chown $(id -u):$(id -g) $HOME/.kube/config
 
 
 #### Possible error:
