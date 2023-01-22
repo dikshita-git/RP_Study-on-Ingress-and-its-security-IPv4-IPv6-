@@ -76,10 +76,11 @@ users:
 - debugging
 
    - log out in keycloak via account console (so it stops redirecting)
-   - 
-    https://10.20.116.209.nip.io/realms/master/account
+   
+   https://10.20.116.209.nip.io/realms/master/account
     
    - delete already obtained token
+	
 	rm -r ~/.kube/cache/oidc-login
 	
    - token can be inspected via
