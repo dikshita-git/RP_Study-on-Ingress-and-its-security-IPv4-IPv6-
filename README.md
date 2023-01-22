@@ -12,5 +12,13 @@ Please click on the link for the project report → <a href="https://github.com/
 
 Please click on the link for the project report → <a href="https://github.com/dikshita-git/Research-Project/tree/main/OpenIDconnect_practical">See practical</a>
 
+
+### Project Presentation:
+
+Please click on the link for the project presentation (PDF) → <a href="https://github.com/dikshita-git/Research-Project/tree/main/Presentations">See presentation</a>
+
+
+
+
 --------------------------------------------------------
 
