@@ -1,3 +1,5 @@
+### Manually generated tokens:
+
 
 json to picture
 	first https://jsonformatter.curiousconcept.com
@@ -10,13 +12,16 @@ jwt
 
 ---
 
+#### STEPS: 
 
 export issuer_url=https://10.20.116.209.nip.io/realms/master
 export token_endpoint="${issuer_url}/protocol/openid-connect/token"
 export authorization_endpoint="${issuer_url}/protocol/openid-connect/auth"
 
 
-a) request webfinger endpoint for discovery of all supported modes and endpoints
+***a)***
+
+request webfinger endpoint for discovery of all supported modes and endpoints
 see: OIDC discovery specification for details
 
 curl --insecure ${issuer_url}/.well-known/openid-configuration
@@ -24,24 +29,28 @@ curl --insecure ${issuer_url}/.well-known/openid-configuration
 open in browser:
     https://10.20.116.209.nip.io/realms/master/.well-known/openid-configuration
 
-important:
-    all the endpoint -> token, authorization, userinfo
-    grant_types_supported
-    response_types_supported
-    jwks_uri -> has the certificates, which are used to verify the token
-    scopes -> openid scope we use
-    and also the crypto algorithms supported
-    -> THIS webfinger page is for all clients, not only for the kubernetes one
+⭐ ***Important:***
 
-b) Simulate "Direct Access Grant"
+    - all the endpoint -> token, authorization, userinfo
+    - grant_types_supported
+    - response_types_supported
+    - jwks_uri -> has the certificates, which are used to verify the token
+    - scopes -> openid scope we use
+    - and also the crypto algorithms supported
+          -> THIS webfinger page is for all clients, not only for the kubernetes one
+
+***b)***
+
+Simulate "Direct Access Grant"
 see also: https://github.com/akoserwal/keycloak-integrations/blob/master/curl-post-request/keycloak-curl.sh
 Direct Access Grant -> A client is using user-credentials to get an access token directly
     User credentials are those of the testuser
 
 The grant type is "password", which means we want to do direct access grant
 
-THIS WILL NOT WORK
-	because:
+🔴 ***THIS WILL NOT WORK***
+	
+💡	Because:
 		- we enabled client authentication
 		- this is now also needed for "Direct Access Grant" 
 		  although we have the user credentials
@@ -53,7 +62,8 @@ THIS WILL NOT WORK
 	 -d "client_id=kubernetes"
 	-> {"error":"unauthorized_client","error_description":"Invalid client or Invalid client credentials"}
 
-this will work
+🟢 ***This will work***
+
 	- here we also add client credentials
 	curl -X POST "${token_endpoint}" --insecure \
 	 -H "Content-Type: application/x-www-form-urlencoded" \
@@ -70,22 +80,18 @@ this will work
 
 
 
+***c)***
 
+Simulate "Authorization Code Flow"
 
-
-
-
-
-c) Simulate "Authorization Code Flow"
-
-sources
+📓 ***Sources:***
 	https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
 	https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
 	https://fireflysemantics.medium.com/oauth-authorization-code-grant-flow-demonstrated-with-curl-71543ba6c3f7
 	https://auth0.com/docs/get-started/authentication-and-authorization-flow/call-your-api-using-the-authorization-code-flow
 
-there was a problem
-        k get pods
+🔴 ***There was a problem***
+       ▶️k get pods
 		k logs my-release-nginx-ingress-vwc64 -f
 			2023/01/19 02:25:10 [error] 73#73: *3284 upstream sent too big header while reading response header from upstream, client: 10.20.116.209, server: 10.20.116.209.nip.io, request: "GET /realms/master/protocol/openid-connect/auth?response_type=code&scope=openid&grant_type=authorization_code&client_id=kubernetes&client_secret=aDeeUt5uKeLmGTrkPsARGTET8FOcBRZx&state=12345&redirect_uri=http:%2F%2Flocalhost:8000 HTTP/1.1", upstream: "http://192.168.50.205:8080/realms/master/protocol/openid-connect/auth?response_type=code&scope=openid&grant_type=authorization_code&client_id=kubernetes&client_secret=aDeeUt5uKeLmGTrkPsARGTET8FOcBRZx&state=12345&redirect_uri=http:%2F%2Flocalhost:8000", host: "10.20.116.209.nip.io"
 			10.20.116.209 - - [19/Jan/2023:02:25:10 +0000] "GET /realms/master/protocol/openid-connect/auth?response_type=code&scope=openid&grant_type=authorization_code&client_id=kubernetes&client_secret=aDeeUt5uKeLmGTrkPsARGTET8FOcBRZx&state=12345&redirect_uri=http:%2F%2Flocalhost:8000 HTTP/1.1" 502 157 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0" "-"
