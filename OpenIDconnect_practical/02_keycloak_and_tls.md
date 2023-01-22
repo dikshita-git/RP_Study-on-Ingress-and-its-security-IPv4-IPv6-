@@ -82,9 +82,9 @@ helm install my-release nginx-stable/nginx-ingress -f nginx-config.yaml
 
 - Certificate Authority = Private and Public Key, the latter being in a X.509 certificate
          
-         - which has the CA: True flag set
+     - which has the CA: True flag set
          
-         - therefore this privkey and certificate can sign other certificate
+     - therefore this privkey and certificate can sign other certificate
          
 - generate CA for cert-manager or whatever it wants
 - 
@@ -148,7 +148,6 @@ EOF
 ```
 openssl genrsa -out myssl/key.pem 4096 # create certificate signing request
 ```
-
 - we generate a Certificate Signing Request
 - second certificate wants to be signed by first one
 
@@ -227,6 +226,6 @@ k apply -f keycloak_ingress.yaml
 curl --insecure https://${fqdn} # should work on node and vm host, and in GUI browser on vm host
 https://10.20.116.209.nip.io
 ```
-:arrow:right: ***Summary:***
+:arrow_right: ***Summary:***
 
 Now we have a working keycloak instace accessible over both our master and worker node's ip and it provides tls with a self-signed certificate, which is signed for the master node's ip
