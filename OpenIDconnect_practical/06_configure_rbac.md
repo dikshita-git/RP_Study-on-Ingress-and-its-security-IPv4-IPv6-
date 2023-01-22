@@ -54,7 +54,7 @@ subjects:
 - kind: Group
   name: kubernetes_role
 EOF
-``
+```
 			
 :arrow_right: k get ClusterRoleBinding | grep pods
 
