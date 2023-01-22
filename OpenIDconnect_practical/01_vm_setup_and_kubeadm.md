@@ -1,22 +1,22 @@
 
 # Basics
 
--kubeadm
+- kubeadm
 	- passes kubernetes conformance tests
 	- supports bootstrap tokens
 	- All of these services are deployed as pods within Kubernetes.
 		-> etcd, dns, api-server, dashboard, monitoring logging, ...
 
--requirements
+- requirements
 	- choose a pod network add-on
 	- install container runtime
 		- kubeadm tries to detect the container runtime by using a list of well known endpoints. 
 		- To use different container runtime or if there are more than one installed on the provisioned node, specify the --cri-socket argument to kubeadm.
 
 
--options
+- options
 	--control-plane-endpoint (recommended)
-		- if you have plans to upgrade this single control-plane kubeadm cluster to high availability you should specify the --control-plane------endpoint to set the shared endpoint for all control-plane nodes
+		- if you have plans to upgrade this single control-plane kubeadm cluster to high availability you should specify the --control-plane------ endpoint to set the shared endpoint for all control-plane nodes
 		- Such an endpoint can be either a DNS name or an IP address of a load-balancer.
 	--pod-network-cidr
 		- Depending on which third-party provider you choose, you might need to set the --pod-network-cidr to a provider-specific value
