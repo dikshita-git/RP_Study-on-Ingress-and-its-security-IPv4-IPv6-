@@ -24,7 +24,7 @@ source: https://developer.okta.com/blog/2021/11/08/k8s-api-server-oidc
 
 - we create a restricted pods-readonly role and attach it to kubernetes_role
 
-
+```
 kubectl apply -f - <<EOF
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
