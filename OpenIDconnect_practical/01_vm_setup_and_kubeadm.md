@@ -193,6 +193,7 @@ debug: true
             nodeAddressAutodetectionV4:
               interface: "eth1"
         ```
+	
     - kubectl create -f custom-resources.yaml
 
 - verify all the calico pods run
@@ -229,8 +230,11 @@ debug: true
 	           
 	           Edit on both nodes:
 	        ```
-		sudo mkdir /etc/containerd
+		
+	        sudo mkdir /etc/containerd
+	
 		sudo vim /etc/containerd/config.toml
+	
 		version = 2
 	
 		[plugins]
