@@ -16,6 +16,7 @@
     "manage-account-links",
     "view-profile"
   ],
+  
 ```
 source: https://developer.okta.com/blog/2021/11/08/k8s-api-server-oidc
 
@@ -37,8 +38,9 @@ rules:
 EOF
 ```
 
-```
-			 
+- Next:
+
+```			 
 kubectl apply -f - <<EOF
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
@@ -52,10 +54,10 @@ subjects:
 - kind: Group
   name: kubernetes_role
 EOF
-```
+``
 			
-- :arrow_right: k get ClusterRoleBinding | grep pods
+:arrow_right: k get ClusterRoleBinding | grep pods
 
-- :arrow_right: k get ClusterRole | grep pods
+:arrow_right: k get ClusterRole | grep pods
 
 
