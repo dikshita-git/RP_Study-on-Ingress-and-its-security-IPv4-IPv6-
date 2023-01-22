@@ -1,4 +1,4 @@
-# Configuring Role-absed access control in server
+# Configuring Role-based access control (in our server) for "kubernetes_role" created in keycloak 
 
 
 - some yaml beautifier
