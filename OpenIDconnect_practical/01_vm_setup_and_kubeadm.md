@@ -226,9 +226,9 @@ debug: true
 	
 				https://github.com/etcd-io/etcd/issues/13670
 	
-			🟢 Solution:
+- 🟢 Solution:
 	           
-	        Edit on both nodes:
+Edit on both nodes:
 	
 ```
 sudo mkdir /etc/containerd
