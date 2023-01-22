@@ -1,13 +1,17 @@
-### Manually generated tokens:
+## Manually generated tokens:
 
 
-json to picture
+- json to picture
+	
 	first https://jsonformatter.curiousconcept.com
+	
 	then https://onlinejsontools.com/convert-json-to-image
+		
 		size: 25px
+		
 		color scheme: liquibyte
 
-jwt
+- jwt
 	https://jwt.io/
 
 ---
