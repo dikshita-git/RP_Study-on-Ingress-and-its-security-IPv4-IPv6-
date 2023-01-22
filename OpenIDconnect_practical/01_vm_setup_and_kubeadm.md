@@ -228,18 +228,18 @@ debug: true
 	
 			🟢 Solution:
 	           
-	           Edit on both nodes:
-	        ```
-		
-	        sudo mkdir /etc/containerd
+	        Edit on both nodes:
 	
-		sudo vim /etc/containerd/config.toml
+```
+sudo mkdir /etc/containerd
 	
-		version = 2
+sudo vim /etc/containerd/config.toml
 	
-		[plugins]
+version = 2
 	
-		  [plugins."io.containerd.grpc.v1.cri"]
+[plugins]
+	
+	[plugins."io.containerd.grpc.v1.cri"]
 	
 		   [plugins."io.containerd.grpc.v1.cri".containerd]
 	
@@ -252,8 +252,8 @@ debug: true
 		          [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
 	
 		            SystemdCgroup = true
+```
 
-	        ```
 	
 	- sudo systemctl restart containerd
 
