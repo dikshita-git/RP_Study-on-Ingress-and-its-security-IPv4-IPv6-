@@ -1,4 +1,11 @@
 
+## Configuring Keycloak
+
+Please click teh link here to see the screenshots as per the steps:
+
+
+#### STEPS:
+
 a) first open https://10.20.116.209.nip.io
 click Administrator Console
 
