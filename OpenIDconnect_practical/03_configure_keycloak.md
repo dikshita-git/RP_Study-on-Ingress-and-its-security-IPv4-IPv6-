@@ -1,7 +1,7 @@
 
 ## Configuring Keycloak
 
-Please click teh link here to see the screenshots as per the steps:
+Please click the link <a href="https://github.com/dikshita-git/Research-Project/tree/main/OpenIDconnect_practical/03">here</a> to see the screenshots as per the steps:
 
 
 #### STEPS:
