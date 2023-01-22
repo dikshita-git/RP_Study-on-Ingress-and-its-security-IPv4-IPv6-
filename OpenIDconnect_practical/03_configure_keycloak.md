@@ -7,10 +7,12 @@ Please click the link <a href="https://github.com/dikshita-git/Research-Project/
 #### STEPS:
 
 ***a)***
+
 first open https://10.20.116.209.nip.io
 click Administrator Console
 
 ***b)***
+
 create client
 Administrator Console -> Clients -> Create client
 	Client ID: kubernetes
@@ -29,6 +31,7 @@ Administrator Console -> Clients -> Create client
 	-> this means kubelogin will listen on localhost:8000 to accept the redirect with the tokens
 
 ***c)***
+
 create client role
 (for mapping to user later)
 Inside client "kubernetes"
@@ -38,6 +41,7 @@ Inside client "kubernetes"
 	-> Save
 
 ***d)***
+
 create testuser
 
 Administrator Console -> Users -> Add user
@@ -49,6 +53,7 @@ Administrator Console -> Users -> Add user
 	-> create
 
 ***e)***
+
 configure user, set credentials and add to client role
 
 -> Tab "Credentials" -> Set password
@@ -64,11 +69,13 @@ configure user, set credentials and add to client role
 	-> select "kubernetes_role"
 	-> Assign 
 
-💡 Status:
+💡 ***Status:***
+
 	- now we can do "Direct Access Grant" and "Authorization Code Flow"
 	- but we might not have the correct claims
 
 ***f)***
+
 add mapper inside client scope 
 so that we get the groups claim in our token payload
 this will be later used to be evaluated to kubernetes groups via kube-apiserver
