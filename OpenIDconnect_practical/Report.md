@@ -18,9 +18,11 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
 ## Table of Contents:
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-motivation">1. Motivation</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-motivation">1. Introduction</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-research-question">2. Research Question</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-motivation">1.1 Motivation</a>
+
+   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-research-question">1.2 Research Question</a>
 
 * <a href="">3. Fundamentals</a>
 
