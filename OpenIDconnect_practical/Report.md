@@ -36,7 +36,7 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#342-emergence-of-openid-connect"> 3.2 Emergence of OpenID Connect</a>
      
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3421-key-concepts">3.2.1 Roles and key term</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3421-key-concepts">3.2.1 Roles and key terms</a>
 
       * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3422-endpoints">3.2.2 Endpoints</a>
 
