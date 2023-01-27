@@ -24,7 +24,7 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
 * <a href="">3. Fundamentals</a>
 
-       	* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">3.1 OAuth 2.0</a>
+       * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">3.1 OAuth 2.0</a>
         
                      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">3.1.1 Key terms</a>
 
