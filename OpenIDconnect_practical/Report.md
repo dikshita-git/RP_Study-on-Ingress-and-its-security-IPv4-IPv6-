@@ -74,34 +74,29 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 ----------------------------------------------------
 
 
-## 1. Motivation
+## 1. Introduction
+
+### 1.1 Motivation cryptojacking
 
 This project aims to find an improved way in order to secure the kube-apiserver from an attack called "cryptojacking". It is an attack wherein the attacker gains access to the cluster and steals the computing resources like CPU, Memory etc. which are needed to run our containers. Once he succeeds in stealing them, he can use them further to mine cryptocurrencies like Monero. Although there are several possible attack surfaces but the primary, of course not exclusive component is the kube-apiserver.
 
---------------------------------------------------
-
-
-## 2. Research Question
-
-How can the security of the kube-apiserver be improved against compromised client certificates?
-
----------------------------------------
 
 
 
-## 3. Realizing a solution
 
-
-### 3.1 Kinds of attacks on kube-apiserver
+### 1.2 Possible attacks on kube-apiserver
 
 Besides cryptojacking, various types of attacks are viable through attacking kube-apiserver. Some of these includes:
 
 i) Using kube-apiserver as the attack surface can help an attacker to spread his malwares in the clusters leading to unavailability of the hosted applications and services.
 
-ii) Attacker could take up the advantage of the API server communication into communicating with some malicious resources which are hosted in the externals.
+ii) Attacker could take up the advantage of the API server communication into communicating with some malicious resources which are hosted in the externals.-
 
 
-### 3.2 Causes of attacks
+
+
+
+### 1.3 Causes of attacks
 
 Whenever any operator tries to access the cluster using kubectl, this command line interface uses a client certificate and client key to get authenticated by the kube-apiserver and sends an HTTPS request. This set of client certificate and key is primarily generated when we create a cluster and is stored in the kubeconfig file which is used to store the cluster authentication informations for kubectl. In order to attack the kube-apiserver, an attacker needs to obtain this client-certificate because it contains the signature of the kubernetes certificate authority and the client-key in order to prove that the he is the owner of the certificate.
 Another prospects for an attacker to be able to steal this certificates are:
@@ -118,6 +113,14 @@ This is due to the fact that kubernetes is not able to check the status of any p
 ##### :bulb: Online Certificate Status Protocol (OCSP): 
 
  - It is an internet protocol enabling an application to determine the revocation status of the identified certificates without the usage of CRL. 
+
+
+
+
+## 1.4 Realizing a solution
+
+How can the security of the kube-apiserver be improved against compromised client certificates?
+
 
 
 
