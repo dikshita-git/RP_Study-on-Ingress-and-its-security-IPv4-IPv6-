@@ -117,7 +117,7 @@ This is due to the fact that kubernetes is not able to check the status of any p
 
 
 
-## 1.4 Realizing a solution
+### 1.4 Realizing a solution
 
 How can the security of the kube-apiserver be improved against compromised client certificates?
 
