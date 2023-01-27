@@ -22,11 +22,9 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-motivation">1.1 Motivation</a>
    
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#31-kinds-of-attacks-on-kube-apiserver">1.2 Kinds of attacks on kube-apiserver</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">1.2 Causes of attacks</a>
 
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">1.3 Causes of attacks</a>
-
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-research-question">1.4 Research Question</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-research-question">1.3 Research Question</a>
 
 * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-realizing-a-solution">2. Realizing a solution</a>
 
