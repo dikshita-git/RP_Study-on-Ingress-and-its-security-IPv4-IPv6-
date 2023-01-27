@@ -36,7 +36,7 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#342-emergence-of-openid-connect"> 3.2 Emergence of OpenID Connect</a>
      
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3421-key-concepts">3.2.1 Key Concepts</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3421-key-concepts">3.2.1 Roles and key term</a>
 
       * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3422-endpoints">3.2.2 Endpoints</a>
 
@@ -195,7 +195,7 @@ To get started with OpenID Connect, we need to first learn a bit about [:bulb: O
 - This happens because the application trusts Google as the identity provider in this case and if the user already has an account in the identity provider and if he gives his consent then he can be successfully signed in to the application he wants to register with.
 - This process explains why OAuth 2.0 is said to be used for delegated authority.
 
-#### 3.4.1.1 Roles and key-terminologies in OAuth 2.0:
+#### 3.4.1.1 Roles and key terms in OAuth 2.0:
 
 There are several terminologies in OAuth which forms a fundamental block of understanding its actions as described in the table below:
 
@@ -288,7 +288,7 @@ This is where OpenID Connect comes into picture.
 - Leverages centralized authorization.
 
 
-#### 3.4.2.1 Key Concepts:
+#### 3.4.2.1 Roles and key terms:
 
 - :ballot_box_with_check: ***Actors:*** 
  The three actors that participate in the OpenID Connect authentication flow are listed in the able below:
