@@ -60,9 +60,9 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
 * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#5-state-of-the-art">4. Adoption of OIDC</a>
   
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-openid-connect-with-keycloak-in-practice">5. Configuring OIDC for kube-apiserver with keycloak</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-openid-connect-with-keycloak-in-practice">5. Configure OIDC for kube-apiserver with keycloak</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-results">6. Results</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-results">6. Resulting authorization flow</a>
 
 * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#8-summary">7. Summary</a>
 
