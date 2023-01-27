@@ -22,49 +22,49 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
 * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-research-question">2. Research Question</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-realizing-a-solution">3. Realizing a solution</a>
+* <a href="">3. Fundamentals</a>
 
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#31-kinds-of-attacks-on-kube-apiserver">3.1 Kinds of attacks on kube-apiserver</a>
+     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#34-token-based-authentication-with-openid-connect">3.1 Token-based authentication with OpenID Connect</a>
 
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">3.2 Causes of attacks</a>
-
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#33-default-kubernetes-authentication-strategies">3.3 Default kubernetes authentication strategies and their pitfalls</a>
-
-     * <a href="">4. Fundamentals</a>
-
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#34-token-based-authentication-with-openid-connect">4.1 Token-based authentication with OpenID Connect</a>
-
-         * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">4.2 Basics of OAuth 2.0</a>
+         * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">3.2 Basics of OAuth 2.0</a>
         
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">4.2.1 Key terms</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">3.2.1 Key terms</a>
 
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3412-oauth-endpoints">4.2.2 Endpoints</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3412-oauth-endpoints">3.2.2 Endpoints</a>
     
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3413-authorization-flows">4.2.3 Authorization Flows</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3413-authorization-flows">3.2.3 Authorization Flows</a>
 
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">4.2.4 Pitfall of OAuth 2.0</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">3.2.4 Pitfall of OAuth 2.0</a>
 
-         * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#342-emergence-of-openid-connect"> 3.4.2 Emergence of OpenID Connect</a>
+         * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#342-emergence-of-openid-connect"> 3.2 Emergence of OpenID Connect</a>
      
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3421-key-concepts">3.4.2.1 Key Concepts</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3421-key-concepts">3.2.1 Key Concepts</a>
 
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3422-endpoints">3.4.2.2 Endpoints</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3422-endpoints">3.2.2 Endpoints</a>
 
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3423-authentication-flows">3.4.2.3 Authentication Flows</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3423-authentication-flows">3.2.3 Authentication Flows</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#4-how-openid-connect-can-improve-the-security-of-kube-apiserver">4. How OpenID Connect can improve the security of kube-apiserver? </a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-realizing-a-solution">4. Realizing a solution</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#5-state-of-the-art">5. State-of-the-art</a>
+     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#31-kinds-of-attacks-on-kube-apiserver">4.1 Kinds of attacks on kube-apiserver</a>
+
+     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">4.2 Causes of attacks</a>
+
+     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#33-default-kubernetes-authentication-strategies">4.3 Default kubernetes authentication strategies and their pitfalls</a>
+
+   
+
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#4-how-openid-connect-can-improve-the-security-of-kube-apiserver">5. How OpenID Connect can improve the security of kube-apiserver? </a>
+
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#5-state-of-the-art">6. State-of-the-art</a>
   
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-openid-connect-with-keycloak-in-practice">6. OpenID Connect with Keycloak in practice</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-openid-connect-with-keycloak-in-practice">7. OpenID Connect with Keycloak in practice</a>
 
-    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#61-steps-of-implementation-">6.1 Steps of implementation</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-results">8. Results</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-results">7. Results</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#8-summary">9. Summary</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#8-summary">8. Summary</a>
-
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#9-literatures">9. Literatures</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#9-literatures">10. Literatures</a>
 
 
 
