@@ -24,17 +24,15 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
 * <a href="">3. Fundamentals</a>
 
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#34-token-based-authentication-with-openid-connect">3.1 Token-based authentication with OpenID Connect</a>
-
-         * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">3.2 Basics of OAuth 2.0</a>
+    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">3.1 Basics of OAuth 2.0</a>
         
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">3.2.1 Key terms</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">3.1.1 Key terms</a>
 
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3412-oauth-endpoints">3.2.2 Endpoints</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3412-oauth-endpoints">3.1.2 Endpoints</a>
     
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3413-authorization-flows">3.2.3 Authorization Flows</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3413-authorization-flows">3.1.3 Authorization Flows</a>
 
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">3.2.4 Pitfall of OAuth 2.0</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">3.1.4 Pitfall of OAuth 2.0</a>
 
          * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#342-emergence-of-openid-connect"> 3.2 Emergence of OpenID Connect</a>
      
