@@ -28,43 +28,45 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-research-question">1.4 Research Question</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-realizing-a-solution">2. Realizing a solution</a>
 
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#33-default-kubernetes-authentication-strategies">2.1 Default kubernetes authentication strategies and their pitfalls</a>
 
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#4-how-openid-connect-can-improve-the-security-of-kube-apiserver">2.2 How OpenID Connect can improve the security of kube-apiserver? </a>
+* <a href="">2. Fundamentals</a>
 
-* <a href="">3. Fundamentals</a>
-
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">3.1 OAuth 2.0</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">2.1 OAuth 2.0</a>
         
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">3.1.1 Roles and key terms</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">2.1.1 Roles and key terms</a>
 
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3412-oauth-endpoints">3.1.2 Endpoints</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3412-oauth-endpoints">2.1.2 Endpoints</a>
     
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3413-authorization-flows">3.1.3 Authorization Flows</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3413-authorization-flows">2.1.3 Authorization Flows</a>
 
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">3.1.4 Pitfalls of OAuth 2.0</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">2.1.4 Pitfalls of OAuth 2.0</a>
 
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#342-emergence-of-openid-connect"> 3.2 Emergence of OpenID Connect</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#342-emergence-of-openid-connect">2.2 Emergence of OpenID Connect</a>
      
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3421-key-concepts">3.2.1 Roles and key terms</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3421-key-concepts">2.2.1 Roles and key terms</a>
 
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3422-endpoints">3.2.2 Endpoints</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3422-endpoints">2.2.2 Endpoints</a>
 
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3423-authentication-flows">3.2.3 Authentication Flows</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3423-authentication-flows">2.2.3 Authentication Flows</a>
 
 
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-realizing-a-solution">3. Realizing a solution</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#5-state-of-the-art">5. Adoption of OIDC</a>
+     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#33-default-kubernetes-authentication-strategies">3.1 Default kubernetes authentication strategies and their pitfalls</a>
+
+     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#4-how-openid-connect-can-improve-the-security-of-kube-apiserver">3.2 How OpenID Connect can improve the security of kube-apiserver? </a>
+     
+
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#5-state-of-the-art">4. Adoption of OIDC</a>
   
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-openid-connect-with-keycloak-in-practice">6. OpenID Connect with Keycloak in practice</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-openid-connect-with-keycloak-in-practice">5. OpenID Connect with Keycloak in practice</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-results">7. Results</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-results">6. Results</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#8-summary">8. Summary</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#8-summary">7. Summary</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#9-literature">9. Literature</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#9-literature">8. Literature</a>
 
 
 
