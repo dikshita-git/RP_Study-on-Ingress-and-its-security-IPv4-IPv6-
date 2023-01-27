@@ -52,7 +52,7 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#4-how-openid-connect-can-improve-the-security-of-kube-apiserver">4.4 How OpenID Connect can improve the security of kube-apiserver? </a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#5-state-of-the-art">5. State-of-the-art</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#5-state-of-the-art">5. Adoption of OIDC</a>
   
 * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-openid-connect-with-keycloak-in-practice">6. OpenID Connect with Keycloak in practice</a>
 
@@ -392,7 +392,7 @@ Securing kube-apiserver with OpenID Connect will help us solve a large number of
 
 
 --------------------------------------------------------------
-## 5. State-of-the-art
+## 5. Adoption of OIDC
 
 <kbd>![Fig: State_of_art](https://github.com/dikshita-git/Research-Project/blob/main/Project_report_images/state_of_art.png)</kbd>
 
