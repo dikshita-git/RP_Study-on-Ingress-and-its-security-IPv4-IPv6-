@@ -224,7 +224,6 @@ There are several terminologies in OAuth which forms a fundamental block of unde
 |---------------------|---------------------------|
 |   **1. Authorization Endpoint** ({your_domain}/oauth/v2/authorize)  |  <ul><li> It is used to interact with the resource owner (end-user) and get the authorization to access the protected resource.</li></ul>  |
 |   **2. Token Endpoint** ({your_domain}/oauth/v2/token)    |  <ul><li> Used by the application in order to get an access token or a refresh token.</li><li> It is used by all flows except for the Implicit Flow because in that case an access token is issued directly.</li></ul> |
-|  **3. UserInfo Endpoint**  ({your_domain}/oauth/v2/userinfo)     |  It is the OAuth 2.0 protected resource which returns the claims (informations) about the authenticated end-user.   |
     
 
 
