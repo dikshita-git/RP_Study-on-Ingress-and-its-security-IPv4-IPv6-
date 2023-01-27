@@ -26,7 +26,7 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">3.1 OAuth 2.0</a>
         
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">3.1.1 Key terms</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">3.1.1 Roles and key terms</a>
 
       * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3412-oauth-endpoints">3.1.2 Endpoints</a>
     
@@ -195,7 +195,7 @@ To get started with OpenID Connect, we need to first learn a bit about [:bulb: O
 - This happens because the application trusts Google as the identity provider in this case and if the user already has an account in the identity provider and if he gives his consent then he can be successfully signed in to the application he wants to register with.
 - This process explains why OAuth 2.0 is said to be used for delegated authority.
 
-#### 3.4.1.1 Key-terminologies in OAuth 2.0:
+#### 3.4.1.1 Roles and key-terminologies in OAuth 2.0:
 
 There are several terminologies in OAuth which forms a fundamental block of understanding its actions as described in the table below:
 
