@@ -24,7 +24,7 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
    
    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">1.2 Possible attacks on kube-apiserver</a>
    
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">1.3 Causes of attacks</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">1.3 Drawbacks of client-keys and certificates</a>
 
    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-research-question">1.4 Research Question</a>
 
@@ -96,7 +96,7 @@ ii) Attacker could take up the advantage of the API server communication into co
 
 
 
-### 1.3 Causes of attacks
+### 1.3 Drawbacks of client-keys and certificates
 
 Whenever any operator tries to access the cluster using kubectl, this command line interface uses a client certificate and client key to get authenticated by the kube-apiserver and sends an HTTPS request. This set of client certificate and key is primarily generated when we create a cluster and is stored in the kubeconfig file which is used to store the cluster authentication informations for kubectl. In order to attack the kube-apiserver, an attacker needs to obtain this client-certificate because it contains the signature of the kubernetes certificate authority and the client-key in order to prove that the he is the owner of the certificate.
 Another prospects for an attacker to be able to steal this certificates are:
