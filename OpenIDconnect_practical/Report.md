@@ -21,8 +21,18 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-motivation">1. Introduction</a>
 
    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-motivation">1.1 Motivation</a>
+   
+   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#31-kinds-of-attacks-on-kube-apiserver">1.2 Kinds of attacks on kube-apiserver</a>
 
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-research-question">1.2 Research Question</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">1.3 Causes of attacks</a>
+
+   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-research-question">1.4 Research Question</a>
+
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-realizing-a-solution">2. Realizing a solution</a>
+
+     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#33-default-kubernetes-authentication-strategies">2.1 Default kubernetes authentication strategies and their pitfalls</a>
+
+     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#4-how-openid-connect-can-improve-the-security-of-kube-apiserver">2.2 How OpenID Connect can improve the security of kube-apiserver? </a>
 
 * <a href="">3. Fundamentals</a>
 
@@ -44,15 +54,7 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
       * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3423-authentication-flows">3.2.3 Authentication Flows</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-realizing-a-solution">4. Realizing a solution</a>
 
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#31-kinds-of-attacks-on-kube-apiserver">4.1 Kinds of attacks on kube-apiserver</a>
-
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">4.2 Causes of attacks</a>
-
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#33-default-kubernetes-authentication-strategies">4.3 Default kubernetes authentication strategies and their pitfalls</a>
-
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#4-how-openid-connect-can-improve-the-security-of-kube-apiserver">4.4 How OpenID Connect can improve the security of kube-apiserver? </a>
 
 * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#5-state-of-the-art">5. Adoption of OIDC</a>
   
