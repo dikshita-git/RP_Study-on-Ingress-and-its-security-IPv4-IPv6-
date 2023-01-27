@@ -30,17 +30,19 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#33-default-kubernetes-authentication-strategies">3.3 Default kubernetes authentication strategies and their pitfalls</a>
 
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#34-token-based-authentication-with-openid-connect">3.4 Token-based authentication with OpenID Connect</a>
+     * <a href="">4. Fundamentals</a>
 
-         * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">3.4.1 Basics of OAuth 2.0</a>
+     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#34-token-based-authentication-with-openid-connect">4.1 Token-based authentication with OpenID Connect</a>
+
+         * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">4.2 Basics of OAuth 2.0</a>
         
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">3.4.1.1 Key terms</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">4.2.1 Key terms</a>
 
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3412-oauth-endpoints">3.4.1.2 Endpoints</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3412-oauth-endpoints">4.2.2 Endpoints</a>
     
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3413-authorization-flows">3.4.1.3 Authorization Flows</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3413-authorization-flows">4.2.3 Authorization Flows</a>
 
-              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">3.4.1.4 Pitfall of OAuth 2.0</a>
+              * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">4.2.4 Pitfall of OAuth 2.0</a>
 
          * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#342-emergence-of-openid-connect"> 3.4.2 Emergence of OpenID Connect</a>
      
