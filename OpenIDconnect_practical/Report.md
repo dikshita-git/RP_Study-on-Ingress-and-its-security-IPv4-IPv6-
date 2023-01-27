@@ -32,7 +32,7 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
     
       * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3413-authorization-flows">3.1.3 Authorization Flows</a>
 
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">3.1.4 Pitfall of OAuth 2.0</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">3.1.4 Pitfalls of OAuth 2.0</a>
 
    * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#342-emergence-of-openid-connect"> 3.2 Emergence of OpenID Connect</a>
      
@@ -262,7 +262,7 @@ Sources: [[1]](https://github.com/dikshita-git/Research-Project/wiki/Project-Rep
 
 
 
-#### 3.4.1.4 Pitfall of OAuth 2.0:
+#### 3.4.1.4 Pitfalls of OAuth 2.0:
 
 OAuth 2.0 is exclusively used for authorization using an access token. But it has several pitfalls like:
 
