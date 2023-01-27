@@ -60,7 +60,7 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
 * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#8-summary">8. Summary</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#9-literatures">9. Literatures</a>
+* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#9-literature">9. Literature</a>
 
 
 
@@ -523,7 +523,7 @@ Thus,we found a way to recover from the compromised client-certificates and clie
 
 ------------------------
 
-## 9. Literatures
+## 9. Literature
 
 ##### [1] “An Illustrated Guide to OAuth and OpenID Connect,” Okta Developer. [Online]. Available: https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc. [Accessed: Jan. 23, 2023] 
 
