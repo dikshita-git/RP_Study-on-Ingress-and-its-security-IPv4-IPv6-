@@ -39,13 +39,13 @@ open in browser:
 
 ⭐ ***Important:***
 
-    - all the endpoint -> token, authorization, userinfo
-    - grant_types_supported
-    - response_types_supported
-    - jwks_uri -> has the certificates, which are used to verify the token
-    - scopes -> openid scope we use
-    - and also the crypto algorithms supported
-          -> THIS webfinger page is for all clients, not only for the kubernetes one
+- all the endpoint -> token, authorization, userinfo
+- grant_types_supported
+- response_types_supported
+- jwks_uri -> has the certificates, which are used to verify the token
+- scopes -> openid scope we use
+- and also the crypto algorithms supported
+  -> THIS webfinger page is for all clients, not only for the kubernetes one
 
 ***b)***
 
