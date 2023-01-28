@@ -50,6 +50,8 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
       * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#223-authentication-flows">2.2.3 Authentication Flows</a>
 
+      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#223-authentication-flows">2.2.4 Adoption of OIDC</a>
+
 
 * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#3-realizing-a-solution">3. Realizing a solution</a>
 
@@ -57,16 +59,14 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#32-how-openid-connect-can-improve-the-security-of-kube-apiserver">3.2 How OpenID Connect can improve the security of kube-apiserver? </a>
      
+ 
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#4-configure-oidc-for-kube-apiserver-with-keycloak">4. Configure OIDC for kube-apiserver with keycloak</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#4-adoption-of-oidc">4. Adoption of OIDC</a>
-  
-* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#5-configure-oidc-for-kube-apiserver-with-keycloak">5. Configure OIDC for kube-apiserver with keycloak</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#5-resulting-authorization-flow">5. Resulting authorization flow</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#6-resulting-authorization-flow">6. Resulting authorization flow</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#6-summary">6. Summary</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#7-summary">7. Summary</a>
-
-* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#8-literature">8. Literature</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#7-literature">7. Literature</a>
 
 
 
@@ -326,6 +326,10 @@ Source: [[4]](https://github.com/dikshita-git/Research-Project/wiki/Project-Repo
 Source: [[3]](https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-authenticating-kubernetes-online-available-httpskubernetesiodocsreferenceaccess-authn-authzauthentication-accessed-jan-18-2023)
 
 
+#### 2.4 Adoption of OIDC
+
+<kbd>![Fig: State_of_art](https://github.com/dikshita-git/Research-Project/blob/main/Project_report_images/state_of_art.png)</kbd>
+
 
 
 ==================================================================
@@ -406,18 +410,12 @@ Securing kube-apiserver with OpenID Connect will help us solve a large number of
 - We can also disable renewal of the tokens as per accordance.
 
 
-==================================================================
-
-
-## 4. Adoption of OIDC
-
-<kbd>![Fig: State_of_art](https://github.com/dikshita-git/Research-Project/blob/main/Project_report_images/state_of_art.png)</kbd>
 
 
 ==================================================================
 
 
-## 5. Configure OIDC for kube-apiserver with keycloak
+## 4. Configure OIDC for kube-apiserver with keycloak
 
 In order to implement OpenID Connect in our kubernetes cluster, Keycloak is used as the Identity Provider which will issue us the access token, id_token, refresh_token etc. A kubectl plugin called Kubelogin is also used to provide an ease to automatically open the browser with the login form of Keycloak when we try to query for kubernetes resources using kubectl. The workflow would look the image shown below:
 
@@ -441,7 +439,7 @@ In order to implement OpenID Connect in our kubernetes cluster, Keycloak is used
 
 
 
-### 5.1 Steps of implementation :
+### 4.1 Steps of implementation :
 
 These are the practical implementations which were performed on our VM and are included in the descriptive folder of [OpenIDconnect_practical](https://github.com/dikshita-git/Research-Project/tree/main/OpenIDconnect_practical) of this repository. Below is a short roadmap of the same:
 
@@ -498,7 +496,7 @@ These are the practical implementations which were performed on our VM and are i
 
 ==================================================================
 
-## 6. Resulting authorization flow
+## 5. Resulting authorization flow
 
 - As for testing purpose, I tried to access the kubernetes resources from my local machine with the command:
 
@@ -534,15 +532,17 @@ which in return opens up the browser for login as shown below:
 ==================================================================
 
 
-## 7. Summary
+## 6. Summary
 
 Using OpenID Connect, we have several benefits as in terms of security measures because of its short-lived tokens which can be easily revoked any time and the revocation timestamp can be configured as per our choice. Additionally, fine granular authentication and authorization management is also achieved with the integration of OpenID Connect with keycloak. Although OIDC can be implemented using the enterprise version of ingress controllers like nginx, traefik etc. which are exclusively meant for industries. In relation to the project, the goal was to deploy it in our bare-metal in the most simple ways with less cost for small to medium-size application organizations. However the implementation is definitely a complex setup besides learning the vast specification lists and grant flows of OAuth 2.0, OpenID Connect and various concepts of keycloak. 
 Thus,we found a way to recover from the compromised client-certificates and client-keys and to mitigate the impact of cryptojacking attack. Further we implicitly unlocked features in keycloak like Two-Factor Authentication, password recovery and more.  
 
+
+
 ==================================================================
 
 
-## 8. Literature
+## 7. Literature
 
 ##### [1] “An Illustrated Guide to OAuth and OpenID Connect,” Okta Developer. [Online]. Available: https://developer.okta.com/blog/2019/10/21/illustrated-guide-to-oauth-and-oidc. [Accessed: Jan. 23, 2023] 
 
