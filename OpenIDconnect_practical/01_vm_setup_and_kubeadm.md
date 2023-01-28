@@ -197,15 +197,15 @@ debug: true
 
     - if we have multiple interfaces, by default the first one is selected
     - we need to specify another interface if the first one is not the interface over which our cluster runs
-       ``` 
+ ``` 
 	spec:
           calicoNetwork:
             nodeAddressAutodetectionV4:
               interface: "eth1"
-        ```
 	
     - kubectl create -f custom-resources.yaml
-
+```
+	
 - verify all the calico pods run
     
 	▶️ k get -n calico-system all
@@ -230,6 +230,7 @@ debug: true
 - needed to make containerd work with kubernetes, mismatching cgroup versions:
 		
 	- randomly shutting down pods 
+	
 				https://www.jetstack.io/blog/cri-migration/
 	
 				https://gjhenrique.com/cgroups-k8s/
