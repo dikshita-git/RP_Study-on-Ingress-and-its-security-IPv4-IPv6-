@@ -18,55 +18,55 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
 ## Table of Contents:
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-motivation">1. Introduction</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#1-introduction">1. Introduction</a>
 
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#1-motivation">1.1 Motivation cryptojacking</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#11-motivation-cryptojacking">1.1 Motivation cryptojacking</a>
    
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">1.2 Possible attacks on kube-apiserver</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#12-possible-attacks-on-kube-apiserver">1.2 Possible attacks on kube-apiserver</a>
    
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#32-causes-of-attacks">1.3 Drawbacks of client-keys and certificates</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#13-drawbacks-of-client-keys-and-certificates">1.3 Drawbacks of client-keys and certificates</a>
 
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#2-research-question">1.4 Research Question</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#14-research-question">1.4 Research Question</a>
 
 
 
-* <a href="">2. Fundamentals</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#2-fundamentals">2. Fundamentals</a>
 
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#341-basics-of-oauth-20-open-authorization">2.1 OAuth 2.0</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#21-oauth-20-open-authorization">2.1 OAuth 2.0</a>
         
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3411-key-terminologies-in-oauth-20">2.1.1 Roles and key terms</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#211-roles-and-key-terms">2.1.1 Roles and key terms</a>
 
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3412-oauth-endpoints">2.1.2 Endpoints</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#212-endpoints">2.1.2 Endpoints</a>
     
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3413-authorization-flows">2.1.3 Authorization Flows</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#213-authorization-flows">2.1.3 Authorization Flows</a>
 
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3414-pitfall-of-oauth-20">2.1.4 Pitfalls of OAuth 2.0</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#214-pitfalls-of-oauth-20">2.1.4 Pitfalls of OAuth 2.0</a>
 
-   * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#342-emergence-of-openid-connect">2.2 Emergence of OpenID Connect</a>
+   * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#22-emergence-of-openid-connect">2.2 Emergence of OpenID Connect</a>
      
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3421-key-concepts">2.2.1 Roles and key terms</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#221-roles-and-key-terms">2.2.1 Roles and key terms</a>
 
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3422-endpoints">2.2.2 Endpoints</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#222-endpoints">2.2.2 Endpoints</a>
 
-      * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3423-authentication-flows">2.2.3 Authentication Flows</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#223-authentication-flows">2.2.3 Authentication Flows</a>
 
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#3-realizing-a-solution">3. Realizing a solution</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#3-realizing-a-solution">3. Realizing a solution</a>
 
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#33-default-kubernetes-authentication-strategies">3.1 Default kubernetes authentication strategies and their pitfalls</a>
+     * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#31-default-kubernetes-authentication-strategies-and-their-pitfalls">3.1 Default kubernetes authentication strategies and their pitfalls</a>
 
-     * <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#4-how-openid-connect-can-improve-the-security-of-kube-apiserver">3.2 How OpenID Connect can improve the security of kube-apiserver? </a>
+     * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#32-how-openid-connect-can-improve-the-security-of-kube-apiserver">3.2 How OpenID Connect can improve the security of kube-apiserver? </a>
      
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#5-state-of-the-art">4. Adoption of OIDC</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#4-adoption-of-oidc">4. Adoption of OIDC</a>
   
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-openid-connect-with-keycloak-in-practice">5. Configure OIDC for kube-apiserver with keycloak</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#5-configure-oidc-for-kube-apiserver-with-keycloak">5. Configure OIDC for kube-apiserver with keycloak</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#6-results">6. Resulting authorization flow</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#6-resulting-authorization-flow">6. Resulting authorization flow</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#8-summary">7. Summary</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#7-summary">7. Summary</a>
 
-* <a href="https://github.com/dikshita-git/Research-Project/wiki/Project-Report#9-literature">8. Literature</a>
+* <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#8-literature">8. Literature</a>
 
 
 
@@ -122,7 +122,7 @@ This is due to the fact that kubernetes is not able to check the status of any p
 How can the security of the kube-apiserver be improved against compromised client certificates?
 
 
-
+===========================================================================0000000
 
 ## 2. Fundamentals
 
@@ -327,6 +327,12 @@ Source: [[3]](https://github.com/dikshita-git/Research-Project/wiki/Project-Repo
 
 
 
+
+======================================================================================================
+
+
+
+
 ## 3. Realizing a solution
 
 ### 3.1 Default kubernetes authentication strategies and their pitfalls:
@@ -400,7 +406,7 @@ Securing kube-apiserver with OpenID Connect will help us solve a large number of
 - We can also disable renewal of the tokens as per accordance.
 
 
-
+===========================================================================================
 
 
 ## 4. Adoption of OIDC
@@ -408,6 +414,7 @@ Securing kube-apiserver with OpenID Connect will help us solve a large number of
 <kbd>![Fig: State_of_art](https://github.com/dikshita-git/Research-Project/blob/main/Project_report_images/state_of_art.png)</kbd>
 
 
+===========================================================================================
 
 
 ## 5. Configure OIDC for kube-apiserver with keycloak
@@ -489,7 +496,7 @@ These are the practical implementations which were performed on our VM and are i
    :arrow_right: [07_kubelogin_set_up_and_test.md](https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/07_kubelogin_set_up_and_test.md)
 
 
-
+===================================================================================
 
 ## 6. Resulting authorization flow
 
@@ -524,12 +531,16 @@ which in return opens up the browser for login as shown below:
 
 
 
+=========================================================================================
+
+
 ## 7. Summary
 
 Using OpenID Connect, we have several benefits as in terms of security measures because of its short-lived tokens which can be easily revoked any time and the revocation timestamp can be configured as per our choice. Additionally, fine granular authentication and authorization management is also achieved with the integration of OpenID Connect with keycloak. Although OIDC can be implemented using the enterprise version of ingress controllers like nginx, traefik etc. which are exclusively meant for industries. In relation to the project, the goal was to deploy it in our bare-metal in the most simple ways with less cost for small to medium-size application organizations. However the implementation is definitely a complex setup besides learning the vast specification lists and grant flows of OAuth 2.0, OpenID Connect and various concepts of keycloak. 
 Thus,we found a way to recover from the compromised client-certificates and client-keys and to mitigate the impact of cryptojacking attack. Further we implicitly unlocked features in keycloak like Two-Factor Authentication, password recovery and more.  
 
 
+=========================================================================================
 
 
 ## 8. Literature
