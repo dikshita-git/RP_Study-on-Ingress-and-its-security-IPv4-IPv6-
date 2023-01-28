@@ -15,25 +15,26 @@
 
 
 - options
-	--control-plane-endpoint (recommended)
+   - --control-plane-endpoint (recommended)
 		- if you have plans to upgrade this single control-plane kubeadm cluster to high availability you should specify the --control-plane------ endpoint to set the shared endpoint for all control-plane nodes
+		
 		- Such an endpoint can be either a DNS name or an IP address of a load-balancer.
-		- 
-	--pod-network-cidr
+		
+   - --pod-network-cidr
 	
 		- Depending on which third-party provider you choose, you might need to set the --pod-network-cidr to a provider-specific value
 		- 
-	--cri-socket
+   - --cri-socket
 	
 		- select container runtime
 		- 
-	--apiserver-advertise-address=<ip-address>
+   - --apiserver-advertise-address=<ip-address>
 	
 		- advertise address of the api server
 	
 		- by default network interface associated with the default gateway
 	
-		- ipv6 geht auch --apiserver-advertise-address=2001:db8::101
+		- ipv6 also goes --apiserver-advertise-address=2001:db8::101
 
 
 ### STEPS:
