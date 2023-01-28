@@ -122,7 +122,7 @@ This is due to the fact that kubernetes is not able to check the status of any p
 How can the security of the kube-apiserver be improved against compromised client certificates?
 
 
-===========================================================================0000000
+==================================================================
 
 ## 2. Fundamentals
 
@@ -328,7 +328,7 @@ Source: [[3]](https://github.com/dikshita-git/Research-Project/wiki/Project-Repo
 
 
 
-======================================================================================================
+==================================================================
 
 
 
@@ -406,7 +406,7 @@ Securing kube-apiserver with OpenID Connect will help us solve a large number of
 - We can also disable renewal of the tokens as per accordance.
 
 
-===========================================================================================
+==================================================================
 
 
 ## 4. Adoption of OIDC
@@ -414,7 +414,7 @@ Securing kube-apiserver with OpenID Connect will help us solve a large number of
 <kbd>![Fig: State_of_art](https://github.com/dikshita-git/Research-Project/blob/main/Project_report_images/state_of_art.png)</kbd>
 
 
-===========================================================================================
+==================================================================
 
 
 ## 5. Configure OIDC for kube-apiserver with keycloak
@@ -496,7 +496,7 @@ These are the practical implementations which were performed on our VM and are i
    :arrow_right: [07_kubelogin_set_up_and_test.md](https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/07_kubelogin_set_up_and_test.md)
 
 
-===================================================================================
+==================================================================
 
 ## 6. Resulting authorization flow
 
@@ -531,7 +531,7 @@ which in return opens up the browser for login as shown below:
 
 
 
-=========================================================================================
+==================================================================
 
 
 ## 7. Summary
@@ -539,8 +539,7 @@ which in return opens up the browser for login as shown below:
 Using OpenID Connect, we have several benefits as in terms of security measures because of its short-lived tokens which can be easily revoked any time and the revocation timestamp can be configured as per our choice. Additionally, fine granular authentication and authorization management is also achieved with the integration of OpenID Connect with keycloak. Although OIDC can be implemented using the enterprise version of ingress controllers like nginx, traefik etc. which are exclusively meant for industries. In relation to the project, the goal was to deploy it in our bare-metal in the most simple ways with less cost for small to medium-size application organizations. However the implementation is definitely a complex setup besides learning the vast specification lists and grant flows of OAuth 2.0, OpenID Connect and various concepts of keycloak. 
 Thus,we found a way to recover from the compromised client-certificates and client-keys and to mitigate the impact of cryptojacking attack. Further we implicitly unlocked features in keycloak like Two-Factor Authentication, password recovery and more.  
 
-
-=========================================================================================
+==================================================================
 
 
 ## 8. Literature
