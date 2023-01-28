@@ -50,7 +50,7 @@ Kube-apiserver component of the kubernetes architecture is the core of the contr
 
       * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#223-authentication-flows">2.2.3 Authentication Flows</a>
 
-      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#223-authentication-flows">2.2.4 Adoption of OIDC</a>
+      * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#24-adoption-of-oidc">2.2.4 Adoption of OIDC</a>
 
 
 * <a href="https://github.com/dikshita-git/Research-Project/blob/main/OpenIDconnect_practical/Report.md#3-realizing-a-solution">3. Realizing a solution</a>
