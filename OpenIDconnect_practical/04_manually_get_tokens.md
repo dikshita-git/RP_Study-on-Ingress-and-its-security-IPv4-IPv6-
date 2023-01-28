@@ -18,9 +18,11 @@
 
 #### STEPS: 
 
+```
 export issuer_url=https://10.20.116.209.nip.io/realms/master
 export token_endpoint="${issuer_url}/protocol/openid-connect/token"
 export authorization_endpoint="${issuer_url}/protocol/openid-connect/auth"
+```
 
 
 ***a)***
@@ -28,7 +30,9 @@ export authorization_endpoint="${issuer_url}/protocol/openid-connect/auth"
 request webfinger endpoint for discovery of all supported modes and endpoints
 see: OIDC discovery specification for details
 
+```
 curl --insecure ${issuer_url}/.well-known/openid-configuration
+```
 
 open in browser:
     https://10.20.116.209.nip.io/realms/master/.well-known/openid-configuration
@@ -58,17 +62,22 @@ The grant type is "password", which means we want to do direct access grant
 		- we enabled client authentication
 		- this is now also needed for "Direct Access Grant" 
 		  although we have the user credentials
+		  
+```
 	curl -X POST "${token_endpoint}" --insecure \
 	 -H "Content-Type: application/x-www-form-urlencoded" \
 	 -d "username=testuser" \
 	 -d "password=testpass" \
 	 -d 'grant_type=password' \
 	 -d "client_id=kubernetes"
+```
+
 	-> {"error":"unauthorized_client","error_description":"Invalid client or Invalid client credentials"}
 
 🟢 ***This will work***
 
 	- here we also add client credentials
+```
 	curl -X POST "${token_endpoint}" --insecure \
 	 -H "Content-Type: application/x-www-form-urlencoded" \
 	 -d "username=testuser" \
@@ -76,6 +85,7 @@ The grant type is "password", which means we want to do direct access grant
 	 -d 'grant_type=password' \
 	 -d "client_id=kubernetes" \
 	 -d "client_secret=FPltK3k7eA5agTbnTmwc0ounthRVVNaW"
+```
 	 -> {"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJUMXBjTVBlbzd4QmItdkZPR1NGUFl0OXJlZDNWdTdFOWJrRkFoN203cjRRIn0.eyJleHAiOjE2NzQzMzc5NzksImlhdCI6MTY3NDMzNzkxOSwianRpIjoiODc1ZjIwMzItOTY1Yy00MzMyLWFiZjYtYTgxMjFkNzM2NjI4IiwiaXNzIjoiaHR0cHM6Ly8xMC4yMC4xMTYuMjA5Lm5pcC5pby9yZWFsbXMvbWFzdGVyIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjAxODcxZWFkLTdiOTUtNDEwYS04YjA5LTEwOGQ2ZGExYTNlOCIsInR5cCI6IkJlYXJlciIsImF6cCI6Imt1YmVybmV0ZXMiLCJzZXNzaW9uX3N0YXRlIjoiODQzYjRmNDEtNjllZi00ZDQwLWExYzUtNWI1ODdjYThjMzI3IiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJkZWZhdWx0LXJvbGVzLW1hc3RlciIsIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJrdWJlcm5ldGVzIjp7InJvbGVzIjpbImt1YmVybmV0ZXNfcm9sZSJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiODQzYjRmNDEtNjllZi00ZDQwLWExYzUtNWI1ODdjYThjMzI3IiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5hbWUiOiJmaXJzdG5hbWUgbGFzdG5hbWUiLCJncm91cHMiOlsia3ViZXJuZXRlc19yb2xlIiwibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJ0ZXN0dXNlciIsImdpdmVuX25hbWUiOiJmaXJzdG5hbWUiLCJmYW1pbHlfbmFtZSI6Imxhc3RuYW1lIiwiZW1haWwiOiJ0ZXN0dXNlckB0ZXN0dXNlci5kZSJ9.Jv3q8UQcyRPyq0uGBqzwzgTdFmSZzSw0vJi2uYp9RulzQ7Ih7OnoOVbFZY8E4benaQ7JVH6Q0MTh8nebKKANW4qb5m-mTfQCqSozzK-20ehn1ZXXOr8TV-P59qKa0EFOpYsHoz06Q3tftbkPKfrFGCTeqxRdCvddPoFCia_AHV0b96L0FaNKVp_o70Q_YIaahYYmNJBJlSE5t6wYj_Yfrj-uywBQnvZX_pCDCwwYnxZfxPsJMBjmDqJXBgid41ww812m2PgTM4frAGffXl5gjxx4O2Wnvt_GugDwW8-WPd2ZOweoc0DsmwKsoMywPbVvXItUj2kJCsMseIEic6eIFw","expires_in":60,"refresh_expires_in":1800,"refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJhNTBmYmI4MS1hYTA0LTQ0NzItYWMxYi00OTBhMmFlMzA1M2UifQ.eyJleHAiOjE2NzQzMzk3MTksImlhdCI6MTY3NDMzNzkxOSwianRpIjoiYmJlOGY0ZTAtMmY4OS00ZDhlLThhOTItZWI1NjJkYzI2MWY3IiwiaXNzIjoiaHR0cHM6Ly8xMC4yMC4xMTYuMjA5Lm5pcC5pby9yZWFsbXMvbWFzdGVyIiwiYXVkIjoiaHR0cHM6Ly8xMC4yMC4xMTYuMjA5Lm5pcC5pby9yZWFsbXMvbWFzdGVyIiwic3ViIjoiMDE4NzFlYWQtN2I5NS00MTBhLThiMDktMTA4ZDZkYTFhM2U4IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6Imt1YmVybmV0ZXMiLCJzZXNzaW9uX3N0YXRlIjoiODQzYjRmNDEtNjllZi00ZDQwLWExYzUtNWI1ODdjYThjMzI3Iiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiODQzYjRmNDEtNjllZi00ZDQwLWExYzUtNWI1ODdjYThjMzI3In0.gh-oOjqaRwGQa9t-MI6wArjdwrnLzCIgENCnSFht4zM","token_type":"Bearer","not-before-policy":0,"session_state":"843b4f41-69ef-4d40-a1c5-5b587ca8c327","scope":"profile email"}
 
 	 interesting
